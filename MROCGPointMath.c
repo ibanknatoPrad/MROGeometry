@@ -9,15 +9,6 @@
 #include "MROCGPointMath.h"
 #include <math.h>
 
-/// unused
-CGPoint CGPointSwapXY(CGPoint p)
-{
-	CGFloat t = p.x;
-	p.x = p.y;
-	p.y = (320 - 1) - t;
-	return p;
-}
-
 
 CGPoint CGPointAdd(const CGPoint a, const CGPoint b)
 {
@@ -66,12 +57,10 @@ CGFloat CGPointAbs(const CGPoint a)
 
 int CGPointDistanceSmallerThan(const CGPoint a, const CGPoint b, const CGFloat radius)
 {
-	CGFloat dx = a.x - b.x;
-	dx = ABS(dx);
+	const CGFloat dx = ABS(a.x - b.x);
 	if ( dx > radius )
 		return 0 == 1;
-	CGFloat dy = a.y - b.y;
-	dy = ABS(dy);
+	const CGFloat dy = ABS(a.y - b.y);
 	if ( dy > radius )
 		return 0 == 1;
 	return SQR(dx) + SQR(dy) < SQR(radius);
