@@ -19,7 +19,7 @@
 #endif
 
 #ifndef MRLogD
-#define MRLogD(x,...)
+#define MRLogD(x, ...)
 #endif
 
 /// internal, temporary helper struct

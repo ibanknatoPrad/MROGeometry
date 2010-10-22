@@ -16,13 +16,13 @@ CGPoint CGPointAdd(const CGPoint a, const CGPoint b)
 }
 
 
-CGPoint CGPointMinus(const CGPoint a, const CGPoint b)
+CGPoint CGPointSub(const CGPoint a, const CGPoint b)
 {
 	return CGPointMake(a.x - b.x, a.y - b.y);
 }
 
 
-CGPoint CGPointScale(const CGFloat f, const CGPoint a)
+CGPoint CGPointMul(const CGPoint a, const CGFloat f)
 {
 	return CGPointMake(f * a.x, f * a.y);
 }
