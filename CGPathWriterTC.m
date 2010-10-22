@@ -1,0 +1,51 @@
+//
+//  CGPathWriterTC.m
+//
+//  Created by Marcus Rohrmoser on 15.10.10.
+//  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+//
+
+#import <SenTestingKit/SenTestingKit.h>
+
+@interface CGPathWriterTC : SenTestCase {}
+@end
+
+#import "CGPathWriter.h"
+#import "PathParser.h"
+
+@implementation CGPathWriterTC
+
+-(void) testWrite
+{
+	CGMutablePathRef p = CGPathCreateMutable();
+	CGPathMoveToPoint(p, NULL, 1, 2);
+	CGPathAddLineToPoint(p, NULL, 3, 4);
+	CGPathAddCurveToPoint(p, NULL, 5, 6, 7, 8, 9, 10);
+
+	char *buf = CGPathToCString(p, 0, 0);
+
+	STAssertEqualObjects(@"M1.000000,2.000000L3.000000,4.000000C5.000000,6.000000,7.000000,8.000000,9.000000,10.000000", ([NSString stringWithCString:buf encoding:NSASCIIStringEncoding]), @"");
+
+	free(buf);
+	CGPathRelease(p);
+}
+
+
+-(void) testReadWrite
+{
+	NSString *ps = @"M1.000000,2.000000L3.000000,4.000000C5.000000,6.000000,7.000000,8.000000,9.000000,10.000000";
+	PathParser *pp = [alloc (PathParser)init];
+	NSError *err = nil;
+	CGPathRef p = [pp parseString:ps trafo:NULL error:&err];
+	STAssertNil(err, @"");
+
+	char *buf = CGPathToCString(p, 0, 0);
+	STAssertEqualObjects(ps, ([NSString stringWithCString:buf encoding:NSASCIIStringEncoding]), @"");
+	free(buf);
+
+	CGPathRelease(p);
+	[pp release];
+}
+
+
+@end
