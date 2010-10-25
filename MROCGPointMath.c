@@ -28,6 +28,12 @@ CGPoint CGPointMul(const CGPoint a, const CGFloat f)
 }
 
 
+CGFloat CGPointDotPr(const CGPoint a, const CGPoint b)
+{
+	return a.x * b.x + a.y * b.y;
+}
+
+
 #if !defined(SQR)
 #define SQR(x) ( (x) * (x) )
 #else
@@ -37,7 +43,7 @@ CGPoint CGPointMul(const CGPoint a, const CGFloat f)
 
 CGFloat CGPointAbsSqr(const CGPoint a)
 {
-	return SQR(a.x) + SQR(a.y);
+	return CGPointDotPr(a, a);
 }
 
 
