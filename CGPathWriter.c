@@ -57,6 +57,7 @@ void CGPathWriter_snprintf(CGPathWriter_t *const t, char *fmt, ...)
 			// fprintf(stderr, "CGPathToCString::re-allocating %zu\n", inc);
 			t->buffer = reallocf(t->buffer, t->allocated += inc);
 			assert(t->allocated > t->used);
+			t->buffer[t->used] = '\0';
 			assert(t->buffer[t->used] == '\0');
 		} else {
 			t->used += len;
