@@ -29,6 +29,7 @@ struct CGPathWriter_t {
 	size_t used;
 	size_t increment;
 };
+/// internal, temporary helper struct
 typedef struct CGPathWriter_t CGPathWriter_t;
 
 /// internal, re-allocating snprintf helper
@@ -55,6 +56,8 @@ void CGPathWriter_snprintf(CGPathWriter_t *const t, char *fmt, ...)
 			assert(t->allocated < INT_MAX - inc);
 			// fprintf(stderr, "CGPathToCString::re-allocating %zu\n", inc);
 			t->buffer = reallocf(t->buffer, t->allocated += inc);
+			assert(t->allocated > t->used);
+			assert(t->buffer[t->used] == '\0');
 		} else {
 			t->used += len;
 			return;
@@ -102,6 +105,8 @@ char *CGPathToCString(const CGPathRef p, const size_t capacity, const size_t inc
 	t.allocated = MAX(0, capacity);
 	t.increment = MAX(0, increment);
 	t.buffer = malloc(t.allocated);
+	if ( t.buffer != NULL )
+		t.buffer[0] = '\0';
 	t.used = 0;
 
 	CGPathApply(p, &t, CGPathWriter_path_walker);

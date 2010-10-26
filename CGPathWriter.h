@@ -6,7 +6,7 @@
  *
  */
 
-#include "CoreGraphics/CGPath.h"
+#import <CoreGraphics/CGPath.h>
 
 /** Write a very simple, non-optimized form of http://www.w3.org/TR/SVG11/paths.html#PathDataBNF .
  * @param p
