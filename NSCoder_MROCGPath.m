@@ -22,27 +22,22 @@
 		return;
 	//MRLogD(@"Encode CGPath Buffer[%d]: '%s'", strlen(buf) + 1, buf);
 	NSAssert(buf[strlen(buf)] == '\0', @"");
-	[self encodeBytes:(void *)buf length:strlen(buf) + 1 forKey:key];
+	[self encodeObject:[NSString stringWithCString:buf encoding:NSASCIIStringEncoding] forKey:key];
 	free(buf);
 }
 
 
 -(CGPathRef)decodeCGPathForKey:(NSString *)key
 {
-	NSUInteger len = 0;
-	char *buf = (char *)[self decodeBytesForKey:key returnedLength:&len];
-	if ( len <= 1 || buf == NULL || buf[0] == '\0' )
-		return NULL;
+	NSString *buf = [self decodeObjectForKey:key];
 	//MRLogD(@"Decode CGPath Buffer[%d]: '%s'", len, buf);
-	NSAssert(strlen(buf) == len - 1, @"");
 	PathParser *pp = [alloc (PathParser)init];
 	NSError *err = nil;
-	CGPathRef p = [pp parseString:[NSString stringWithCString:buf encoding:NSASCIIStringEncoding] trafo:NULL error:&err];
+	CGPathRef p = [pp parseString:buf trafo:NULL error:&err];
 	//	MRLogD(@"Error: %@", err);
 	NSAssert(p != NULL, @"");
 	NSAssert(err == nil, @"");
 	[pp release];
-	// free(buf);
 	return p;
 }
 
