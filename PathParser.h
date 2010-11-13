@@ -37,7 +37,7 @@
  */
 -(CGPathRef)parseString:(NSString *)data trafo:(CGAffineTransform *)trafo error:(NSError **)errPtr;
 
-#if 0
+#if 1
 /** Do the actual parsing. Stateless and reentrant.
  * @param data content of a svg path element's 'd' attribute.
  * @param length number of max. baytes to read
