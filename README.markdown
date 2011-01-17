@@ -1,7 +1,7 @@
 
 # MROGeometry
 
-Some helpers related to
+Some C / Objective-C helpers related to
 
 - [CGPoint](http://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html%23//apple_ref/doc/uid/TP30000955-CH2g-C016211),
 - [CGAffineTransform](http://developer.apple.com/library/ios/#documentation/GraphicsImaging/Reference/CGAffineTransform/Reference/reference.html%23//apple_ref/doc/c_ref/CGAffineTransform),
@@ -13,16 +13,20 @@ Some helpers related to
 Generate C state machines and pdf docs from [Ragel](http://www.complang.org/ragel/) sources.
 
 ## [CGPathReader.h](MROGeometry/blob/master/CGPathReader.h)
+
 Parse a [SVG path](http://www.w3.org/TR/SVG/paths.html) and return a retained 
 [CGPathRef](http://developer.apple.com/library/ios/#documentation/GraphicsImaging/Reference/CGPath/Reference/reference.html).
 
 See [PathParser.h](MROGeometry/blob/master/PathParser.h)
 
 ## [CGPathWriter.h](MROGeometry/blob/master/CGPathWriter.h)
+
 Write a very simple, non-optimized form of [SVG path](http://www.w3.org/TR/SVG11/paths.html#PathDataBNF).
 
 ## [MROCGPointMath.h](MROGeometry/blob/master/MROCGPointMath.h)
-Simple [CGPoint](http://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html%23//apple_ref/doc/uid/TP30000955-CH2g-C016211) math.
+
+Simple [CGPoint](http://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html%23//apple_ref/doc/uid/TP30000955-CH2g-C016211)
+math:
 
 - add,
 - subtract,
@@ -31,6 +35,7 @@ Simple [CGPoint](http://developer.apple.com/library/mac/#documentation/GraphicsI
 - distance square and distance.
 
 ## [NSCoder_MROCGPath.h](MROGeometry/blob/master/NSCoder_MROCGPath.h)
+
 Persist a [CGPathRef](http://developer.apple.com/library/ios/#documentation/GraphicsImaging/Reference/CGPath/Reference/reference.html)
 using the [SVG path](http://www.w3.org/TR/SVG11/paths.html#PathDataBNF) format as ASCII/C String.
  
