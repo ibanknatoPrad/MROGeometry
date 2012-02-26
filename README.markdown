@@ -93,3 +93,5 @@ file I list them here (usually I put them into the common header *.pch):
 ## [Makefile](MROGeometry/blob/master/Makefile)
 
 Generate C state machines and pdf docs from [Ragel](http://www.complang.org/ragel/) sources.
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=mro&url=https://github.com/mro/MROGeometry&title=MROGeometry&language=&tags=github&category=software) 
