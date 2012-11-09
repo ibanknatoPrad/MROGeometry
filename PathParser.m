@@ -43,10 +43,10 @@ static const int path_en_main = 232;
 
 -(CGPathRef)parseChar:(const char *)data length:(int)length trafo:(CGAffineTransform *)trafo error:(NSError **)errPtr
 {
-	DEBUG_TIMER_START();
+//	DEBUG_TIMER_START();
 
 	// MRLogD(@"");
-	PathBuilder *pb = [[alloc (PathBuilder) initWithTrafo:trafo] autorelease];
+	PathBuilder *pb = [[PathBuilder alloc] initWithTrafo:trafo];
 	if ( data == NULL )
 		return CGPathRetain([pb toPath]);
 	//	high-level buffers
@@ -11158,7 +11158,7 @@ _out: {}
 
 	if ( errPtr != nil && cs < path_first_final )
 		*errPtr = [self parseError:data position:p];
-	DEBUG_TIMER_LOG();
+//	DEBUG_TIMER_LOG();
 	return CGPathRetain([pb toPath]);
 }
 
