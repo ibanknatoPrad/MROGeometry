@@ -5,9 +5,9 @@
 // Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface CGPathWriterTC : SenTestCase {}
+@interface CGPathWriterTC : XCTestCase {}
 @end
 
 #import "CGPathWriter.h"
@@ -26,7 +26,7 @@
 
 	// file:///Users/Developer.SnowLeopard/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiOS4_1.iOSLibrary.docset/Contents/Resources/Documents/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/initWithBytesNoCopy:length:encoding:freeWhenDone:
 	// initWithBytesNoCopy:length:encoding:freeWhenDone:
-	STAssertEqualObjects(@"M1.000000,2.000000L3.000000,4.000000C5.000000,6.000000,7.000000,8.000000,9.000000,10.000000", ([NSString stringWithCString:buf encoding:NSASCIIStringEncoding]), @"");
+	XCTAssertEqualObjects(@"M1.000000,2.000000L3.000000,4.000000C5.000000,6.000000,7.000000,8.000000,9.000000,10.000000", ([NSString stringWithCString:buf encoding:NSASCIIStringEncoding]), @"");
 
 	free(buf);
 	CGPathRelease(p);
@@ -39,12 +39,12 @@
 	PathParser *pp = [alloc (PathParser)init];
 	NSError *err = nil;
 	CGPathRef p = [pp parseString:ps trafo:NULL error:&err];
-	STAssertNil(err, @"");
+	XCTAssertNil(err, @"");
 
 	char *buf = CGPathToCString(p, 0, 0);
 	// file:///Users/Developer.SnowLeopard/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiOS4_1.iOSLibrary.docset/Contents/Resources/Documents/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/initWithBytesNoCopy:length:encoding:freeWhenDone:
 	// initWithBytesNoCopy:length:encoding:freeWhenDone:
-	STAssertEqualObjects(ps, ([NSString stringWithCString:buf encoding:NSASCIIStringEncoding]), @"");
+	XCTAssertEqualObjects(ps, ([NSString stringWithCString:buf encoding:NSASCIIStringEncoding]), @"");
 	free(buf);
 
 	CGPathRelease(p);

@@ -13,7 +13,6 @@
 		1627C79318BFE14000D0465F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1627C79218BFE14000D0465F /* UIKit.framework */; };
 		1627C79618BFE14000D0465F /* libMROGeometry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1627C77E18BFE14000D0465F /* libMROGeometry.a */; };
 		1627C79C18BFE14000D0465F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1627C79A18BFE14000D0465F /* InfoPlist.strings */; };
-		1627C79E18BFE14000D0465F /* MROGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C79D18BFE14000D0465F /* MROGeometryTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1627C7BA18BFE26700D0465F /* CGPathReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A818BFE26700D0465F /* CGPathReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1627C7BB18BFE26700D0465F /* CGPathReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A818BFE26700D0465F /* CGPathReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1627C7BC18BFE26700D0465F /* CGPathWriter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A918BFE26700D0465F /* CGPathWriter.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -30,8 +29,7 @@
 		1627C7CA18BFE26700D0465F /* RagelParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B618BFE26700D0465F /* RagelParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1627C7CB18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1627C7CC18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7CF18BFE2AB00D0465F /* CGPathWriterTC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7CE18BFE2AB00D0465F /* CGPathWriterTC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7D118BFE62B00D0465F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1627C7D018BFE62B00D0465F /* SenTestingKit.framework */; };
+		1627C7CF18BFE2AB00D0465F /* CGPathWriterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +63,6 @@
 		1627C79218BFE14000D0465F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		1627C79918BFE14000D0465F /* MROGeometryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MROGeometryTests-Info.plist"; sourceTree = "<group>"; };
 		1627C79B18BFE14000D0465F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1627C79D18BFE14000D0465F /* MROGeometryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MROGeometryTests.m; sourceTree = "<group>"; };
 		1627C7A718BFE26700D0465F /* CGPathReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPathReader.h; sourceTree = "<group>"; };
 		1627C7A818BFE26700D0465F /* CGPathReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPathReader.m; sourceTree = "<group>"; };
 		1627C7A918BFE26700D0465F /* CGPathWriter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CGPathWriter.c; sourceTree = "<group>"; };
@@ -84,8 +81,7 @@
 		1627C7B718BFE26700D0465F /* TrafoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafoParser.h; sourceTree = "<group>"; };
 		1627C7B818BFE26700D0465F /* TrafoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafoParser.m; sourceTree = "<group>"; };
 		1627C7B918BFE26700D0465F /* TrafoParser.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrafoParser.rl; sourceTree = "<group>"; };
-		1627C7CE18BFE2AB00D0465F /* CGPathWriterTC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPathWriterTC.m; sourceTree = "<group>"; };
-		1627C7D018BFE62B00D0465F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPathWriterTest.m; sourceTree = "<group>"; };
 		1627C7D218BFE70F00D0465F /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		1627C7D318BFE70F00D0465F /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1627C7D118BFE62B00D0465F /* SenTestingKit.framework in Frameworks */,
 				1627C79618BFE14000D0465F /* libMROGeometry.a in Frameworks */,
 				1627C79018BFE14000D0465F /* XCTest.framework in Frameworks */,
 				1627C79318BFE14000D0465F /* UIKit.framework in Frameworks */,
@@ -138,7 +133,6 @@
 		1627C78018BFE14000D0465F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1627C7D018BFE62B00D0465F /* SenTestingKit.framework */,
 				1627C78118BFE14000D0465F /* Foundation.framework */,
 				1627C78F18BFE14000D0465F /* XCTest.framework */,
 				1627C79218BFE14000D0465F /* UIKit.framework */,
@@ -184,8 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				1627C79818BFE14000D0465F /* Supporting Files */,
-				1627C79D18BFE14000D0465F /* MROGeometryTests.m */,
-				1627C7CE18BFE2AB00D0465F /* CGPathWriterTC.m */,
+				1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */,
 			);
 			path = MROGeometryTests;
 			sourceTree = "<group>";
@@ -297,8 +290,7 @@
 			files = (
 				1627C7C318BFE26700D0465F /* NSCoder_MROCGPath.m in Sources */,
 				1627C7C718BFE26700D0465F /* PathParser.m in Sources */,
-				1627C7CF18BFE2AB00D0465F /* CGPathWriterTC.m in Sources */,
-				1627C79E18BFE14000D0465F /* MROGeometryTests.m in Sources */,
+				1627C7CF18BFE2AB00D0465F /* CGPathWriterTest.m in Sources */,
 				1627C7BB18BFE26700D0465F /* CGPathReader.m in Sources */,
 				1627C7C118BFE26700D0465F /* MROCGPointMath.c in Sources */,
 				1627C7C518BFE26700D0465F /* PathBuilder.m in Sources */,
