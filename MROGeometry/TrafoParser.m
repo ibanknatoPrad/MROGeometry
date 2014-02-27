@@ -46,7 +46,7 @@ static const int trafo_en_main = 168;
 		return t;
 	// high-level buffers
 	BOOL two = NO;
-	NSMutableString *buf = [[[NSMutableString alloc] init] autorelease];
+	NSMutableString *buf = [[NSMutableString alloc] init];
 	double argv[] = {
 		0, 0, 0, 0, 0, 0
 	};

@@ -33,7 +33,6 @@
 -(void)dealloc
 {
 	CGPathRelease(gp);
-	[super dealloc];
 }
 
 
@@ -55,8 +54,8 @@
 		y3 += py;
 	}
 	CGPathAddCurveToPoint(gp, trafo, x1, y1, x2, y2, x3, y3);
-	ox = px;
-	oy = py;
+	ox = x2;
+	oy = y2;
 	px = x3;
 	py = y3;
 }
@@ -70,8 +69,8 @@
 		y += py;
 	}
 	CGPathAddLineToPoint(gp, trafo, x, y);
-	ox = px;
-	oy = py;
+	ox = NAN;
+	oy = NAN;
 	px = x;
 	py = y;
 }
@@ -92,8 +91,8 @@
 		y += py;
 	}
 	CGPathMoveToPoint(gp, trafo, x, y);
-	ox = px;
-	oy = py;
+	ox = NAN;
+	oy = NAN;
 	px = x;
 	py = y;
 }
@@ -109,8 +108,8 @@
 		y2 += py;
 	}
 	CGPathAddQuadCurveToPoint(gp, trafo, x1, y1, x2, y2);
-	ox = px;
-	oy = py;
+	ox = x1;
+	oy = y1;
 	px = x2;
 	py = y2;
 }
@@ -118,18 +117,16 @@
 
 -(void)smoothCubicToAbsolute:(BOOL)abs x2:(CGFloat)x2 y2:(CGFloat)y2 x3:(CGFloat)x3 y3:(CGFloat)y3
 {
-	NSLogD(@"[PathBuilder smoothCubicToAbsolute:%d]", abs);
-	CGFloat x1;
-	CGFloat y1;
-	if( abs ) {
-		x1 = 2 * px - ox;
-		y1 = 2 * py - oy;
-	} else {
-		// @todo verify!
-		x1 = px - ox;
-		y1 = py - oy;
+	NSLogD(@"[PathBuilder smoothCubicToAbsolute:%d (%f,%f) (%f,%f)]", abs, x2, y2, x3, y3);
+	CGFloat x1 = px + (px - ox);
+	CGFloat y1 = py + (py - oy);
+	if( !abs ) {
+		x2 += px;
+		y2 += py;
+		x3 += px;
+		y3 += py;
 	}
-	[self cubicToAbsolute:abs x1:x1 y1:y1 x2:x2 y2:y2 x3:x3 y3:y3];
+	[self cubicToAbsolute:YES x1:x1 y1:y1 x2:x2 y2:y2 x3:x3 y3:y3];
 }
 
 
