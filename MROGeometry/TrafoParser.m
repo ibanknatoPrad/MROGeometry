@@ -1,6 +1,6 @@
 #line 1 "MROGeometry/TrafoParser.rl"
 //
-// TrafoParser.m
+// TrafoParser.rl
 //
 // Created by Marcus Rohrmoser on 11.03.10.
 // Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.

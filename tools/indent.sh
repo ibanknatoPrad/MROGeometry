@@ -22,7 +22,7 @@ cd `dirname $0`/..
 if [[ "$@" == "" ]]
 then
 	echo "Got no files on commandline (which is fine), so I'll format those:"
-	PROJECT_SOURCE=$(find MROGeometry* -name "*.m" -or -name "*.h")
+	PROJECT_SOURCE=$(find MROGeometry* -name "*.m" -or -name "*.h" -and -not -name "*Parser.m")
 else
 	PROJECT_SOURCE="$@"
 fi

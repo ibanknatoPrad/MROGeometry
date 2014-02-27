@@ -1,5 +1,5 @@
 //
-//  PathParser.m
+//  PathParser.rl
 //
 //  Created by Marcus Rohrmoser on 11.03.10.
 //  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
@@ -27,98 +27,98 @@
 
 %%{
 
-	machine path;
+  machine path;
 
-	#######################################################
-	## Define the actions
-	#######################################################
+  #######################################################
+  ## Define the actions
+  #######################################################
 
-	action start_number {
-		start = p;
-	}
+  action start_number {
+    start = p;
+  }
 
-	action push_number {
-		char *endmark = (char*)p;
-		const char c = *endmark;
-		*endmark = '\0';
-		argv[argc++] = strtod(start, NULL);
-		*endmark = c;
-		start = NULL;
-	}
+  action push_number {
+    char *endmark = (char*)p;
+    const char c = *endmark;
+    *endmark = '\0';
+    argv[argc++] = strtod(start, NULL);
+    *endmark = c;
+    start = NULL;
+  }
 
-	action push_true {
-		if(YES)
-			[NSException raise:@"ragel action push_true isn't implemented yet." format:@""];
-	}
+  action push_true {
+    if(YES)
+      [NSException raise:@"ragel action push_true isn't implemented yet." format:@""];
+  }
 
-	action push_false {
-		if(YES)
-			[NSException raise:@"ragel action push_false isn't implemented yet." format:@""];
-	}
+  action push_false {
+    if(YES)
+      [NSException raise:@"ragel action push_false isn't implemented yet." format:@""];
+  }
 
-	action mode_abs {
-		absolute = YES;
-	}
+  action mode_abs {
+    absolute = YES;
+  }
 
-	action mode_rel {
-		absolute = NO;
-	}
+  action mode_rel {
+    absolute = NO;
+  }
     
-	action moveto {
-		[pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
-		argc = 0;
-	}    
+  action moveto {
+    [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
+    argc = 0;
+  }    
 
-	action lineto {
-		[pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
-		argc = 0;
-	}
+  action lineto {
+    [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
+    argc = 0;
+  }
 
-	action horizontal_lineto {
-		[pb hlineToAbsolute:absolute x:argv[0]];
-		argc = 0;
-	}
+  action horizontal_lineto {
+    [pb hlineToAbsolute:absolute x:argv[0]];
+    argc = 0;
+  }
 
-	action vertical_lineto {
-		[pb vlineToAbsolute:absolute y:argv[0]];
-		argc = 0;
-	}
+  action vertical_lineto {
+    [pb vlineToAbsolute:absolute y:argv[0]];
+    argc = 0;
+  }
 
-	action curveto {
-		[pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
-		argc = 0;
-	}
+  action curveto {
+    [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
+    argc = 0;
+  }
 
-	action smooth_curveto {
-		[pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
-		argc = 0;
-	}
+  action smooth_curveto {
+    [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
+    argc = 0;
+  }
 
-	action quadratic_bezier_curveto {
-		[pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
-		argc = 0;
-	}
+  action quadratic_bezier_curveto {
+    [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
+    argc = 0;
+  }
 
-	action smooth_quadratic_bezier_curveto {
-		[pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
-		argc = 0;
-	}
+  action smooth_quadratic_bezier_curveto {
+    [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
+    argc = 0;
+  }
 
-	action elliptical_arc {
-		if(YES)
-			[NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
-		argc = 0;
-	}
+  action elliptical_arc {
+    if(YES)
+      [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
+    argc = 0;
+  }
         
-	action closepath {
-		[pb closePath];		
-	}
+  action closepath {
+    [pb closePath];   
+  }
 
-	#######################################################
-	## Define the grammar
-	#######################################################
+  #######################################################
+  ## Define the grammar
+  #######################################################
 
-		wsp = (' ' | 9 | 10 | 13);
+    wsp = (' ' | 9 | 10 | 13);
         sign = ('+' | '-');
         digit_sequence = digit+;
         exponent = ('e' | 'E') sign? digit_sequence;
@@ -256,39 +256,39 @@
 }%%
 
 %% write data;
-	
+  
 -(CGPathRef)parseChar:(const char*)data length:(int)length trafo:(CGAffineTransform*)trafo error:(NSError**)errPtr
 {
-	MRLogTStart();
+  MRLogTStart();
 
-	// MRLogD(@"");
-	PathBuilder *pb = [[alloc(PathBuilder) initWithTrafo:trafo] autorelease];
-	if(data == NULL)
-		return CGPathRetain([pb toPath]);
-//	high-level buffers
-	const char *start = NULL;
-	CGFloat argv[] = {0,1,2,3,4,5,6,7};
-	int argc = 0;
-	BOOL absolute = YES;
-	
-//	ragel variables (low level)
-	const char *p = data;
-	const char *pe = data + length; // pointer "end"
-	const char *eof = pe;
-	int cs = 0;
-//	int top;
+  // MRLogD(@"");
+  PathBuilder *pb = [[alloc(PathBuilder) initWithTrafo:trafo] autorelease];
+  if(data == NULL)
+    return CGPathRetain([pb toPath]);
+//  high-level buffers
+  const char *start = NULL;
+  CGFloat argv[] = {0,1,2,3,4,5,6,7};
+  int argc = 0;
+  BOOL absolute = YES;
+  
+//  ragel variables (low level)
+  const char *p = data;
+  const char *pe = data + length; // pointer "end"
+  const char *eof = pe;
+  int cs = 0;
+//  int top;
 
 ///////////////////////////////////////////////////////////
-//	init ragel
-	%% write init;
+//  init ragel
+  %% write init;
 ///////////////////////////////////////////////////////////
-//	exec ragel
-	%% write exec;
+//  exec ragel
+  %% write exec;
 
-	if ( errPtr != nil && cs < path_first_final )
-		*errPtr = [self parseError:data position:p];
+  if ( errPtr != nil && cs < path_first_final )
+    *errPtr = [self parseError:data position:p];
     MRLogT(@"", nil);
-	return CGPathRetain([pb toPath]);
+  return CGPathRetain([pb toPath]);
 }
 
 -(CGPathRef)parseString:(NSString*)data trafo:(CGAffineTransform*)trafo error:(NSError**)errPtr

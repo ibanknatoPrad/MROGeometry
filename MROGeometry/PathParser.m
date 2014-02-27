@@ -1,6 +1,6 @@
 #line 1 "MROGeometry/PathParser.rl"
 //
-// PathParser.m
+// PathParser.rl
 //
 // Created by Marcus Rohrmoser on 11.03.10.
 // Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
