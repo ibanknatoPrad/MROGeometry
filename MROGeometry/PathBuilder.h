@@ -1,8 +1,8 @@
 //
-//  PathBuilder.h
+// PathBuilder.h
 //
-//  Created by Marcus Rohrmoser on 11.03.10.
-//  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+// Created by Marcus Rohrmoser on 11.03.10.
+// Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
 //
 
 #import <CoreGraphics/CGPath.h>
@@ -15,10 +15,10 @@
 {
 	CGAffineTransform *trafo;
 	CGMutablePathRef gp;
-	//	last control point for the smooth curveTo and quadTo
+	// last control point for the smooth curveTo and quadTo
 	CGFloat ox;
 	CGFloat oy;
-	//	last point
+	// last point
 	CGFloat px;
 	CGFloat py;
 }

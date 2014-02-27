@@ -1,8 +1,8 @@
 //
-//  PathBuilder.m
+// PathBuilder.m
 //
-//  Created by Marcus Rohrmoser on 11.03.10.
-//  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+// Created by Marcus Rohrmoser on 11.03.10.
+// Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
 //
 
 #import "PathBuilder.h"
@@ -12,18 +12,18 @@
 #endif
 
 // No Logging
-#define NSLogD(x, ...)                             /* NSLog(x,##__VA_ARGS__) */
+#define NSLogD(x, ...) /* NSLog(x,##__VA_ARGS__) */
 
 @implementation PathBuilder
 
 -(id)initWithTrafo:(CGAffineTransform *)trafo_
 {
-	if ( self = [super init] ) {
+	if( self = [super init] ) {
 		trafo = trafo_;
 		gp = CGPathCreateMutable();
-		//		last control point for the smooth curveTo and quadTo
+		// last control point for the smooth curveTo and quadTo
 		ox = oy = 0.0;
-		//		last point
+		// last point
 		px = py = 0.0;
 	}
 	return self;
@@ -46,7 +46,7 @@
 -(void)cubicToAbsolute:(BOOL)abs x1:(CGFloat)x1 y1:(CGFloat)y1 x2:(CGFloat)x2 y2:(CGFloat)y2 x3:(CGFloat)x3 y3:(CGFloat)y3
 {
 	NSLogD(@"[PathBuilder cubicToAbsolute:%d (%f,%f) (%f,%f) (%f,%f)]", abs, x1, y1, x2, y2, x3, y3);
-	if ( !abs ) {
+	if( !abs ) {
 		x1 += px;
 		y1 += py;
 		x2 += px;
@@ -65,7 +65,7 @@
 -(void)lineToAbsolute:(BOOL)abs x:(CGFloat)x y:(CGFloat)y
 {
 	NSLogD(@"[PathBuilder lineToAbsolute:%d]", abs);
-	if ( !abs ) {
+	if( !abs ) {
 		x += px;
 		y += py;
 	}
@@ -87,7 +87,7 @@
 -(void)moveToAbsolute:(BOOL)abs x:(CGFloat)x y:(CGFloat)y
 {
 	NSLogD(@"[PathBuilder moveToAbsolute:%d (%f,%f)]", abs, x, y);
-	if ( !abs ) {
+	if( !abs ) {
 		x += px;
 		y += py;
 	}
@@ -102,7 +102,7 @@
 -(void)quadToAbsolute:(BOOL)abs x1:(CGFloat)x1 y1:(CGFloat)y1 x2:(CGFloat)x2 y2:(CGFloat)y2
 {
 	NSLogD(@"[PathBuilder quadToAbsolute:%d]", abs);
-	if ( !abs ) {
+	if( !abs ) {
 		x1 += px;
 		y1 += py;
 		x2 += px;
@@ -121,11 +121,11 @@
 	NSLogD(@"[PathBuilder smoothCubicToAbsolute:%d]", abs);
 	CGFloat x1;
 	CGFloat y1;
-	if ( abs ) {
+	if( abs ) {
 		x1 = 2 * px - ox;
 		y1 = 2 * py - oy;
 	} else {
-		//		@todo verify!
+		// @todo verify!
 		x1 = px - ox;
 		y1 = py - oy;
 	}
@@ -138,11 +138,11 @@
 	NSLogD(@"[PathBuilder smoothQuadToAbsolute:%d]", abs);
 	CGFloat x1;
 	CGFloat y1;
-	if ( abs ) {
+	if( abs ) {
 		x1 = 2 * px - ox;
 		y1 = 2 * py - oy;
 	} else {
-		//		@todo verify!
+		// @todo verify!
 		x1 = px - ox;
 		y1 = py - oy;
 	}
@@ -150,7 +150,7 @@
 }
 
 
-/// returns an unretained reference!
+/** returns an unretained reference! */
 -(CGPathRef)toPath
 {
 	return gp;

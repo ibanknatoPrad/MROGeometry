@@ -1,8 +1,8 @@
 //
-//  CGPathWriterTC.m
+// CGPathWriterTC.m
 //
-//  Created by Marcus Rohrmoser on 15.10.10.
-//  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+// Created by Marcus Rohrmoser on 15.10.10.
+// Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>
@@ -15,7 +15,7 @@
 
 @implementation CGPathWriterTC
 
--(void) testWrite
+-(void)testWrite
 {
 	CGMutablePathRef p = CGPathCreateMutable();
 	CGPathMoveToPoint(p, NULL, 1, 2);
@@ -33,7 +33,7 @@
 }
 
 
--(void) testReadWrite
+-(void)testReadWrite
 {
 	NSString *ps = @"M1.000000,2.000000L3.000000,4.000000C5.000000,6.000000,7.000000,8.000000,9.000000,10.000000";
 	PathParser *pp = [alloc (PathParser)init];

@@ -1,3 +1,4 @@
 .DS_Store
 MROGeometry.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad/
 MROGeometry.xcodeproj/xcuserdata/*.xcuserdatad/
+build/

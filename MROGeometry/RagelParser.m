@@ -1,8 +1,8 @@
 //
-//  RagelParser.m
+// RagelParser.m
 //
-//  Created by Marcus Rohrmoser on 11.03.10.
-//  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+// Created by Marcus Rohrmoser on 11.03.10.
+// Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
 //
 
 #import "RagelParser.h"
@@ -12,7 +12,7 @@
 #endif
 
 // No Logging
-#define MRLogD(x, ...)                             /* NSLog(x,##__VA_ARGS__) */
+#define MRLogD(x, ...) /* NSLog(x,##__VA_ARGS__) */
 
 @implementation RagelParser
 

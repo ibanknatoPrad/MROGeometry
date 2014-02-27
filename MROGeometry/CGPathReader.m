@@ -1,8 +1,8 @@
 //
-//  CGPathReader.c
+// CGPathReader.c
 //
-//  Created by Marcus Rohrmoser on 11.03.10.
-//  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+// Created by Marcus Rohrmoser on 11.03.10.
+// Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
 //
 
 #import "CGPathReader.h"
@@ -10,7 +10,7 @@
 
 CGPathRef CGPathCreateFromSVG(const char *path, CFErrorRef *errPtr)
 {
-	if ( path == NULL )
+	if( path == NULL )
 		return NULL;
 	const size_t len = strlen(path);
 	// #FIXME check overflow

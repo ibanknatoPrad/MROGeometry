@@ -1,8 +1,8 @@
 //
-//  NSCoder_MROCGPath.h
+// NSCoder_MROCGPath.h
 //
-//  Created by Marcus Rohrmoser on 26.10.10.
-//  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+// Created by Marcus Rohrmoser on 26.10.10.
+// Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
 //
 
 #import <CoreGraphics/CGPath.h>
@@ -12,7 +12,7 @@
  * @see CGPathToCString(CGPathRef p, size_t c, size_t i)
  * @see PathParser
  */
-@interface NSCoder (MROCGPath)
+@interface NSCoder(MROCGPath)
 
 -(void)encodeCGPath:(CGPathRef)value forKey:(NSString *)key;
 -(CGPathRef)decodeCGPathForKey:(NSString *)key;
