@@ -6,6 +6,7 @@
 //
 
 #import "RagelParser.h"
+#import <CoreGraphics/CGAffineTransform.h>
 
 /** Parser for <a href="http://www.w3.org/TR/SVG11/coords.html#TransformAttribute">SVG transform attributes</a>.
  *

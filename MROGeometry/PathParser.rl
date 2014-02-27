@@ -259,7 +259,7 @@
 	
 -(CGPathRef)parseChar:(const char*)data length:(int)length trafo:(CGAffineTransform*)trafo error:(NSError**)errPtr
 {
-	DEBUG_TIMER_START();
+	MRLogTStart();
 
 	// MRLogD(@"");
 	PathBuilder *pb = [[alloc(PathBuilder) initWithTrafo:trafo] autorelease];
@@ -287,7 +287,7 @@
 
 	if ( errPtr != nil && cs < path_first_final )
 		*errPtr = [self parseError:data position:p];
-    DEBUG_TIMER_LOG();
+    MRLogT(@"", nil);
 	return CGPathRetain([pb toPath]);
 }
 

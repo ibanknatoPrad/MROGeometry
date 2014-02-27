@@ -5,6 +5,7 @@
 //  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
 //
 
+#import <CoreGraphics/CGPath.h>
 
 /** Persist a CGPath using the SVG path format as ASCII/C String
  * http://www.w3.org/TR/SVG11/paths.html#PathDataBNF .

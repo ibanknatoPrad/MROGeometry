@@ -5,8 +5,8 @@
 DOT			?= dot
 RAGEL		?= ragel
 
-RAGEL_DIR := .
-GENERATED_DIR := .
+RAGEL_DIR := MROGeometry
+GENERATED_DIR := MROGeometry
 
 RAGEL_SOURCES := $(wildcard ./$(RAGEL_DIR)/*.rl)
 RAGEL_GENERATED := $(RAGEL_SOURCES:./$(RAGEL_DIR)/%.rl=./$(GENERATED_DIR)/%.m)
