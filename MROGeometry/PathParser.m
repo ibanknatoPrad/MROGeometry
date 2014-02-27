@@ -100,11 +100,11 @@ st0:
 tr443:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -116,11 +116,11 @@ tr443:
 tr485:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -132,11 +132,11 @@ tr485:
 tr508:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -149,11 +149,11 @@ tr508:
 tr533:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -165,11 +165,11 @@ tr533:
 tr558:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -181,11 +181,11 @@ tr558:
 tr583:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -197,11 +197,11 @@ tr583:
 tr608:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -213,11 +213,11 @@ tr608:
 tr633:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -229,11 +229,11 @@ tr633:
 tr658:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -390,11 +390,11 @@ st5:
 tr12:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st6;
@@ -427,11 +427,11 @@ tr18:
 tr13:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -458,11 +458,11 @@ tr20:
 tr15:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -522,11 +522,11 @@ st233:
 tr434:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -538,11 +538,11 @@ tr434:
 tr476:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -620,11 +620,11 @@ tr363:
 tr435:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -640,11 +640,11 @@ tr435:
 tr477:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -696,11 +696,11 @@ tr364:
 tr437:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -716,11 +716,11 @@ tr437:
 tr479:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -765,11 +765,11 @@ st11:
 tr28:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st12;
@@ -802,11 +802,11 @@ tr34:
 tr29:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -833,11 +833,11 @@ tr36:
 tr31:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -909,11 +909,11 @@ tr362:
 tr436:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -925,11 +925,11 @@ tr436:
 tr478:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -1007,11 +1007,11 @@ st16:
 tr30:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st17;
@@ -1084,11 +1084,11 @@ st236:
 tr438:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -1100,11 +1100,11 @@ tr438:
 tr480:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -1116,11 +1116,11 @@ tr480:
 tr503:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -1133,11 +1133,11 @@ tr503:
 tr528:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -1149,11 +1149,11 @@ tr528:
 tr553:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -1165,11 +1165,11 @@ tr553:
 tr578:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -1181,11 +1181,11 @@ tr578:
 tr603:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -1197,11 +1197,11 @@ tr603:
 tr628:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -1213,11 +1213,11 @@ tr628:
 tr653:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -1263,11 +1263,11 @@ tr351:
 tr501:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -1322,11 +1322,11 @@ tr352:
 tr502:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -1369,11 +1369,11 @@ st21:
 tr52:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st22;
@@ -1397,11 +1397,11 @@ st22:
 tr53:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st23;
@@ -1430,11 +1430,11 @@ tr58:
 tr54:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -1474,11 +1474,11 @@ st25:
 tr61:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st26;
@@ -1511,11 +1511,11 @@ tr67:
 tr62:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -1542,11 +1542,11 @@ tr69:
 tr64:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -1582,11 +1582,11 @@ st29:
 tr74:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st30;
@@ -1608,11 +1608,11 @@ st30:
 tr75:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st31;
@@ -1799,11 +1799,11 @@ st39:
 tr97:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st40;
@@ -1836,11 +1836,11 @@ tr103:
 tr98:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -1867,11 +1867,11 @@ tr105:
 tr100:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -1928,11 +1928,11 @@ st237:
 tr500:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -2061,11 +2061,11 @@ st46:
 tr439:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -2077,11 +2077,11 @@ tr439:
 tr481:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -2093,11 +2093,11 @@ tr481:
 tr504:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -2110,11 +2110,11 @@ tr504:
 tr529:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -2126,11 +2126,11 @@ tr529:
 tr554:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -2142,11 +2142,11 @@ tr554:
 tr579:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -2158,11 +2158,11 @@ tr579:
 tr604:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -2174,11 +2174,11 @@ tr604:
 tr629:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -2190,11 +2190,11 @@ tr629:
 tr654:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -2242,11 +2242,11 @@ tr354:
 tr526:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -2302,11 +2302,11 @@ tr355:
 tr525:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -2358,11 +2358,11 @@ tr356:
 tr527:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -2407,11 +2407,11 @@ st51:
 tr124:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st52;
@@ -2444,11 +2444,11 @@ tr130:
 tr125:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2475,11 +2475,11 @@ tr132:
 tr127:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2519,11 +2519,11 @@ st55:
 tr137:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st56;
@@ -2556,11 +2556,11 @@ tr143:
 tr138:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2587,11 +2587,11 @@ tr145:
 tr140:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2631,11 +2631,11 @@ st59:
 tr150:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st60;
@@ -2668,11 +2668,11 @@ tr156:
 tr151:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2699,11 +2699,11 @@ tr158:
 tr153:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2743,11 +2743,11 @@ st63:
 tr163:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st64;
@@ -2780,11 +2780,11 @@ tr169:
 tr164:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2811,11 +2811,11 @@ tr171:
 tr166:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2855,11 +2855,11 @@ st67:
 tr176:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st68;
@@ -2892,11 +2892,11 @@ tr182:
 tr177:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2923,11 +2923,11 @@ tr184:
 tr179:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -2987,11 +2987,11 @@ st239:
 tr524:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -3091,11 +3091,11 @@ st71:
 tr126:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st72;
@@ -3148,11 +3148,11 @@ st73:
 tr139:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st74;
@@ -3205,11 +3205,11 @@ st75:
 tr152:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st76;
@@ -3262,11 +3262,11 @@ st77:
 tr165:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st78;
@@ -3319,11 +3319,11 @@ st79:
 tr178:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st80;
@@ -3453,11 +3453,11 @@ st242:
 tr441:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -3469,11 +3469,11 @@ tr441:
 tr483:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -3485,11 +3485,11 @@ tr483:
 tr506:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -3502,11 +3502,11 @@ tr506:
 tr531:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -3518,11 +3518,11 @@ tr531:
 tr556:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -3534,11 +3534,11 @@ tr556:
 tr581:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -3550,11 +3550,11 @@ tr581:
 tr606:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -3566,11 +3566,11 @@ tr606:
 tr631:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -3582,11 +3582,11 @@ tr631:
 tr656:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -3634,11 +3634,11 @@ tr358:
 tr551:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -3694,11 +3694,11 @@ tr359:
 tr550:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -3750,11 +3750,11 @@ tr360:
 tr552:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -3819,11 +3819,11 @@ st243:
 tr549:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -4000,11 +4000,11 @@ st246:
 tr442:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -4016,11 +4016,11 @@ tr442:
 tr484:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -4032,11 +4032,11 @@ tr484:
 tr507:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -4049,11 +4049,11 @@ tr507:
 tr532:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -4065,11 +4065,11 @@ tr532:
 tr557:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -4081,11 +4081,11 @@ tr557:
 tr582:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -4097,11 +4097,11 @@ tr582:
 tr607:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -4113,11 +4113,11 @@ tr607:
 tr632:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -4129,11 +4129,11 @@ tr632:
 tr657:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -4169,11 +4169,11 @@ st89:
 tr444:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -4185,11 +4185,11 @@ tr444:
 tr486:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -4201,11 +4201,11 @@ tr486:
 tr509:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -4218,11 +4218,11 @@ tr509:
 tr534:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -4234,11 +4234,11 @@ tr534:
 tr559:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -4250,11 +4250,11 @@ tr559:
 tr584:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -4266,11 +4266,11 @@ tr584:
 tr609:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -4282,11 +4282,11 @@ tr609:
 tr634:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -4298,11 +4298,11 @@ tr634:
 tr659:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -4350,11 +4350,11 @@ tr372:
 tr576:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -4410,11 +4410,11 @@ tr373:
 tr575:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -4466,11 +4466,11 @@ tr374:
 tr577:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -4515,11 +4515,11 @@ st94:
 tr219:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st95;
@@ -4552,11 +4552,11 @@ tr225:
 tr220:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -4583,11 +4583,11 @@ tr227:
 tr222:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -4627,11 +4627,11 @@ st98:
 tr232:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st99;
@@ -4664,11 +4664,11 @@ tr238:
 tr233:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -4695,11 +4695,11 @@ tr240:
 tr235:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -4739,11 +4739,11 @@ st102:
 tr245:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st103;
@@ -4776,11 +4776,11 @@ tr251:
 tr246:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -4807,11 +4807,11 @@ tr253:
 tr248:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -4871,11 +4871,11 @@ st247:
 tr574:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -4975,11 +4975,11 @@ st106:
 tr221:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st107;
@@ -5032,11 +5032,11 @@ st108:
 tr234:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st109;
@@ -5089,11 +5089,11 @@ st110:
 tr247:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st111;
@@ -5223,11 +5223,11 @@ st250:
 tr445:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -5239,11 +5239,11 @@ tr445:
 tr487:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -5255,11 +5255,11 @@ tr487:
 tr510:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -5272,11 +5272,11 @@ tr510:
 tr535:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -5288,11 +5288,11 @@ tr535:
 tr560:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -5304,11 +5304,11 @@ tr560:
 tr585:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -5320,11 +5320,11 @@ tr585:
 tr610:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -5336,11 +5336,11 @@ tr610:
 tr635:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -5352,11 +5352,11 @@ tr635:
 tr660:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -5404,11 +5404,11 @@ tr376:
 tr601:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -5464,11 +5464,11 @@ tr377:
 tr600:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -5520,11 +5520,11 @@ tr378:
 tr602:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -5569,11 +5569,11 @@ st118:
 tr271:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st119;
@@ -5606,11 +5606,11 @@ tr277:
 tr272:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -5637,11 +5637,11 @@ tr279:
 tr274:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -5681,11 +5681,11 @@ st122:
 tr284:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st123;
@@ -5718,11 +5718,11 @@ tr290:
 tr285:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -5749,11 +5749,11 @@ tr292:
 tr287:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -5793,11 +5793,11 @@ st126:
 tr297:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st127;
@@ -5830,11 +5830,11 @@ tr303:
 tr298:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -5861,11 +5861,11 @@ tr305:
 tr300:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -5925,11 +5925,11 @@ st251:
 tr599:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -6029,11 +6029,11 @@ st130:
 tr273:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st131;
@@ -6086,11 +6086,11 @@ st132:
 tr286:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st133;
@@ -6143,11 +6143,11 @@ st134:
 tr299:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st135;
@@ -6277,11 +6277,11 @@ st254:
 tr446:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -6293,11 +6293,11 @@ tr446:
 tr488:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -6309,11 +6309,11 @@ tr488:
 tr511:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -6326,11 +6326,11 @@ tr511:
 tr536:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -6342,11 +6342,11 @@ tr536:
 tr561:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -6358,11 +6358,11 @@ tr561:
 tr586:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -6374,11 +6374,11 @@ tr586:
 tr611:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -6390,11 +6390,11 @@ tr611:
 tr636:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -6406,11 +6406,11 @@ tr636:
 tr661:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -6458,11 +6458,11 @@ tr380:
 tr626:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -6518,11 +6518,11 @@ tr381:
 tr625:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -6574,11 +6574,11 @@ tr382:
 tr627:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -6623,11 +6623,11 @@ st142:
 tr323:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st143;
@@ -6660,11 +6660,11 @@ tr329:
 tr324:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -6691,11 +6691,11 @@ tr331:
 tr326:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 36 "MROGeometry/PathParser.rl"
@@ -6755,11 +6755,11 @@ st255:
 tr624:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -6859,11 +6859,11 @@ st146:
 tr325:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st147;
@@ -6993,11 +6993,11 @@ st258:
 tr447:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -7009,11 +7009,11 @@ tr447:
 tr489:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -7025,11 +7025,11 @@ tr489:
 tr512:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -7042,11 +7042,11 @@ tr512:
 tr537:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -7058,11 +7058,11 @@ tr537:
 tr562:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -7074,11 +7074,11 @@ tr562:
 tr587:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -7090,11 +7090,11 @@ tr587:
 tr612:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -7106,11 +7106,11 @@ tr612:
 tr637:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -7122,11 +7122,11 @@ tr637:
 tr662:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -7174,11 +7174,11 @@ tr384:
 tr651:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -7234,11 +7234,11 @@ tr385:
 tr650:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -7290,11 +7290,11 @@ tr386:
 tr652:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -7359,11 +7359,11 @@ st259:
 tr649:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -7540,11 +7540,11 @@ st262:
 tr448:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -7556,11 +7556,11 @@ tr448:
 tr490:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -7572,11 +7572,11 @@ tr490:
 tr513:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -7589,11 +7589,11 @@ tr513:
 tr538:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -7605,11 +7605,11 @@ tr538:
 tr563:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -7621,11 +7621,11 @@ tr563:
 tr588:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -7637,11 +7637,11 @@ tr588:
 tr613:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -7653,11 +7653,11 @@ tr613:
 tr638:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -7669,11 +7669,11 @@ tr638:
 tr663:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -7761,11 +7761,11 @@ st264:
 tr449:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -7777,11 +7777,11 @@ tr449:
 tr491:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -7793,11 +7793,11 @@ tr491:
 tr514:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -7810,11 +7810,11 @@ tr514:
 tr539:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -7826,11 +7826,11 @@ tr539:
 tr564:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -7842,11 +7842,11 @@ tr564:
 tr589:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -7858,11 +7858,11 @@ tr589:
 tr614:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -7874,11 +7874,11 @@ tr614:
 tr639:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -7890,11 +7890,11 @@ tr639:
 tr664:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -7928,11 +7928,11 @@ st156:
 tr450:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -7944,11 +7944,11 @@ tr450:
 tr492:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -7960,11 +7960,11 @@ tr492:
 tr515:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -7977,11 +7977,11 @@ tr515:
 tr540:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -7993,11 +7993,11 @@ tr540:
 tr565:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -8009,11 +8009,11 @@ tr565:
 tr590:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -8025,11 +8025,11 @@ tr590:
 tr615:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -8041,11 +8041,11 @@ tr615:
 tr640:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -8057,11 +8057,11 @@ tr640:
 tr665:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -8097,11 +8097,11 @@ st157:
 tr451:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -8113,11 +8113,11 @@ tr451:
 tr493:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -8129,11 +8129,11 @@ tr493:
 tr516:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -8146,11 +8146,11 @@ tr516:
 tr541:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -8162,11 +8162,11 @@ tr541:
 tr566:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -8178,11 +8178,11 @@ tr566:
 tr591:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -8194,11 +8194,11 @@ tr591:
 tr616:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -8210,11 +8210,11 @@ tr616:
 tr641:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -8226,11 +8226,11 @@ tr641:
 tr666:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -8266,11 +8266,11 @@ st158:
 tr452:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -8282,11 +8282,11 @@ tr452:
 tr494:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -8298,11 +8298,11 @@ tr494:
 tr517:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -8315,11 +8315,11 @@ tr517:
 tr542:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -8331,11 +8331,11 @@ tr542:
 tr567:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -8347,11 +8347,11 @@ tr567:
 tr592:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -8363,11 +8363,11 @@ tr592:
 tr617:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -8379,11 +8379,11 @@ tr617:
 tr642:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -8395,11 +8395,11 @@ tr642:
 tr667:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -8435,11 +8435,11 @@ st159:
 tr453:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -8451,11 +8451,11 @@ tr453:
 tr495:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -8467,11 +8467,11 @@ tr495:
 tr518:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -8484,11 +8484,11 @@ tr518:
 tr543:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -8500,11 +8500,11 @@ tr543:
 tr568:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -8516,11 +8516,11 @@ tr568:
 tr593:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -8532,11 +8532,11 @@ tr593:
 tr618:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -8548,11 +8548,11 @@ tr618:
 tr643:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -8564,11 +8564,11 @@ tr643:
 tr668:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -8652,11 +8652,11 @@ st161:
 tr14:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st162;
@@ -8786,11 +8786,11 @@ st266:
 tr454:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -8802,11 +8802,11 @@ tr454:
 tr496:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -8818,11 +8818,11 @@ tr496:
 tr519:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -8835,11 +8835,11 @@ tr519:
 tr544:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -8851,11 +8851,11 @@ tr544:
 tr569:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -8867,11 +8867,11 @@ tr569:
 tr594:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -8883,11 +8883,11 @@ tr594:
 tr619:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -8899,11 +8899,11 @@ tr619:
 tr644:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -8915,11 +8915,11 @@ tr644:
 tr669:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -8955,11 +8955,11 @@ st165:
 tr455:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -8971,11 +8971,11 @@ tr455:
 tr497:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -8987,11 +8987,11 @@ tr497:
 tr520:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -9004,11 +9004,11 @@ tr520:
 tr545:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -9020,11 +9020,11 @@ tr545:
 tr570:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -9036,11 +9036,11 @@ tr570:
 tr595:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -9052,11 +9052,11 @@ tr595:
 tr620:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -9068,11 +9068,11 @@ tr620:
 tr645:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -9084,11 +9084,11 @@ tr645:
 tr670:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -9124,11 +9124,11 @@ st166:
 tr456:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -9140,11 +9140,11 @@ tr456:
 tr498:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -9156,11 +9156,11 @@ tr498:
 tr521:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -9173,11 +9173,11 @@ tr521:
 tr546:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -9189,11 +9189,11 @@ tr546:
 tr571:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -9205,11 +9205,11 @@ tr571:
 tr596:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -9221,11 +9221,11 @@ tr596:
 tr621:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -9237,11 +9237,11 @@ tr621:
 tr646:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -9253,11 +9253,11 @@ tr646:
 tr671:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -9293,11 +9293,11 @@ st167:
 tr457:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 67 "MROGeometry/PathParser.rl"
@@ -9309,11 +9309,11 @@ tr457:
 tr499:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 72 "MROGeometry/PathParser.rl"
@@ -9325,11 +9325,11 @@ tr499:
 tr522:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 107 "MROGeometry/PathParser.rl"
@@ -9342,11 +9342,11 @@ tr522:
 tr547:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 87 "MROGeometry/PathParser.rl"
@@ -9358,11 +9358,11 @@ tr547:
 tr572:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 77 "MROGeometry/PathParser.rl"
@@ -9374,11 +9374,11 @@ tr572:
 tr597:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 97 "MROGeometry/PathParser.rl"
@@ -9390,11 +9390,11 @@ tr597:
 tr622:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 92 "MROGeometry/PathParser.rl"
@@ -9406,11 +9406,11 @@ tr622:
 tr647:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 102 "MROGeometry/PathParser.rl"
@@ -9422,11 +9422,11 @@ tr647:
 tr672:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 #line 82 "MROGeometry/PathParser.rl"
@@ -10042,11 +10042,11 @@ st268:
 tr99:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st210;
@@ -10250,11 +10250,11 @@ st221:
 tr63:
 #line 40 "MROGeometry/PathParser.rl"
 			{
-				char *endmark = (char *)p;
-				const char c = *endmark;
-				*endmark = '\0';
-				argv[argc++] = strtod(start, NULL);
-				*endmark = c;
+				char push_number_tmp[p - start];
+				push_number_tmp[p - start] = '\0';
+				memcpy(push_number_tmp, start, p - start - 1);
+				assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+				argv[argc++] = strtod(push_number_tmp, NULL);
 				start = NULL;
 			}
 			goto st222;
@@ -10989,11 +10989,11 @@ _test_eof: {}
 			case 266:
 #line 40 "MROGeometry/PathParser.rl"
 				{
-					char *endmark = (char *)p;
-					const char c = *endmark;
-					*endmark = '\0';
-					argv[argc++] = strtod(start, NULL);
-					*endmark = c;
+					char push_number_tmp[p - start];
+					push_number_tmp[p - start] = '\0';
+					memcpy(push_number_tmp, start, p - start - 1);
+					assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+					argv[argc++] = strtod(push_number_tmp, NULL);
 					start = NULL;
 				}
 #line 67 "MROGeometry/PathParser.rl"
@@ -11007,11 +11007,11 @@ _test_eof: {}
 			case 269:
 #line 40 "MROGeometry/PathParser.rl"
 				{
-					char *endmark = (char *)p;
-					const char c = *endmark;
-					*endmark = '\0';
-					argv[argc++] = strtod(start, NULL);
-					*endmark = c;
+					char push_number_tmp[p - start];
+					push_number_tmp[p - start] = '\0';
+					memcpy(push_number_tmp, start, p - start - 1);
+					assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+					argv[argc++] = strtod(push_number_tmp, NULL);
 					start = NULL;
 				}
 #line 72 "MROGeometry/PathParser.rl"
@@ -11025,11 +11025,11 @@ _test_eof: {}
 			case 246:
 #line 40 "MROGeometry/PathParser.rl"
 				{
-					char *endmark = (char *)p;
-					const char c = *endmark;
-					*endmark = '\0';
-					argv[argc++] = strtod(start, NULL);
-					*endmark = c;
+					char push_number_tmp[p - start];
+					push_number_tmp[p - start] = '\0';
+					memcpy(push_number_tmp, start, p - start - 1);
+					assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+					argv[argc++] = strtod(push_number_tmp, NULL);
 					start = NULL;
 				}
 #line 77 "MROGeometry/PathParser.rl"
@@ -11043,11 +11043,11 @@ _test_eof: {}
 			case 262:
 #line 40 "MROGeometry/PathParser.rl"
 				{
-					char *endmark = (char *)p;
-					const char c = *endmark;
-					*endmark = '\0';
-					argv[argc++] = strtod(start, NULL);
-					*endmark = c;
+					char push_number_tmp[p - start];
+					push_number_tmp[p - start] = '\0';
+					memcpy(push_number_tmp, start, p - start - 1);
+					assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+					argv[argc++] = strtod(push_number_tmp, NULL);
 					start = NULL;
 				}
 #line 82 "MROGeometry/PathParser.rl"
@@ -11061,11 +11061,11 @@ _test_eof: {}
 			case 242:
 #line 40 "MROGeometry/PathParser.rl"
 				{
-					char *endmark = (char *)p;
-					const char c = *endmark;
-					*endmark = '\0';
-					argv[argc++] = strtod(start, NULL);
-					*endmark = c;
+					char push_number_tmp[p - start];
+					push_number_tmp[p - start] = '\0';
+					memcpy(push_number_tmp, start, p - start - 1);
+					assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+					argv[argc++] = strtod(push_number_tmp, NULL);
 					start = NULL;
 				}
 #line 87 "MROGeometry/PathParser.rl"
@@ -11079,11 +11079,11 @@ _test_eof: {}
 			case 254:
 #line 40 "MROGeometry/PathParser.rl"
 				{
-					char *endmark = (char *)p;
-					const char c = *endmark;
-					*endmark = '\0';
-					argv[argc++] = strtod(start, NULL);
-					*endmark = c;
+					char push_number_tmp[p - start];
+					push_number_tmp[p - start] = '\0';
+					memcpy(push_number_tmp, start, p - start - 1);
+					assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+					argv[argc++] = strtod(push_number_tmp, NULL);
 					start = NULL;
 				}
 #line 92 "MROGeometry/PathParser.rl"
@@ -11097,11 +11097,11 @@ _test_eof: {}
 			case 250:
 #line 40 "MROGeometry/PathParser.rl"
 				{
-					char *endmark = (char *)p;
-					const char c = *endmark;
-					*endmark = '\0';
-					argv[argc++] = strtod(start, NULL);
-					*endmark = c;
+					char push_number_tmp[p - start];
+					push_number_tmp[p - start] = '\0';
+					memcpy(push_number_tmp, start, p - start - 1);
+					assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+					argv[argc++] = strtod(push_number_tmp, NULL);
 					start = NULL;
 				}
 #line 97 "MROGeometry/PathParser.rl"
@@ -11115,11 +11115,11 @@ _test_eof: {}
 			case 258:
 #line 40 "MROGeometry/PathParser.rl"
 				{
-					char *endmark = (char *)p;
-					const char c = *endmark;
-					*endmark = '\0';
-					argv[argc++] = strtod(start, NULL);
-					*endmark = c;
+					char push_number_tmp[p - start];
+					push_number_tmp[p - start] = '\0';
+					memcpy(push_number_tmp, start, p - start - 1);
+					assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+					argv[argc++] = strtod(push_number_tmp, NULL);
 					start = NULL;
 				}
 #line 102 "MROGeometry/PathParser.rl"
@@ -11133,11 +11133,11 @@ _test_eof: {}
 			case 268:
 #line 40 "MROGeometry/PathParser.rl"
 				{
-					char *endmark = (char *)p;
-					const char c = *endmark;
-					*endmark = '\0';
-					argv[argc++] = strtod(start, NULL);
-					*endmark = c;
+					char push_number_tmp[p - start];
+					push_number_tmp[p - start] = '\0';
+					memcpy(push_number_tmp, start, p - start - 1);
+					assert(push_number_tmp[p - start] == '\0' && "must be NUL terminated");
+					argv[argc++] = strtod(push_number_tmp, NULL);
 					start = NULL;
 				}
 #line 107 "MROGeometry/PathParser.rl"

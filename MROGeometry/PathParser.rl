@@ -38,11 +38,11 @@
   }
 
   action push_number {
-    char *endmark = (char*)p;
-    const char c = *endmark;
-    *endmark = '\0';
-    argv[argc++] = strtod(start, NULL);
-    *endmark = c;
+    char push_number_tmp[p-start];
+    push_number_tmp[p-start] = '\0';
+    memcpy(push_number_tmp, start, p-start-1);
+    assert(push_number_tmp[p-start] == '\0' && "must be NUL terminated");
+    argv[argc++] = strtod(push_number_tmp, NULL);
     start = NULL;
   }
 
