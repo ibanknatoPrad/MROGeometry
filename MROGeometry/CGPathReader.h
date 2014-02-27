@@ -16,4 +16,4 @@
  * @param error pointer to a CFError/NSError object
  * @return a retained CGPathRef
  */
-CGPathRef CGPathCreateFromSVG(const char *path, CFErrorRef *error);
+CGPathRef CGPathCreateFromSVG(const char *path, NSError **error);

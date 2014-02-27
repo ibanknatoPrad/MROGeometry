@@ -36,7 +36,7 @@
 -(void)testReadWrite
 {
 	NSString *ps = @"M1.000000,2.000000L3.000000,4.000000C5.000000,6.000000,7.000000,8.000000,9.000000,10.000000";
-	PathParser *pp = [alloc (PathParser)init];
+	PathParser *pp = [[PathParser alloc] init];
 	NSError *err = nil;
 	CGPathRef p = [pp parseString:ps trafo:NULL error:&err];
 	XCTAssertNil(err, @"");
@@ -48,7 +48,6 @@
 	free(buf);
 
 	CGPathRelease(p);
-	[pp release];
 }
 
 

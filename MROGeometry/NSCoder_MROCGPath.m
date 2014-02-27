@@ -37,7 +37,6 @@
 	// MRLogD(@"Error: %@", err);
 	NSAssert(p != NULL, @"");
 	NSAssert(err == nil, @"");
-	[pp release];
 	return p;
 }
 

@@ -44,7 +44,7 @@
  * @param errPtr out parameter to report parsing problems.
  * @return a retained core graphics path.
  */
--(CGPathRef)parseChar:(const char *)data length:(int)length trafo:(CGAffineTransform *)trafo error:(NSError **)errPtr;
+-(CGPathRef)parseChar:(const char *)data length:(size_t)length trafo:(CGAffineTransform *)trafo error:(NSError **)errPtr;
 #endif
 
 @end

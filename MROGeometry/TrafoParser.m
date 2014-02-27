@@ -39,7 +39,7 @@ static const int trafo_en_main = 168;
 
 #line 138 "MROGeometry/TrafoParser.rl"
 
--(CGAffineTransform)parseChar:(const char *)data length:(int)length error:(NSError **)errPtr
+-(CGAffineTransform)parseChar:(const char *)data length:(const size_t)length error:(NSError **)errPtr
 {
 	CGAffineTransform t = CGAffineTransformIdentity;
 	if( data == NULL )
@@ -640,7 +640,7 @@ st169:
 tr207:
 #line 90 "MROGeometry/TrafoParser.rl"
 			{
-				MRLogD(@"concat");
+				MRLogD(@"concat", nil);
 				t = CGAffineTransformConcat( t, CGAffineTransformMake(argv[0], argv[1], argv[2], argv[3], argv[4], argv[5]) );
 				// t.preConcatenate(new AffineTransform(argv));
 			}
@@ -709,7 +709,7 @@ st170:
 tr208:
 #line 90 "MROGeometry/TrafoParser.rl"
 			{
-				MRLogD(@"concat");
+				MRLogD(@"concat", nil);
 				t = CGAffineTransformConcat( t, CGAffineTransformMake(argv[0], argv[1], argv[2], argv[3], argv[4], argv[5]) );
 				// t.preConcatenate(new AffineTransform(argv));
 			}
@@ -3522,7 +3522,7 @@ _test_eof: {}
 			case 169:
 #line 90 "MROGeometry/TrafoParser.rl"
 				{
-					MRLogD(@"concat");
+					MRLogD(@"concat", nil);
 					t = CGAffineTransformConcat( t, CGAffineTransformMake(argv[0], argv[1], argv[2], argv[3], argv[4], argv[5]) );
 					// t.preConcatenate(new AffineTransform(argv));
 				}
@@ -3545,8 +3545,7 @@ _out: {}
 -(CGAffineTransform)parseString:(NSString *)data error:(NSError **)errPtr
 {
 	const char *c = [data UTF8String];
-	const int len = strlen(c);
-	return [self parseChar:c length:len error:errPtr];
+	return [self parseChar:c length:strlen(c) error:errPtr];
 }
 
 

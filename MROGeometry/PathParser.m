@@ -41,12 +41,12 @@ static const int path_en_main = 232;
 
 #line 259 "MROGeometry/PathParser.rl"
 
--(CGPathRef)parseChar:(const char *)data length:(int)length trafo:(CGAffineTransform *)trafo error:(NSError **)errPtr
+-(CGPathRef)parseChar:(const char *)data length:(const size_t)length trafo:(CGAffineTransform *)trafo error:(NSError **)errPtr
 {
 	MRLogTStart();
 
 	// MRLogD(@"");
-	PathBuilder *pb = [[alloc (PathBuilder) initWithTrafo:trafo] autorelease];
+	PathBuilder *pb = [[PathBuilder alloc] initWithTrafo:trafo];
 	if( data == NULL )
 		return CGPathRetain([pb toPath]);
 	// high-level buffers
@@ -11166,8 +11166,7 @@ _out: {}
 -(CGPathRef)parseString:(NSString *)data trafo:(CGAffineTransform *)trafo error:(NSError **)errPtr
 {
 	const char *c = [data UTF8String];
-	const int len = strlen(c);
-	return [self parseChar:c length:len trafo:trafo error:errPtr];
+	return [self parseChar:c length:strlen(c) trafo:trafo error:errPtr];
 }
 
 

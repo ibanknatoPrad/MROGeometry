@@ -13,23 +13,23 @@
 		1627C79318BFE14000D0465F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1627C79218BFE14000D0465F /* UIKit.framework */; };
 		1627C79618BFE14000D0465F /* libMROGeometry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1627C77E18BFE14000D0465F /* libMROGeometry.a */; };
 		1627C79C18BFE14000D0465F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1627C79A18BFE14000D0465F /* InfoPlist.strings */; };
-		1627C7BA18BFE26700D0465F /* CGPathReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A818BFE26700D0465F /* CGPathReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7BB18BFE26700D0465F /* CGPathReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A818BFE26700D0465F /* CGPathReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7BC18BFE26700D0465F /* CGPathWriter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A918BFE26700D0465F /* CGPathWriter.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7BD18BFE26700D0465F /* CGPathWriter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A918BFE26700D0465F /* CGPathWriter.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7C018BFE26700D0465F /* MROCGPointMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7AC18BFE26700D0465F /* MROCGPointMath.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7C118BFE26700D0465F /* MROCGPointMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7AC18BFE26700D0465F /* MROCGPointMath.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7C218BFE26700D0465F /* NSCoder_MROCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7AF18BFE26700D0465F /* NSCoder_MROCGPath.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7C318BFE26700D0465F /* NSCoder_MROCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7AF18BFE26700D0465F /* NSCoder_MROCGPath.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7C418BFE26700D0465F /* PathBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B118BFE26700D0465F /* PathBuilder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7C518BFE26700D0465F /* PathBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B118BFE26700D0465F /* PathBuilder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7C618BFE26700D0465F /* PathParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B318BFE26700D0465F /* PathParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7C718BFE26700D0465F /* PathParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B318BFE26700D0465F /* PathParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7C918BFE26700D0465F /* RagelParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B618BFE26700D0465F /* RagelParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7CA18BFE26700D0465F /* RagelParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B618BFE26700D0465F /* RagelParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7CB18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7CC18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1627C7CF18BFE2AB00D0465F /* CGPathWriterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1627C7BA18BFE26700D0465F /* CGPathReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A818BFE26700D0465F /* CGPathReader.m */; };
+		1627C7BB18BFE26700D0465F /* CGPathReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A818BFE26700D0465F /* CGPathReader.m */; };
+		1627C7BC18BFE26700D0465F /* CGPathWriter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A918BFE26700D0465F /* CGPathWriter.c */; };
+		1627C7BD18BFE26700D0465F /* CGPathWriter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7A918BFE26700D0465F /* CGPathWriter.c */; };
+		1627C7C018BFE26700D0465F /* MROCGPointMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7AC18BFE26700D0465F /* MROCGPointMath.c */; };
+		1627C7C118BFE26700D0465F /* MROCGPointMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7AC18BFE26700D0465F /* MROCGPointMath.c */; };
+		1627C7C218BFE26700D0465F /* NSCoder_MROCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7AF18BFE26700D0465F /* NSCoder_MROCGPath.m */; };
+		1627C7C318BFE26700D0465F /* NSCoder_MROCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7AF18BFE26700D0465F /* NSCoder_MROCGPath.m */; };
+		1627C7C418BFE26700D0465F /* PathBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B118BFE26700D0465F /* PathBuilder.m */; };
+		1627C7C518BFE26700D0465F /* PathBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B118BFE26700D0465F /* PathBuilder.m */; };
+		1627C7C618BFE26700D0465F /* PathParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B318BFE26700D0465F /* PathParser.m */; };
+		1627C7C718BFE26700D0465F /* PathParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B318BFE26700D0465F /* PathParser.m */; };
+		1627C7C918BFE26700D0465F /* RagelParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B618BFE26700D0465F /* RagelParser.m */; };
+		1627C7CA18BFE26700D0465F /* RagelParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B618BFE26700D0465F /* RagelParser.m */; };
+		1627C7CB18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; };
+		1627C7CC18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; };
+		1627C7CF18BFE2AB00D0465F /* CGPathWriterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

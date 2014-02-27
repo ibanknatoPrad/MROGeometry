@@ -8,14 +8,13 @@
 #import "CGPathReader.h"
 #import "PathParser.h"
 
-CGPathRef CGPathCreateFromSVG(const char *path, CFErrorRef *errPtr)
+CGPathRef CGPathCreateFromSVG(const char *path, NSError **errPtr)
 {
 	if( path == NULL )
 		return NULL;
 	const size_t len = strlen(path);
 	// #FIXME check overflow
-	PathParser *p = [alloc (PathParser)init];
+	PathParser *p = [[PathParser alloc] init];
 	CGPathRef ret = [p parseChar:path length:len trafo:NULL error:(NSError **)errPtr];
-	[p release];
 	return ret;
 }
