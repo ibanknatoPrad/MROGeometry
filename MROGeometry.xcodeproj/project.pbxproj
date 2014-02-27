@@ -84,6 +84,9 @@
 		1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPathWriterTest.m; sourceTree = "<group>"; };
 		1627C7D218BFE70F00D0465F /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		1627C7D318BFE70F00D0465F /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		1627C7D418BFEFA600D0465F /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		1627C7D518BFEFA600D0465F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		1627C7D618BFEFA600D0465F /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,9 @@
 		1627C77518BFE14000D0465F = {
 			isa = PBXGroup;
 			children = (
+				1627C7D418BFEFA600D0465F /* Common.xcconfig */,
+				1627C7D518BFEFA600D0465F /* Debug.xcconfig */,
+				1627C7D618BFEFA600D0465F /* Release.xcconfig */,
 				1627C7D318BFE70F00D0465F /* README.markdown */,
 				1627C7D218BFE70F00D0465F /* Makefile */,
 				1627C78318BFE14000D0465F /* MROGeometry */,
@@ -155,13 +161,13 @@
 				1627C7B018BFE26700D0465F /* PathBuilder.h */,
 				1627C7B118BFE26700D0465F /* PathBuilder.m */,
 				1627C7B218BFE26700D0465F /* PathParser.h */,
-				1627C7B318BFE26700D0465F /* PathParser.m */,
 				1627C7B418BFE26700D0465F /* PathParser.rl */,
+				1627C7B318BFE26700D0465F /* PathParser.m */,
 				1627C7B518BFE26700D0465F /* RagelParser.h */,
 				1627C7B618BFE26700D0465F /* RagelParser.m */,
 				1627C7B718BFE26700D0465F /* TrafoParser.h */,
-				1627C7B818BFE26700D0465F /* TrafoParser.m */,
 				1627C7B918BFE26700D0465F /* TrafoParser.rl */,
+				1627C7B818BFE26700D0465F /* TrafoParser.m */,
 			);
 			path = MROGeometry;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 		};
 		1627C7A218BFE14000D0465F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1627C7D518BFEFA600D0465F /* Debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MROGeometry.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -406,6 +413,7 @@
 		};
 		1627C7A318BFE14000D0465F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1627C7D618BFEFA600D0465F /* Release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MROGeometry.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
