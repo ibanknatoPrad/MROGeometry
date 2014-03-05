@@ -16,8 +16,8 @@
 // // No Logging
 // #define MRLogD(x,...)                             /* NSLog(x,##__VA_ARGS__) */
 
-/** <a href="http://research.cs.queensu.ca/~thurston/ragel/">Ragel</a> parser
  * for <a href="http://www.w3.org/TR/SVG11/paths.html#PathDataBNF">paths</a>
+/** <a href="http://www.complang.org/ragel/">Ragel</a> parser 
  * This file is auto-generated
  * <p>
  * DO NOT EDIT MANUALLY!!!

@@ -10,8 +10,8 @@
 
 /** Parser for <a href="http://www.w3.org/TR/SVG11/coords.html#TransformAttribute">SVG transform attributes</a>.
  *
- * The implementation is generated via <a href="http://research.cs.queensu.ca/~thurston/ragel/">Ragel</a>
- * from ../ragel/TrafoParser.rl.
+ * The implementation is generated via <a href="http://www.complang.org/ragel/">Ragel</a>
+ * from TrafoParser.rl.
  *
  * <b>DO NOT EDIT TrafoParser.m MANUALLY!!!</b>
  *
