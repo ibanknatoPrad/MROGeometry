@@ -7,13 +7,34 @@
 
 #import <XCTest/XCTest.h>
 
-@interface CGPathWriterTC : XCTestCase {}
+@implementation XCTestCase(Helpers)
+
+-(NSString *)contentOfFile:(NSString *)name ofType:(NSString *)type
+{
+	NSError *err = nil;
+	Class clz = [self class];
+	XCTAssertNotNil(NSStringFromClass(clz), @"ouch", nil);
+	NSBundle *b = [NSBundle bundleForClass:clz];
+	NSString *res = [NSString stringWithFormat:@"%@.%@", NSStringFromClass(clz), name, nil];
+	NSString *path = [b pathForResource:res ofType:type];
+	NSString *clob = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&err];
+	XCTAssertNil(err, @"Issue reading %@.%@: %@", res, type, err, nil);
+	XCTAssertNotNil(clob, @"Issue reading %@.%@", path, type, nil);
+	return clob;
+}
+
+
+@end
+
+
+@interface CGPathWriterTest : XCTestCase
 @end
 
 #import "CGPathWriter.h"
+#import "CGPathReader.h"
 #import "PathParser.h"
 
-@implementation CGPathWriterTC
+@implementation CGPathWriterTest
 
 -(void)testWrite
 {
@@ -38,7 +59,7 @@
 	NSString *ps = @"M1.000000,2.000000L3.000000,4.000000C5.000000,6.000000,7.000000,8.000000,9.000000,10.000000";
 	PathParser *pp = [[PathParser alloc] init];
 	NSError *err = nil;
-	CGPathRef p = [pp parseString:ps trafo:NULL error:&err];
+	CGPathRef p = [pp newCGPathWithNSString:ps trafo:NULL error:&err];
 	XCTAssertNil(err, @"");
 
 	char *buf = CGPathToCString(p, 0, 0);
@@ -47,6 +68,18 @@
 	XCTAssertEqualObjects(ps, ([NSString stringWithCString:buf encoding:NSASCIIStringEncoding]), @"");
 	free(buf);
 
+	CGPathRelease(p);
+}
+
+
+/** http://www.w3.org/TR/SVG11/paths.html#PathDataCubicBezierCommands
+ */
+-(void)testPathDataCubicBezierCommands
+{
+	NSString *d = @"M100,200 C100,100 250,100 250,200\nS400,300 400,200";
+	NSError *err = nil;
+	CGPathRef p = CGPathCreateFromSVGPath(d, NULL, &err);
+	XCTAssertNil(err, @"");
 	CGPathRelease(p);
 }
 

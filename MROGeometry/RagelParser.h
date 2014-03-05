@@ -8,7 +8,7 @@
 #define RAGEL_ERROR_DOMAIN @"_RAGEL_ERROR_DOMAIN_"
 #define RAGEL_ERROR_CODE 110
 
-@interface RagelParser : NSObject {}
+@interface RagelParser : NSObject
 
 -(NSError *)parseError:(const char *)data position:(const char *)p;
 

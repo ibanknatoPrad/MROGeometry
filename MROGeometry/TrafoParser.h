@@ -24,10 +24,10 @@
  * @param errPtr out parameter to report parsing problems.
  * @return a core graphics transformation.
  */
--(CGAffineTransform)parseString:(NSString *)data error:(NSError **)errPtr;
+-(CGAffineTransform)newCGAffineTransformWithNSString:(NSString *)data error:(NSError **)errPtr;
 
 #if 0
--(CGAffineTransform)parseChar:(const char *)data length:(int)length error:(NSError **)errPtr;
+-(CGAffineTransform)newCGAffineTransformWithCString:(const char *)data length:(int)length error:(NSError **)errPtr;
 #endif
 
 @end

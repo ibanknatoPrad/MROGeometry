@@ -12,8 +12,13 @@
 /** Parse the svg path and return a retained CGPathRef.
  * Currently just a C-wrapper around PathParser::parseChar:length:trafo:error:
  * but might become plain C some day.
- * @param path the svg <path d="..."> data
+ * @param path the [svg <path d="...">](http://www.w3.org/TR/SVG11/paths.html#PathData) data
  * @param error pointer to a CFError/NSError object
  * @return a retained CGPathRef
  */
 CGPathRef CGPathCreateFromSVG(const char *path, NSError **error);
+
+/**
+ * @see CGPathCreateFromSVG
+ */
+CGPathRef CGPathCreateFromSVGPath(NSString *d, const CGAffineTransform *trafo, NSError **error);

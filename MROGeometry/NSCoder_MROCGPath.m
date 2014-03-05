@@ -33,7 +33,7 @@
 	// MRLogD(@"Decode CGPath Buffer[%d]: '%s'", len, buf);
 	PathParser *pp = [alloc (PathParser)init];
 	NSError *err = nil;
-	CGPathRef p = [pp parseString:buf trafo:NULL error:&err];
+	CGPathRef p = [pp newCGPathWithNSString:buf trafo:NULL error:&err];
 	// MRLogD(@"Error: %@", err);
 	NSAssert(p != NULL, @"");
 	NSAssert(err == nil, @"");

@@ -54,20 +54,20 @@ CGFloat CGPointAbs(const CGPoint a)
 
 
 #if !defined(ABS)
-#define ABS(A)  ({ __typeof__(A) __a = (A); __a < 0 ? -__a : __a; } \
-		 )
+#define ABS(A) ({ __typeof__(A) __a = (A); __a < 0 ? -__a : __a; } \
+		)
 #else
 #error "ABS already defined."
 #endif
 
 
-int CGPointDistanceSmallerThan(const CGPoint a, const CGPoint b, const CGFloat radius)
+bool CGPointDistanceSmallerThan(const CGPoint a, const CGPoint b, const CGFloat radius)
 {
 	const CGFloat dx = ABS(a.x - b.x);
-	if ( dx > radius )
-		return 0 == 1;
+	if( dx > radius )
+		return false;
 	const CGFloat dy = ABS(a.y - b.y);
-	if ( dy > radius )
-		return 0 == 1;
+	if( dy > radius )
+		return false;
 	return SQR(dx) + SQR(dy) < SQR(radius);
 }

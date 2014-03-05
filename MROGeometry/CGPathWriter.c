@@ -7,37 +7,40 @@
  */
 
 #include "CGPathWriter.h"
-#include "stdlib.h"
-#include "assert.h"
-#include "limits.h"
-#include "stdarg.h"
-#include "stdio.h"
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <math.h>
 
 #if !defined(MAX)
-#define MAX(A, B)        ({ __typeof__(A) __a = (A); __typeof__(B) __b = (B); __a < __b ? __b : __a; } \
-			  )
+// or rather http://graphics.stanford.edu/~seander/bithacks.html#IntegerMinOrMax ?
+#define MAX(A, B) ({ __typeof__(A) __a = (A); __typeof__(B) __b = (B); __a < __b ? __b : __a; }	\
+		   )
 #endif
 
 #ifndef MRLogD
 #define MRLogD(x, ...)
 #endif
 
-/// internal, temporary helper struct
+// / internal, temporary helper struct
 struct CGPathWriter_t {
 	char *buffer;
+	bool absolute;
 	size_t allocated;
 	size_t used;
 	size_t increment;
 };
-/// internal, temporary helper struct
+// / internal, temporary helper struct
 typedef struct CGPathWriter_t CGPathWriter_t;
 
-/// internal, re-allocating snprintf helper
+// / internal, re-allocating snprintf helper
 void CGPathWriter_snprintf(CGPathWriter_t *const t, char *fmt, ...)
 {
 	assert(t != NULL);
-	for (;; ) {
-		if ( t->buffer == NULL )
+	for(;; ) {
+		if( t->buffer == NULL )
 			return;
 		assert(t->used >= 0);
 		assert(t->allocated >= t->used);
@@ -50,7 +53,7 @@ void CGPathWriter_snprintf(CGPathWriter_t *const t, char *fmt, ...)
 		va_end(ap);
 		assert(len >= 0);
 
-		if ( len >= max ) {
+		if( len >= max ) {
 			assert(t->increment >= 0);
 			const size_t inc = MAX(len - max + 1, t->increment);
 			assert(t->allocated < INT_MAX - inc);
@@ -67,14 +70,14 @@ void CGPathWriter_snprintf(CGPathWriter_t *const t, char *fmt, ...)
 }
 
 
-/// internal Helper
+// / internal Helper
 void CGPathWriter_path_walker(void *info, const CGPathElement *elm)
 {
 	assert(info != NULL);
 	CGPathWriter_t *const t = (CGPathWriter_t *)info;
-	if ( t->buffer == NULL )
-		return;
-	switch ( elm->type ) {
+	assert(t->absolute && "currently only absolute positions supported.");
+	assert(t->buffer && "buffer to write to mustn't be NULL");
+	switch( elm->type ) {
 	case kCGPathElementMoveToPoint:
 		CGPathWriter_snprintf(t, "M%f,%f", elm->points[0].x, elm->points[0].y);
 		break;
@@ -100,13 +103,14 @@ void CGPathWriter_path_walker(void *info, const CGPathElement *elm)
 
 char *CGPathToCString(const CGPathRef p, const size_t capacity, const size_t increment)
 {
-	if ( p == NULL )
+	if( p == NULL )
 		return NULL;
 	CGPathWriter_t t;
-	t.allocated = MAX(0, capacity);
-	t.increment = MAX(0, increment);
+	t.absolute  = true;
+	t.allocated = MAX(2, capacity);
+	t.increment = MAX(2, increment);
 	t.buffer = malloc(t.allocated);
-	if ( t.buffer != NULL )
+	if( t.buffer != NULL )
 		t.buffer[0] = '\0';
 	t.used = 0;
 

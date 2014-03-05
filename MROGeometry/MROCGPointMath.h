@@ -24,4 +24,4 @@ CGFloat CGPointAbsSqr(const CGPoint a);
 /** Similar to http://developer.apple.com/library/ios/documentation/Accelerate/Reference/vDSPRef/Reference/reference.html#//apple_ref/c/func/vDSP_vabs */
 CGFloat CGPointAbs(const CGPoint a);
 
-int CGPointDistanceSmallerThan(const CGPoint a, const CGPoint b, const CGFloat radius);
+bool CGPointDistanceSmallerThan(const CGPoint a, const CGPoint b, const CGFloat radius);

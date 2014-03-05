@@ -9,10 +9,11 @@
 #import <CoreGraphics/CGPath.h>
 #import <CoreGraphics/CGAffineTransform.h>
 
+
 /** Parser for <a href="http://www.w3.org/TR/SVG11/paths.html#PathDataBNF">SVG path elements</a>.
  *
- * The implementation is generated via <a href="http://research.cs.queensu.ca/~thurston/ragel/">Ragel</a>
- * from ../ragel/PathParser.rl.
+ * The implementation is generated via <a href="http://www.complang.org/ragel/">Ragel</a>
+ * from PathParser.rl.
  *
  * <b>DO NOT EDIT PathParser.m MANUALLY!!!</b>
  *
@@ -20,31 +21,22 @@
  */
 @interface PathParser : RagelParser {}
 
-#if 0
-/** Do the actual parsing. Stateless and reentrant.
- * @param data content of a svg path element's 'd' attribute.
- * @param errPtr out parameter to report parsing problems.
- * @return a retained core graphics path.
- */
--(CGPathRef)parseString:(NSString *)data error:(NSError **)errPtr;
-#endif
-
 /** Do the actual parsing. Stateless and reentrant.
  * @param data content of a svg path element's 'd' attribute.
  * @param trafo may be NULL
  * @param errPtr out parameter to report parsing problems.
  * @return a retained core graphics path.
  */
--(CGPathRef)parseString:(NSString *)data trafo:(CGAffineTransform *)trafo error:(NSError **)errPtr;
+-(CGPathRef)newCGPathWithNSString:(NSString *)data trafo:(const CGAffineTransform *)trafo error:(NSError **)errPtr;
 
-#if 1
+
 /** Do the actual parsing. Stateless and reentrant.
  * @param data content of a svg path element's 'd' attribute.
  * @param length number of max. baytes to read
  * @param errPtr out parameter to report parsing problems.
  * @return a retained core graphics path.
  */
--(CGPathRef)parseChar:(const char *)data length:(size_t)length trafo:(CGAffineTransform *)trafo error:(NSError **)errPtr;
-#endif
+-(CGPathRef)newCGPathWithCString:(const char *)data length:(size_t)length trafo:(const CGAffineTransform *)trafo error:(NSError **)errPtr;
+
 
 @end

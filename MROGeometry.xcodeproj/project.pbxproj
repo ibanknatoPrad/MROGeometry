@@ -30,6 +30,7 @@
 		1627C7CB18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; };
 		1627C7CC18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; };
 		1627C7CF18BFE2AB00D0465F /* CGPathWriterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */; };
+		16992E8518C0947000701606 /* CGPathWriterTest.PathDataCubicBezierCommands.svg in Resources */ = {isa = PBXBuildFile; fileRef = 16992E8418C0947000701606 /* CGPathWriterTest.PathDataCubicBezierCommands.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		1627C7D418BFEFA600D0465F /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		1627C7D518BFEFA600D0465F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		1627C7D618BFEFA600D0465F /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		16992E8418C0947000701606 /* CGPathWriterTest.PathDataCubicBezierCommands.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CGPathWriterTest.PathDataCubicBezierCommands.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,22 +154,22 @@
 				1627C78418BFE14000D0465F /* Supporting Files */,
 				1627C7A718BFE26700D0465F /* CGPathReader.h */,
 				1627C7A818BFE26700D0465F /* CGPathReader.m */,
-				1627C7A918BFE26700D0465F /* CGPathWriter.c */,
 				1627C7AA18BFE26700D0465F /* CGPathWriter.h */,
-				1627C7AC18BFE26700D0465F /* MROCGPointMath.c */,
+				1627C7A918BFE26700D0465F /* CGPathWriter.c */,
 				1627C7AD18BFE26700D0465F /* MROCGPointMath.h */,
+				1627C7AC18BFE26700D0465F /* MROCGPointMath.c */,
 				1627C7AE18BFE26700D0465F /* NSCoder_MROCGPath.h */,
 				1627C7AF18BFE26700D0465F /* NSCoder_MROCGPath.m */,
-				1627C7B018BFE26700D0465F /* PathBuilder.h */,
-				1627C7B118BFE26700D0465F /* PathBuilder.m */,
-				1627C7B218BFE26700D0465F /* PathParser.h */,
-				1627C7B418BFE26700D0465F /* PathParser.rl */,
-				1627C7B318BFE26700D0465F /* PathParser.m */,
 				1627C7B518BFE26700D0465F /* RagelParser.h */,
 				1627C7B618BFE26700D0465F /* RagelParser.m */,
 				1627C7B718BFE26700D0465F /* TrafoParser.h */,
 				1627C7B918BFE26700D0465F /* TrafoParser.rl */,
 				1627C7B818BFE26700D0465F /* TrafoParser.m */,
+				1627C7B218BFE26700D0465F /* PathParser.h */,
+				1627C7B418BFE26700D0465F /* PathParser.rl */,
+				1627C7B318BFE26700D0465F /* PathParser.m */,
+				1627C7B018BFE26700D0465F /* PathBuilder.h */,
+				1627C7B118BFE26700D0465F /* PathBuilder.m */,
 			);
 			path = MROGeometry;
 			sourceTree = "<group>";
@@ -185,6 +187,7 @@
 			children = (
 				1627C79818BFE14000D0465F /* Supporting Files */,
 				1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */,
+				16992E8418C0947000701606 /* CGPathWriterTest.PathDataCubicBezierCommands.svg */,
 			);
 			path = MROGeometryTests;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16992E8518C0947000701606 /* CGPathWriterTest.PathDataCubicBezierCommands.svg in Resources */,
 				1627C79C18BFE14000D0465F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

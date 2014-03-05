@@ -10,21 +10,12 @@
 
 /** Internal Helper for PathParser. As the PathParser sources stem from a ragel PathParser.rl file
  * that means a break in the toolchain and therefore I try to keep it's complexity as low as possible.
+ *
+ * @see http://www.w3.org/TR/SVG11/implnote.html#PathElementImplementationNotes
  */
 @interface PathBuilder : NSObject
-{
-	CGAffineTransform *trafo;
-	CGMutablePathRef gp;
-	// last control point for the smooth curveTo and quadTo
-	CGFloat ox;
-	CGFloat oy;
-	// last point
-	CGFloat px;
-	CGFloat py;
-}
 
-
--(id)initWithTrafo:(CGAffineTransform *)trafo;
+-(id)initWithTrafo:(const CGAffineTransform *)trafo;
 
 /**
  * http://www.w3.org/TR/SVG11/paths.html#PathDataClosePathCommand
@@ -66,6 +57,9 @@
  */
 -(void)smoothQuadToAbsolute:(BOOL)abs x2:(CGFloat)x2 y2:(CGFloat)y2;
 
+/**
+ * @return unretained reference!
+ */
 -(CGPathRef)toPath;
 
 /**

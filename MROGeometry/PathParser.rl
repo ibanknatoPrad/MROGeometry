@@ -8,12 +8,23 @@
 #import "PathParser.h"
 #import "PathBuilder.h"
 
-//#ifdef MRLogD
-//#undef MRLogD
-//#endif
-//
-//// No Logging
-//#define MRLogD(x,...)                             /* NSLog(x,##__VA_ARGS__) */
+#ifdef MRLogD
+#undef MRLogD
+#undef MRLogTStart
+#endif
+// No Logging
+#define MRLogD(x,...)
+#define MRLogTStart()
+
+
+static inline double strltod(const char *restrict nptr, char **restrict endptr, const size_t size)
+{
+  char push_number_tmp[size];
+  // push_number_tmp[len] = '\0';
+  strlcpy(push_number_tmp, nptr, size);
+  assert(push_number_tmp[size-1] == '\0' && "must be NUL terminated");
+  return strtod(push_number_tmp, endptr);
+}
 
 /** <a href="http://www.complang.org/ragel/">Ragel</a> parser 
  * for <a href="http://www.w3.org/TR/SVG11/paths.html#PathDataBNF">paths</a> 
@@ -38,11 +49,8 @@
   }
 
   action push_number {
-    char push_number_tmp[p-start];
-    push_number_tmp[p-start] = '\0';
-    memcpy(push_number_tmp, start, p-start-1);
-    assert(push_number_tmp[p-start] == '\0' && "must be NUL terminated");
-    argv[argc++] = strtod(push_number_tmp, NULL);
+    assert(p >= start && "must be positive size");
+    argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
 
@@ -257,11 +265,9 @@
 
 %% write data;
   
--(CGPathRef)parseChar:(const char*)data length:(const size_t)length trafo:(CGAffineTransform*)trafo error:(NSError**)errPtr
+-(CGPathRef)newCGPathWithCString:(const char*)data length:(const size_t)length trafo:(const CGAffineTransform*)trafo error:(NSError**)errPtr
 {
   MRLogTStart();
-
-  // MRLogD(@"");
   PathBuilder *pb = [[PathBuilder alloc] initWithTrafo:trafo];
   if(data == NULL)
     return CGPathRetain([pb toPath]);
@@ -287,19 +293,14 @@
 
   if ( errPtr != nil && cs < path_first_final )
     *errPtr = [self parseError:data position:p];
-    MRLogT(@"", nil);
+  MRLogT(@"", nil);
   return CGPathRetain([pb toPath]);
 }
 
--(CGPathRef)parseString:(NSString*)data trafo:(CGAffineTransform*)trafo error:(NSError**)errPtr
+-(CGPathRef)newCGPathWithNSString:(NSString*)data trafo:(const CGAffineTransform*)trafo error:(NSError**)errPtr
 {
     const char *c = [data UTF8String];
-    return [self parseChar:c length:strlen(c) trafo:trafo error:errPtr];
-}
-
--(CGPathRef)parseString:(NSString*)data error:(NSError**)errPtr
-{
-    return [self parseString:data trafo:NULL error:errPtr];
+    return [self newCGPathWithCString:c length:strlen(c) trafo:trafo error:errPtr];
 }
 
 @end

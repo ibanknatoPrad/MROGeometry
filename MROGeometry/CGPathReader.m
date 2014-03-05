@@ -15,6 +15,12 @@ CGPathRef CGPathCreateFromSVG(const char *path, NSError **errPtr)
 	const size_t len = strlen(path);
 	// #FIXME check overflow
 	PathParser *p = [[PathParser alloc] init];
-	CGPathRef ret = [p parseChar:path length:len trafo:NULL error:(NSError **)errPtr];
-	return ret;
+	return [p newCGPathWithCString:path length:len trafo:NULL error:(NSError **)errPtr];
+}
+
+
+CGPathRef CGPathCreateFromSVGPath(NSString *d, const CGAffineTransform *trafo, NSError **errorPtr)
+{
+	PathParser *p = [[PathParser alloc] init];
+	return [p newCGPathWithNSString:d trafo:trafo error:errorPtr];
 }
