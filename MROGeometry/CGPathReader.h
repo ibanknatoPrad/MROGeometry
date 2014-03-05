@@ -2,7 +2,7 @@
  *  CGPathReader.h
  *
  *  Created by Marcus Rohrmoser on 13.11.10.
- *  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+ *  Copyright 2010-2014 Marcus Rohrmoser mobile Software. All rights reserved.
  *
  */
 

@@ -2,7 +2,7 @@
 // PathParser.h
 //
 // Created by Marcus Rohrmoser on 11.03.10.
-// Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+// Copyright 2010-2014 Marcus Rohrmoser mobile Software. All rights reserved.
 //
 
 #import "RagelParser.h"

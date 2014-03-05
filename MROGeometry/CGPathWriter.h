@@ -2,7 +2,7 @@
  *  CGPathWriter.h
  *
  *  Created by Marcus Rohrmoser on 15.10.10.
- *  Copyright 2010 Marcus Rohrmoser mobile Software. All rights reserved.
+ *  Copyright 2010-2014 Marcus Rohrmoser mobile Software. All rights reserved.
  *
  */
 
