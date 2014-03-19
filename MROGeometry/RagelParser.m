@@ -18,7 +18,7 @@
 -(NSError *)parseError:(const char *)data position:(const char *)p
 {
 	MRLogD(@"%s", data);
-	NSDictionary *ui = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Couldn't parse transform '%s' - failed at %d", data, p - data], NSLocalizedDescriptionKey,
+	NSDictionary *ui = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Couldn't parse transform '%s' - failed at %d", data, (int)(p - data)], NSLocalizedDescriptionKey,
 			    nil];
 	return [NSError errorWithDomain:RAGEL_ERROR_DOMAIN code:RAGEL_ERROR_CODE userInfo:ui];
 }

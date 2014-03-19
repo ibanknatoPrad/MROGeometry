@@ -24,12 +24,15 @@
  */
 @implementation TrafoParser
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-const-variable"
 
-#line 134 "MROGeometry/TrafoParser.rl"
+
+#line 137 "MROGeometry/TrafoParser.rl"
 
 
 
-#line 33 "MROGeometry/TrafoParser.m"
+#line 36 "MROGeometry/TrafoParser.m"
 static const int trafo_start = 168;
 static const int trafo_first_final = 168;
 static const int trafo_error = 0;
@@ -37,7 +40,7 @@ static const int trafo_error = 0;
 static const int trafo_en_main = 168;
 
 
-#line 137 "MROGeometry/TrafoParser.rl"
+#line 140 "MROGeometry/TrafoParser.rl"
 
 -(CGAffineTransform)newCGAffineTransformWithCString:(const char*)data length:(const size_t)length error:(NSError**)errPtr
 {
@@ -60,16 +63,16 @@ static const int trafo_en_main = 168;
 ///////////////////////////////////////////////////////////
 //  init ragel
   
-#line 64 "MROGeometry/TrafoParser.m"
+#line 67 "MROGeometry/TrafoParser.m"
 	{
 	cs = trafo_start;
 	}
 
-#line 159 "MROGeometry/TrafoParser.rl"
+#line 162 "MROGeometry/TrafoParser.rl"
 ///////////////////////////////////////////////////////////
 //  exec ragel
   
-#line 73 "MROGeometry/TrafoParser.m"
+#line 76 "MROGeometry/TrafoParser.m"
 	{
 	if ( p == pe )
 		goto _test_eof;
@@ -155,7 +158,7 @@ case 7:
 		goto st7;
 	goto st0;
 tr7:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -165,7 +168,7 @@ st8:
 	if ( ++p == pe )
 		goto _test_eof8;
 case 8:
-#line 169 "MROGeometry/TrafoParser.m"
+#line 172 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st9;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -179,7 +182,7 @@ case 9:
 		goto tr10;
 	goto st0;
 tr10:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -189,7 +192,7 @@ st10:
 	if ( ++p == pe )
 		goto _test_eof10;
 case 10:
-#line 193 "MROGeometry/TrafoParser.m"
+#line 196 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr11;
 		case 44: goto tr12;
@@ -203,7 +206,7 @@ case 10:
 		goto tr11;
 	goto st0;
 tr11:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -215,7 +218,7 @@ st11:
 	if ( ++p == pe )
 		goto _test_eof11;
 case 11:
-#line 219 "MROGeometry/TrafoParser.m"
+#line 222 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st11;
 		case 44: goto st163;
@@ -231,7 +234,7 @@ case 11:
 		goto tr15;
 	goto st0;
 tr15:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -241,7 +244,7 @@ st12:
 	if ( ++p == pe )
 		goto _test_eof12;
 case 12:
-#line 245 "MROGeometry/TrafoParser.m"
+#line 248 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st13;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -255,7 +258,7 @@ case 13:
 		goto tr19;
 	goto st0;
 tr19:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -265,7 +268,7 @@ st14:
 	if ( ++p == pe )
 		goto _test_eof14;
 case 14:
-#line 269 "MROGeometry/TrafoParser.m"
+#line 272 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr20;
 		case 44: goto tr21;
@@ -279,7 +282,7 @@ case 14:
 		goto tr20;
 	goto st0;
 tr20:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -291,7 +294,7 @@ st15:
 	if ( ++p == pe )
 		goto _test_eof15;
 case 15:
-#line 295 "MROGeometry/TrafoParser.m"
+#line 298 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st15;
 		case 44: goto st158;
@@ -307,7 +310,7 @@ case 15:
 		goto tr24;
 	goto st0;
 tr24:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -317,7 +320,7 @@ st16:
 	if ( ++p == pe )
 		goto _test_eof16;
 case 16:
-#line 321 "MROGeometry/TrafoParser.m"
+#line 324 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st17;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -331,7 +334,7 @@ case 17:
 		goto tr28;
 	goto st0;
 tr28:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -341,7 +344,7 @@ st18:
 	if ( ++p == pe )
 		goto _test_eof18;
 case 18:
-#line 345 "MROGeometry/TrafoParser.m"
+#line 348 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr29;
 		case 44: goto tr30;
@@ -355,7 +358,7 @@ case 18:
 		goto tr29;
 	goto st0;
 tr29:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -367,7 +370,7 @@ st19:
 	if ( ++p == pe )
 		goto _test_eof19;
 case 19:
-#line 371 "MROGeometry/TrafoParser.m"
+#line 374 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st19;
 		case 44: goto st153;
@@ -383,7 +386,7 @@ case 19:
 		goto tr33;
 	goto st0;
 tr33:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -393,7 +396,7 @@ st20:
 	if ( ++p == pe )
 		goto _test_eof20;
 case 20:
-#line 397 "MROGeometry/TrafoParser.m"
+#line 400 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st21;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -407,7 +410,7 @@ case 21:
 		goto tr37;
 	goto st0;
 tr37:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -417,7 +420,7 @@ st22:
 	if ( ++p == pe )
 		goto _test_eof22;
 case 22:
-#line 421 "MROGeometry/TrafoParser.m"
+#line 424 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr38;
 		case 44: goto tr39;
@@ -431,7 +434,7 @@ case 22:
 		goto tr38;
 	goto st0;
 tr38:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -443,7 +446,7 @@ st23:
 	if ( ++p == pe )
 		goto _test_eof23;
 case 23:
-#line 447 "MROGeometry/TrafoParser.m"
+#line 450 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st23;
 		case 44: goto st148;
@@ -459,7 +462,7 @@ case 23:
 		goto tr42;
 	goto st0;
 tr42:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -469,7 +472,7 @@ st24:
 	if ( ++p == pe )
 		goto _test_eof24;
 case 24:
-#line 473 "MROGeometry/TrafoParser.m"
+#line 476 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st25;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -483,7 +486,7 @@ case 25:
 		goto tr46;
 	goto st0;
 tr46:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -493,7 +496,7 @@ st26:
 	if ( ++p == pe )
 		goto _test_eof26;
 case 26:
-#line 497 "MROGeometry/TrafoParser.m"
+#line 500 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr47;
 		case 44: goto tr48;
@@ -507,7 +510,7 @@ case 26:
 		goto tr47;
 	goto st0;
 tr47:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -519,7 +522,7 @@ st27:
 	if ( ++p == pe )
 		goto _test_eof27;
 case 27:
-#line 523 "MROGeometry/TrafoParser.m"
+#line 526 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st27;
 		case 44: goto st143;
@@ -535,7 +538,7 @@ case 27:
 		goto tr51;
 	goto st0;
 tr51:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -545,7 +548,7 @@ st28:
 	if ( ++p == pe )
 		goto _test_eof28;
 case 28:
-#line 549 "MROGeometry/TrafoParser.m"
+#line 552 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st29;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -559,7 +562,7 @@ case 29:
 		goto tr55;
 	goto st0;
 tr55:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -569,7 +572,7 @@ st30:
 	if ( ++p == pe )
 		goto _test_eof30;
 case 30:
-#line 573 "MROGeometry/TrafoParser.m"
+#line 576 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr56;
 		case 41: goto tr57;
@@ -583,7 +586,7 @@ case 30:
 		goto tr56;
 	goto st0;
 tr56:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -595,7 +598,7 @@ st31:
 	if ( ++p == pe )
 		goto _test_eof31;
 case 31:
-#line 599 "MROGeometry/TrafoParser.m"
+#line 602 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st31;
 		case 41: goto tr60;
@@ -604,21 +607,21 @@ case 31:
 		goto st31;
 	goto st0;
 tr57:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
     argv[argc++] = v;
     [buf setString:@""];
   }
-#line 33 "MROGeometry/TrafoParser.rl"
+#line 36 "MROGeometry/TrafoParser.rl"
 	{
     two = NO;
     argc = 0;
   }
 	goto st169;
 tr60:
-#line 33 "MROGeometry/TrafoParser.rl"
+#line 36 "MROGeometry/TrafoParser.rl"
 	{
     two = NO;
     argc = 0;
@@ -628,7 +631,7 @@ st169:
 	if ( ++p == pe )
 		goto _test_eof169;
 case 169:
-#line 632 "MROGeometry/TrafoParser.m"
+#line 635 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr207;
 		case 44: goto tr208;
@@ -637,7 +640,7 @@ case 169:
 		goto tr207;
 	goto st0;
 tr207:
-#line 89 "MROGeometry/TrafoParser.rl"
+#line 92 "MROGeometry/TrafoParser.rl"
 	{
     MRLogD(@"concat", nil);
     t = CGAffineTransformConcat(t, CGAffineTransformMake(argv[0], argv[1], argv[2], argv[3], argv[4], argv[5]) );
@@ -645,7 +648,7 @@ tr207:
   }
 	goto st170;
 tr210:
-#line 64 "MROGeometry/TrafoParser.rl"
+#line 67 "MROGeometry/TrafoParser.rl"
 	{
     MRLogD(@"rotate %f", argv[0]);
     argv[0] *= M_PI / 180;
@@ -658,7 +661,7 @@ tr210:
   }
 	goto st170;
 tr212:
-#line 75 "MROGeometry/TrafoParser.rl"
+#line 78 "MROGeometry/TrafoParser.rl"
 	{
     if(!two)
       argv[1] = argv[0];
@@ -667,21 +670,21 @@ tr212:
   }
 	goto st170;
 tr214:
-#line 54 "MROGeometry/TrafoParser.rl"
+#line 57 "MROGeometry/TrafoParser.rl"
 	{
     if(YES)
       [NSException raise:@"Not implemented yet." format:@""];
   }
 	goto st170;
 tr216:
-#line 59 "MROGeometry/TrafoParser.rl"
+#line 62 "MROGeometry/TrafoParser.rl"
 	{
     if(YES)
       [NSException raise:@"Not implemented yet." format:@""];
   }
 	goto st170;
 tr218:
-#line 82 "MROGeometry/TrafoParser.rl"
+#line 85 "MROGeometry/TrafoParser.rl"
 	{
     if(!two)
       argv[1] = argv[0];
@@ -693,7 +696,7 @@ st170:
 	if ( ++p == pe )
 		goto _test_eof170;
 case 170:
-#line 697 "MROGeometry/TrafoParser.m"
+#line 700 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st170;
 		case 44: goto st32;
@@ -706,7 +709,7 @@ case 170:
 		goto st170;
 	goto st0;
 tr208:
-#line 89 "MROGeometry/TrafoParser.rl"
+#line 92 "MROGeometry/TrafoParser.rl"
 	{
     MRLogD(@"concat", nil);
     t = CGAffineTransformConcat(t, CGAffineTransformMake(argv[0], argv[1], argv[2], argv[3], argv[4], argv[5]) );
@@ -714,7 +717,7 @@ tr208:
   }
 	goto st32;
 tr211:
-#line 64 "MROGeometry/TrafoParser.rl"
+#line 67 "MROGeometry/TrafoParser.rl"
 	{
     MRLogD(@"rotate %f", argv[0]);
     argv[0] *= M_PI / 180;
@@ -727,7 +730,7 @@ tr211:
   }
 	goto st32;
 tr213:
-#line 75 "MROGeometry/TrafoParser.rl"
+#line 78 "MROGeometry/TrafoParser.rl"
 	{
     if(!two)
       argv[1] = argv[0];
@@ -736,21 +739,21 @@ tr213:
   }
 	goto st32;
 tr215:
-#line 54 "MROGeometry/TrafoParser.rl"
+#line 57 "MROGeometry/TrafoParser.rl"
 	{
     if(YES)
       [NSException raise:@"Not implemented yet." format:@""];
   }
 	goto st32;
 tr217:
-#line 59 "MROGeometry/TrafoParser.rl"
+#line 62 "MROGeometry/TrafoParser.rl"
 	{
     if(YES)
       [NSException raise:@"Not implemented yet." format:@""];
   }
 	goto st32;
 tr219:
-#line 82 "MROGeometry/TrafoParser.rl"
+#line 85 "MROGeometry/TrafoParser.rl"
 	{
     if(!two)
       argv[1] = argv[0];
@@ -762,7 +765,7 @@ st32:
 	if ( ++p == pe )
 		goto _test_eof32;
 case 32:
-#line 766 "MROGeometry/TrafoParser.m"
+#line 769 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st32;
 		case 44: goto st32;
@@ -775,7 +778,7 @@ case 32:
 		goto st32;
 	goto st0;
 tr63:
-#line 33 "MROGeometry/TrafoParser.rl"
+#line 36 "MROGeometry/TrafoParser.rl"
 	{
     two = NO;
     argc = 0;
@@ -785,7 +788,7 @@ st33:
 	if ( ++p == pe )
 		goto _test_eof33;
 case 33:
-#line 789 "MROGeometry/TrafoParser.m"
+#line 792 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 111 )
 		goto st34;
 	goto st0;
@@ -845,7 +848,7 @@ case 39:
 		goto st39;
 	goto st0;
 tr72:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -855,7 +858,7 @@ st40:
 	if ( ++p == pe )
 		goto _test_eof40;
 case 40:
-#line 859 "MROGeometry/TrafoParser.m"
+#line 862 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st41;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -869,7 +872,7 @@ case 41:
 		goto tr75;
 	goto st0;
 tr75:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -879,7 +882,7 @@ st42:
 	if ( ++p == pe )
 		goto _test_eof42;
 case 42:
-#line 883 "MROGeometry/TrafoParser.m"
+#line 886 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr76;
 		case 41: goto tr77;
@@ -894,7 +897,7 @@ case 42:
 		goto tr76;
 	goto st0;
 tr76:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -906,7 +909,7 @@ st43:
 	if ( ++p == pe )
 		goto _test_eof43;
 case 43:
-#line 910 "MROGeometry/TrafoParser.m"
+#line 913 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st43;
 		case 41: goto st171;
@@ -923,7 +926,7 @@ case 43:
 		goto tr82;
 	goto st0;
 tr77:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -935,7 +938,7 @@ st171:
 	if ( ++p == pe )
 		goto _test_eof171;
 case 171:
-#line 939 "MROGeometry/TrafoParser.m"
+#line 942 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr210;
 		case 44: goto tr211;
@@ -944,7 +947,7 @@ case 171:
 		goto tr210;
 	goto st0;
 tr82:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -954,7 +957,7 @@ st44:
 	if ( ++p == pe )
 		goto _test_eof44;
 case 44:
-#line 958 "MROGeometry/TrafoParser.m"
+#line 961 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st45;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -968,7 +971,7 @@ case 45:
 		goto tr86;
 	goto st0;
 tr86:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -978,7 +981,7 @@ st46:
 	if ( ++p == pe )
 		goto _test_eof46;
 case 46:
-#line 982 "MROGeometry/TrafoParser.m"
+#line 985 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr87;
 		case 44: goto tr88;
@@ -992,14 +995,14 @@ case 46:
 		goto tr87;
 	goto st0;
 tr87:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
     argv[argc++] = v;
     [buf setString:@""];
   }
-#line 38 "MROGeometry/TrafoParser.rl"
+#line 41 "MROGeometry/TrafoParser.rl"
 	{
     two = YES;
   }
@@ -1008,7 +1011,7 @@ st47:
 	if ( ++p == pe )
 		goto _test_eof47;
 case 47:
-#line 1012 "MROGeometry/TrafoParser.m"
+#line 1015 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st47;
 		case 44: goto st56;
@@ -1024,7 +1027,7 @@ case 47:
 		goto tr91;
 	goto st0;
 tr91:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1034,7 +1037,7 @@ st48:
 	if ( ++p == pe )
 		goto _test_eof48;
 case 48:
-#line 1038 "MROGeometry/TrafoParser.m"
+#line 1041 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st49;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -1048,7 +1051,7 @@ case 49:
 		goto tr95;
 	goto st0;
 tr95:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1058,7 +1061,7 @@ st50:
 	if ( ++p == pe )
 		goto _test_eof50;
 case 50:
-#line 1062 "MROGeometry/TrafoParser.m"
+#line 1065 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr96;
 		case 41: goto tr77;
@@ -1072,7 +1075,7 @@ case 50:
 		goto tr96;
 	goto st0;
 tr96:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -1084,7 +1087,7 @@ st51:
 	if ( ++p == pe )
 		goto _test_eof51;
 case 51:
-#line 1088 "MROGeometry/TrafoParser.m"
+#line 1091 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st51;
 		case 41: goto st171;
@@ -1111,7 +1114,7 @@ case 53:
 		goto tr100;
 	goto st0;
 tr100:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1121,7 +1124,7 @@ st54:
 	if ( ++p == pe )
 		goto _test_eof54;
 case 54:
-#line 1125 "MROGeometry/TrafoParser.m"
+#line 1128 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr96;
 		case 41: goto tr77;
@@ -1133,7 +1136,7 @@ case 54:
 		goto tr96;
 	goto st0;
 tr94:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1143,7 +1146,7 @@ st55:
 	if ( ++p == pe )
 		goto _test_eof55;
 case 55:
-#line 1147 "MROGeometry/TrafoParser.m"
+#line 1150 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr96;
 		case 41: goto tr77;
@@ -1158,14 +1161,14 @@ case 55:
 		goto tr96;
 	goto st0;
 tr88:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
     argv[argc++] = v;
     [buf setString:@""];
   }
-#line 38 "MROGeometry/TrafoParser.rl"
+#line 41 "MROGeometry/TrafoParser.rl"
 	{
     two = YES;
   }
@@ -1174,7 +1177,7 @@ st56:
 	if ( ++p == pe )
 		goto _test_eof56;
 case 56:
-#line 1178 "MROGeometry/TrafoParser.m"
+#line 1181 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st56;
 		case 43: goto tr91;
@@ -1206,7 +1209,7 @@ case 58:
 		goto tr102;
 	goto st0;
 tr102:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1216,7 +1219,7 @@ st59:
 	if ( ++p == pe )
 		goto _test_eof59;
 case 59:
-#line 1220 "MROGeometry/TrafoParser.m"
+#line 1223 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr87;
 		case 44: goto tr88;
@@ -1228,7 +1231,7 @@ case 59:
 		goto tr87;
 	goto st0;
 tr85:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1238,7 +1241,7 @@ st60:
 	if ( ++p == pe )
 		goto _test_eof60;
 case 60:
-#line 1242 "MROGeometry/TrafoParser.m"
+#line 1245 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr87;
 		case 44: goto tr88;
@@ -1253,7 +1256,7 @@ case 60:
 		goto tr87;
 	goto st0;
 tr78:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -1265,7 +1268,7 @@ st61:
 	if ( ++p == pe )
 		goto _test_eof61;
 case 61:
-#line 1269 "MROGeometry/TrafoParser.m"
+#line 1272 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st61;
 		case 43: goto tr82;
@@ -1297,7 +1300,7 @@ case 63:
 		goto tr104;
 	goto st0;
 tr104:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1307,7 +1310,7 @@ st64:
 	if ( ++p == pe )
 		goto _test_eof64;
 case 64:
-#line 1311 "MROGeometry/TrafoParser.m"
+#line 1314 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr76;
 		case 41: goto tr77;
@@ -1320,7 +1323,7 @@ case 64:
 		goto tr76;
 	goto st0;
 tr74:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1330,7 +1333,7 @@ st65:
 	if ( ++p == pe )
 		goto _test_eof65;
 case 65:
-#line 1334 "MROGeometry/TrafoParser.m"
+#line 1337 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr76;
 		case 41: goto tr77;
@@ -1346,7 +1349,7 @@ case 65:
 		goto tr76;
 	goto st0;
 tr64:
-#line 33 "MROGeometry/TrafoParser.rl"
+#line 36 "MROGeometry/TrafoParser.rl"
 	{
     two = NO;
     argc = 0;
@@ -1356,7 +1359,7 @@ st66:
 	if ( ++p == pe )
 		goto _test_eof66;
 case 66:
-#line 1360 "MROGeometry/TrafoParser.m"
+#line 1363 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 99: goto st67;
 		case 107: goto st89;
@@ -1411,7 +1414,7 @@ case 71:
 		goto st71;
 	goto st0;
 tr111:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1421,7 +1424,7 @@ st72:
 	if ( ++p == pe )
 		goto _test_eof72;
 case 72:
-#line 1425 "MROGeometry/TrafoParser.m"
+#line 1428 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st73;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -1435,7 +1438,7 @@ case 73:
 		goto tr114;
 	goto st0;
 tr114:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1445,7 +1448,7 @@ st74:
 	if ( ++p == pe )
 		goto _test_eof74;
 case 74:
-#line 1449 "MROGeometry/TrafoParser.m"
+#line 1452 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr115;
 		case 41: goto tr116;
@@ -1460,7 +1463,7 @@ case 74:
 		goto tr115;
 	goto st0;
 tr115:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -1472,7 +1475,7 @@ st75:
 	if ( ++p == pe )
 		goto _test_eof75;
 case 75:
-#line 1476 "MROGeometry/TrafoParser.m"
+#line 1479 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st75;
 		case 41: goto st172;
@@ -1489,7 +1492,7 @@ case 75:
 		goto tr121;
 	goto st0;
 tr116:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -1498,14 +1501,14 @@ tr116:
   }
 	goto st172;
 tr127:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
     argv[argc++] = v;
     [buf setString:@""];
   }
-#line 38 "MROGeometry/TrafoParser.rl"
+#line 41 "MROGeometry/TrafoParser.rl"
 	{
     two = YES;
   }
@@ -1514,7 +1517,7 @@ st172:
 	if ( ++p == pe )
 		goto _test_eof172;
 case 172:
-#line 1518 "MROGeometry/TrafoParser.m"
+#line 1521 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr212;
 		case 44: goto tr213;
@@ -1523,7 +1526,7 @@ case 172:
 		goto tr212;
 	goto st0;
 tr121:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1533,7 +1536,7 @@ st76:
 	if ( ++p == pe )
 		goto _test_eof76;
 case 76:
-#line 1537 "MROGeometry/TrafoParser.m"
+#line 1540 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st77;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -1547,7 +1550,7 @@ case 77:
 		goto tr125;
 	goto st0;
 tr125:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1557,7 +1560,7 @@ st78:
 	if ( ++p == pe )
 		goto _test_eof78;
 case 78:
-#line 1561 "MROGeometry/TrafoParser.m"
+#line 1564 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr126;
 		case 41: goto tr127;
@@ -1571,14 +1574,14 @@ case 78:
 		goto tr126;
 	goto st0;
 tr126:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
     argv[argc++] = v;
     [buf setString:@""];
   }
-#line 38 "MROGeometry/TrafoParser.rl"
+#line 41 "MROGeometry/TrafoParser.rl"
 	{
     two = YES;
   }
@@ -1587,7 +1590,7 @@ st79:
 	if ( ++p == pe )
 		goto _test_eof79;
 case 79:
-#line 1591 "MROGeometry/TrafoParser.m"
+#line 1594 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st79;
 		case 41: goto st172;
@@ -1614,7 +1617,7 @@ case 81:
 		goto tr131;
 	goto st0;
 tr131:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1624,7 +1627,7 @@ st82:
 	if ( ++p == pe )
 		goto _test_eof82;
 case 82:
-#line 1628 "MROGeometry/TrafoParser.m"
+#line 1631 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr126;
 		case 41: goto tr127;
@@ -1636,7 +1639,7 @@ case 82:
 		goto tr126;
 	goto st0;
 tr124:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1646,7 +1649,7 @@ st83:
 	if ( ++p == pe )
 		goto _test_eof83;
 case 83:
-#line 1650 "MROGeometry/TrafoParser.m"
+#line 1653 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr126;
 		case 41: goto tr127;
@@ -1661,7 +1664,7 @@ case 83:
 		goto tr126;
 	goto st0;
 tr117:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -1673,7 +1676,7 @@ st84:
 	if ( ++p == pe )
 		goto _test_eof84;
 case 84:
-#line 1677 "MROGeometry/TrafoParser.m"
+#line 1680 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st84;
 		case 43: goto tr121;
@@ -1705,7 +1708,7 @@ case 86:
 		goto tr133;
 	goto st0;
 tr133:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1715,7 +1718,7 @@ st87:
 	if ( ++p == pe )
 		goto _test_eof87;
 case 87:
-#line 1719 "MROGeometry/TrafoParser.m"
+#line 1722 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr115;
 		case 41: goto tr116;
@@ -1728,7 +1731,7 @@ case 87:
 		goto tr115;
 	goto st0;
 tr113:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1738,7 +1741,7 @@ st88:
 	if ( ++p == pe )
 		goto _test_eof88;
 case 88:
-#line 1742 "MROGeometry/TrafoParser.m"
+#line 1745 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr115;
 		case 41: goto tr116;
@@ -1804,7 +1807,7 @@ case 93:
 		goto st93;
 	goto st0;
 tr139:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1814,7 +1817,7 @@ st94:
 	if ( ++p == pe )
 		goto _test_eof94;
 case 94:
-#line 1818 "MROGeometry/TrafoParser.m"
+#line 1821 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st95;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -1828,7 +1831,7 @@ case 95:
 		goto tr142;
 	goto st0;
 tr142:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1838,7 +1841,7 @@ st96:
 	if ( ++p == pe )
 		goto _test_eof96;
 case 96:
-#line 1842 "MROGeometry/TrafoParser.m"
+#line 1845 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr143;
 		case 41: goto tr144;
@@ -1852,7 +1855,7 @@ case 96:
 		goto tr143;
 	goto st0;
 tr143:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -1864,7 +1867,7 @@ st97:
 	if ( ++p == pe )
 		goto _test_eof97;
 case 97:
-#line 1868 "MROGeometry/TrafoParser.m"
+#line 1871 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st97;
 		case 41: goto tr147;
@@ -1873,21 +1876,21 @@ case 97:
 		goto st97;
 	goto st0;
 tr144:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
     argv[argc++] = v;
     [buf setString:@""];
   }
-#line 33 "MROGeometry/TrafoParser.rl"
+#line 36 "MROGeometry/TrafoParser.rl"
 	{
     two = NO;
     argc = 0;
   }
 	goto st173;
 tr147:
-#line 33 "MROGeometry/TrafoParser.rl"
+#line 36 "MROGeometry/TrafoParser.rl"
 	{
     two = NO;
     argc = 0;
@@ -1897,7 +1900,7 @@ st173:
 	if ( ++p == pe )
 		goto _test_eof173;
 case 173:
-#line 1901 "MROGeometry/TrafoParser.m"
+#line 1904 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr214;
 		case 44: goto tr215;
@@ -1924,7 +1927,7 @@ case 99:
 		goto tr149;
 	goto st0;
 tr149:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1934,7 +1937,7 @@ st100:
 	if ( ++p == pe )
 		goto _test_eof100;
 case 100:
-#line 1938 "MROGeometry/TrafoParser.m"
+#line 1941 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr143;
 		case 41: goto tr144;
@@ -1946,7 +1949,7 @@ case 100:
 		goto tr143;
 	goto st0;
 tr141:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -1956,7 +1959,7 @@ st101:
 	if ( ++p == pe )
 		goto _test_eof101;
 case 101:
-#line 1960 "MROGeometry/TrafoParser.m"
+#line 1963 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr143;
 		case 41: goto tr144;
@@ -1998,7 +2001,7 @@ case 103:
 		goto st103;
 	goto st0;
 tr151:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2008,7 +2011,7 @@ st104:
 	if ( ++p == pe )
 		goto _test_eof104;
 case 104:
-#line 2012 "MROGeometry/TrafoParser.m"
+#line 2015 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st105;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -2022,7 +2025,7 @@ case 105:
 		goto tr154;
 	goto st0;
 tr154:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2032,7 +2035,7 @@ st106:
 	if ( ++p == pe )
 		goto _test_eof106;
 case 106:
-#line 2036 "MROGeometry/TrafoParser.m"
+#line 2039 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr155;
 		case 41: goto tr156;
@@ -2046,7 +2049,7 @@ case 106:
 		goto tr155;
 	goto st0;
 tr155:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -2058,7 +2061,7 @@ st107:
 	if ( ++p == pe )
 		goto _test_eof107;
 case 107:
-#line 2062 "MROGeometry/TrafoParser.m"
+#line 2065 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st107;
 		case 41: goto tr159;
@@ -2067,21 +2070,21 @@ case 107:
 		goto st107;
 	goto st0;
 tr156:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
     argv[argc++] = v;
     [buf setString:@""];
   }
-#line 33 "MROGeometry/TrafoParser.rl"
+#line 36 "MROGeometry/TrafoParser.rl"
 	{
     two = NO;
     argc = 0;
   }
 	goto st174;
 tr159:
-#line 33 "MROGeometry/TrafoParser.rl"
+#line 36 "MROGeometry/TrafoParser.rl"
 	{
     two = NO;
     argc = 0;
@@ -2091,7 +2094,7 @@ st174:
 	if ( ++p == pe )
 		goto _test_eof174;
 case 174:
-#line 2095 "MROGeometry/TrafoParser.m"
+#line 2098 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr216;
 		case 44: goto tr217;
@@ -2118,7 +2121,7 @@ case 109:
 		goto tr161;
 	goto st0;
 tr161:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2128,7 +2131,7 @@ st110:
 	if ( ++p == pe )
 		goto _test_eof110;
 case 110:
-#line 2132 "MROGeometry/TrafoParser.m"
+#line 2135 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr155;
 		case 41: goto tr156;
@@ -2140,7 +2143,7 @@ case 110:
 		goto tr155;
 	goto st0;
 tr153:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2150,7 +2153,7 @@ st111:
 	if ( ++p == pe )
 		goto _test_eof111;
 case 111:
-#line 2154 "MROGeometry/TrafoParser.m"
+#line 2157 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr155;
 		case 41: goto tr156;
@@ -2165,7 +2168,7 @@ case 111:
 		goto tr155;
 	goto st0;
 tr65:
-#line 33 "MROGeometry/TrafoParser.rl"
+#line 36 "MROGeometry/TrafoParser.rl"
 	{
     two = NO;
     argc = 0;
@@ -2175,7 +2178,7 @@ st112:
 	if ( ++p == pe )
 		goto _test_eof112;
 case 112:
-#line 2179 "MROGeometry/TrafoParser.m"
+#line 2182 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 114 )
 		goto st113;
 	goto st0;
@@ -2256,7 +2259,7 @@ case 121:
 		goto st121;
 	goto st0;
 tr171:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2266,7 +2269,7 @@ st122:
 	if ( ++p == pe )
 		goto _test_eof122;
 case 122:
-#line 2270 "MROGeometry/TrafoParser.m"
+#line 2273 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st123;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -2280,7 +2283,7 @@ case 123:
 		goto tr174;
 	goto st0;
 tr174:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2290,7 +2293,7 @@ st124:
 	if ( ++p == pe )
 		goto _test_eof124;
 case 124:
-#line 2294 "MROGeometry/TrafoParser.m"
+#line 2297 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr175;
 		case 41: goto tr176;
@@ -2305,7 +2308,7 @@ case 124:
 		goto tr175;
 	goto st0;
 tr175:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -2317,7 +2320,7 @@ st125:
 	if ( ++p == pe )
 		goto _test_eof125;
 case 125:
-#line 2321 "MROGeometry/TrafoParser.m"
+#line 2324 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st125;
 		case 41: goto st175;
@@ -2334,7 +2337,7 @@ case 125:
 		goto tr181;
 	goto st0;
 tr176:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -2343,14 +2346,14 @@ tr176:
   }
 	goto st175;
 tr187:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
     argv[argc++] = v;
     [buf setString:@""];
   }
-#line 38 "MROGeometry/TrafoParser.rl"
+#line 41 "MROGeometry/TrafoParser.rl"
 	{
     two = YES;
   }
@@ -2359,7 +2362,7 @@ st175:
 	if ( ++p == pe )
 		goto _test_eof175;
 case 175:
-#line 2363 "MROGeometry/TrafoParser.m"
+#line 2366 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr218;
 		case 44: goto tr219;
@@ -2368,7 +2371,7 @@ case 175:
 		goto tr218;
 	goto st0;
 tr181:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2378,7 +2381,7 @@ st126:
 	if ( ++p == pe )
 		goto _test_eof126;
 case 126:
-#line 2382 "MROGeometry/TrafoParser.m"
+#line 2385 "MROGeometry/TrafoParser.m"
 	if ( (*p) == 46 )
 		goto st127;
 	if ( 48 <= (*p) && (*p) <= 57 )
@@ -2392,7 +2395,7 @@ case 127:
 		goto tr185;
 	goto st0;
 tr185:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2402,7 +2405,7 @@ st128:
 	if ( ++p == pe )
 		goto _test_eof128;
 case 128:
-#line 2406 "MROGeometry/TrafoParser.m"
+#line 2409 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr186;
 		case 41: goto tr187;
@@ -2416,14 +2419,14 @@ case 128:
 		goto tr186;
 	goto st0;
 tr186:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
     argv[argc++] = v;
     [buf setString:@""];
   }
-#line 38 "MROGeometry/TrafoParser.rl"
+#line 41 "MROGeometry/TrafoParser.rl"
 	{
     two = YES;
   }
@@ -2432,7 +2435,7 @@ st129:
 	if ( ++p == pe )
 		goto _test_eof129;
 case 129:
-#line 2436 "MROGeometry/TrafoParser.m"
+#line 2439 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st129;
 		case 41: goto st175;
@@ -2459,7 +2462,7 @@ case 131:
 		goto tr191;
 	goto st0;
 tr191:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2469,7 +2472,7 @@ st132:
 	if ( ++p == pe )
 		goto _test_eof132;
 case 132:
-#line 2473 "MROGeometry/TrafoParser.m"
+#line 2476 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr186;
 		case 41: goto tr187;
@@ -2481,7 +2484,7 @@ case 132:
 		goto tr186;
 	goto st0;
 tr184:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2491,7 +2494,7 @@ st133:
 	if ( ++p == pe )
 		goto _test_eof133;
 case 133:
-#line 2495 "MROGeometry/TrafoParser.m"
+#line 2498 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr186;
 		case 41: goto tr187;
@@ -2506,7 +2509,7 @@ case 133:
 		goto tr186;
 	goto st0;
 tr177:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -2518,7 +2521,7 @@ st134:
 	if ( ++p == pe )
 		goto _test_eof134;
 case 134:
-#line 2522 "MROGeometry/TrafoParser.m"
+#line 2525 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st134;
 		case 43: goto tr181;
@@ -2550,7 +2553,7 @@ case 136:
 		goto tr193;
 	goto st0;
 tr193:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2560,7 +2563,7 @@ st137:
 	if ( ++p == pe )
 		goto _test_eof137;
 case 137:
-#line 2564 "MROGeometry/TrafoParser.m"
+#line 2567 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr175;
 		case 41: goto tr176;
@@ -2573,7 +2576,7 @@ case 137:
 		goto tr175;
 	goto st0;
 tr173:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2583,7 +2586,7 @@ st138:
 	if ( ++p == pe )
 		goto _test_eof138;
 case 138:
-#line 2587 "MROGeometry/TrafoParser.m"
+#line 2590 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr175;
 		case 41: goto tr176;
@@ -2617,7 +2620,7 @@ case 140:
 		goto tr195;
 	goto st0;
 tr195:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2627,7 +2630,7 @@ st141:
 	if ( ++p == pe )
 		goto _test_eof141;
 case 141:
-#line 2631 "MROGeometry/TrafoParser.m"
+#line 2634 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr56;
 		case 41: goto tr57;
@@ -2639,7 +2642,7 @@ case 141:
 		goto tr56;
 	goto st0;
 tr54:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2649,7 +2652,7 @@ st142:
 	if ( ++p == pe )
 		goto _test_eof142;
 case 142:
-#line 2653 "MROGeometry/TrafoParser.m"
+#line 2656 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr56;
 		case 41: goto tr57;
@@ -2664,7 +2667,7 @@ case 142:
 		goto tr56;
 	goto st0;
 tr48:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -2676,7 +2679,7 @@ st143:
 	if ( ++p == pe )
 		goto _test_eof143;
 case 143:
-#line 2680 "MROGeometry/TrafoParser.m"
+#line 2683 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st143;
 		case 43: goto tr51;
@@ -2708,7 +2711,7 @@ case 145:
 		goto tr197;
 	goto st0;
 tr197:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2718,7 +2721,7 @@ st146:
 	if ( ++p == pe )
 		goto _test_eof146;
 case 146:
-#line 2722 "MROGeometry/TrafoParser.m"
+#line 2725 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr47;
 		case 44: goto tr48;
@@ -2730,7 +2733,7 @@ case 146:
 		goto tr47;
 	goto st0;
 tr45:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2740,7 +2743,7 @@ st147:
 	if ( ++p == pe )
 		goto _test_eof147;
 case 147:
-#line 2744 "MROGeometry/TrafoParser.m"
+#line 2747 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr47;
 		case 44: goto tr48;
@@ -2755,7 +2758,7 @@ case 147:
 		goto tr47;
 	goto st0;
 tr39:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -2767,7 +2770,7 @@ st148:
 	if ( ++p == pe )
 		goto _test_eof148;
 case 148:
-#line 2771 "MROGeometry/TrafoParser.m"
+#line 2774 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st148;
 		case 43: goto tr42;
@@ -2799,7 +2802,7 @@ case 150:
 		goto tr199;
 	goto st0;
 tr199:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2809,7 +2812,7 @@ st151:
 	if ( ++p == pe )
 		goto _test_eof151;
 case 151:
-#line 2813 "MROGeometry/TrafoParser.m"
+#line 2816 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr38;
 		case 44: goto tr39;
@@ -2821,7 +2824,7 @@ case 151:
 		goto tr38;
 	goto st0;
 tr36:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2831,7 +2834,7 @@ st152:
 	if ( ++p == pe )
 		goto _test_eof152;
 case 152:
-#line 2835 "MROGeometry/TrafoParser.m"
+#line 2838 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr38;
 		case 44: goto tr39;
@@ -2846,7 +2849,7 @@ case 152:
 		goto tr38;
 	goto st0;
 tr30:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -2858,7 +2861,7 @@ st153:
 	if ( ++p == pe )
 		goto _test_eof153;
 case 153:
-#line 2862 "MROGeometry/TrafoParser.m"
+#line 2865 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st153;
 		case 43: goto tr33;
@@ -2890,7 +2893,7 @@ case 155:
 		goto tr201;
 	goto st0;
 tr201:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2900,7 +2903,7 @@ st156:
 	if ( ++p == pe )
 		goto _test_eof156;
 case 156:
-#line 2904 "MROGeometry/TrafoParser.m"
+#line 2907 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr29;
 		case 44: goto tr30;
@@ -2912,7 +2915,7 @@ case 156:
 		goto tr29;
 	goto st0;
 tr27:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2922,7 +2925,7 @@ st157:
 	if ( ++p == pe )
 		goto _test_eof157;
 case 157:
-#line 2926 "MROGeometry/TrafoParser.m"
+#line 2929 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr29;
 		case 44: goto tr30;
@@ -2937,7 +2940,7 @@ case 157:
 		goto tr29;
 	goto st0;
 tr21:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -2949,7 +2952,7 @@ st158:
 	if ( ++p == pe )
 		goto _test_eof158;
 case 158:
-#line 2953 "MROGeometry/TrafoParser.m"
+#line 2956 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st158;
 		case 43: goto tr24;
@@ -2981,7 +2984,7 @@ case 160:
 		goto tr203;
 	goto st0;
 tr203:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -2991,7 +2994,7 @@ st161:
 	if ( ++p == pe )
 		goto _test_eof161;
 case 161:
-#line 2995 "MROGeometry/TrafoParser.m"
+#line 2998 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr20;
 		case 44: goto tr21;
@@ -3003,7 +3006,7 @@ case 161:
 		goto tr20;
 	goto st0;
 tr18:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -3013,7 +3016,7 @@ st162:
 	if ( ++p == pe )
 		goto _test_eof162;
 case 162:
-#line 3017 "MROGeometry/TrafoParser.m"
+#line 3020 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr20;
 		case 44: goto tr21;
@@ -3028,7 +3031,7 @@ case 162:
 		goto tr20;
 	goto st0;
 tr12:
-#line 47 "MROGeometry/TrafoParser.rl"
+#line 50 "MROGeometry/TrafoParser.rl"
 	{
     const double v = [buf doubleValue];
     MRLogD(@"buffer to number '%@' -> %f", buf, v);
@@ -3040,7 +3043,7 @@ st163:
 	if ( ++p == pe )
 		goto _test_eof163;
 case 163:
-#line 3044 "MROGeometry/TrafoParser.m"
+#line 3047 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto st163;
 		case 43: goto tr15;
@@ -3072,7 +3075,7 @@ case 165:
 		goto tr205;
 	goto st0;
 tr205:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -3082,7 +3085,7 @@ st166:
 	if ( ++p == pe )
 		goto _test_eof166;
 case 166:
-#line 3086 "MROGeometry/TrafoParser.m"
+#line 3089 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr11;
 		case 44: goto tr12;
@@ -3094,7 +3097,7 @@ case 166:
 		goto tr11;
 	goto st0;
 tr9:
-#line 42 "MROGeometry/TrafoParser.rl"
+#line 45 "MROGeometry/TrafoParser.rl"
 	{
     [buf appendFormat:@"%c", *p];
     MRLogD(@"buffered '%@'", buf);
@@ -3104,7 +3107,7 @@ st167:
 	if ( ++p == pe )
 		goto _test_eof167;
 case 167:
-#line 3108 "MROGeometry/TrafoParser.m"
+#line 3111 "MROGeometry/TrafoParser.m"
 	switch( (*p) ) {
 		case 32: goto tr11;
 		case 44: goto tr12;
@@ -3300,21 +3303,21 @@ case 167:
 	{
 	switch ( cs ) {
 	case 173: 
-#line 54 "MROGeometry/TrafoParser.rl"
+#line 57 "MROGeometry/TrafoParser.rl"
 	{
     if(YES)
       [NSException raise:@"Not implemented yet." format:@""];
   }
 	break;
 	case 174: 
-#line 59 "MROGeometry/TrafoParser.rl"
+#line 62 "MROGeometry/TrafoParser.rl"
 	{
     if(YES)
       [NSException raise:@"Not implemented yet." format:@""];
   }
 	break;
 	case 171: 
-#line 64 "MROGeometry/TrafoParser.rl"
+#line 67 "MROGeometry/TrafoParser.rl"
 	{
     MRLogD(@"rotate %f", argv[0]);
     argv[0] *= M_PI / 180;
@@ -3327,7 +3330,7 @@ case 167:
   }
 	break;
 	case 172: 
-#line 75 "MROGeometry/TrafoParser.rl"
+#line 78 "MROGeometry/TrafoParser.rl"
 	{
     if(!two)
       argv[1] = argv[0];
@@ -3336,7 +3339,7 @@ case 167:
   }
 	break;
 	case 175: 
-#line 82 "MROGeometry/TrafoParser.rl"
+#line 85 "MROGeometry/TrafoParser.rl"
 	{
     if(!two)
       argv[1] = argv[0];
@@ -3345,21 +3348,21 @@ case 167:
   }
 	break;
 	case 169: 
-#line 89 "MROGeometry/TrafoParser.rl"
+#line 92 "MROGeometry/TrafoParser.rl"
 	{
     MRLogD(@"concat", nil);
     t = CGAffineTransformConcat(t, CGAffineTransformMake(argv[0], argv[1], argv[2], argv[3], argv[4], argv[5]) );
 //    t.preConcatenate(new AffineTransform(argv));
   }
 	break;
-#line 3356 "MROGeometry/TrafoParser.m"
+#line 3359 "MROGeometry/TrafoParser.m"
 	}
 	}
 
 	_out: {}
 	}
 
-#line 162 "MROGeometry/TrafoParser.rl"
+#line 165 "MROGeometry/TrafoParser.rl"
 
   if ( errPtr != nil && cs < trafo_first_final )
     *errPtr = [self parseError:data position:p];
@@ -3371,5 +3374,7 @@ case 167:
   const char *c = [data UTF8String];
   return [self newCGAffineTransformWithCString:c length:strlen(c) error:errPtr];
 }
+
+#pragma clang diagnostic pop
 
 @end

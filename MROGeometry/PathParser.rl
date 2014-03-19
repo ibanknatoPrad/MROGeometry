@@ -36,6 +36,9 @@ static inline double strltod(const char *restrict nptr, char **restrict endptr, 
  */
 @implementation PathParser
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-const-variable"
+
 %%{
 
   machine path;
@@ -302,5 +305,7 @@ static inline double strltod(const char *restrict nptr, char **restrict endptr, 
     const char *c = [data UTF8String];
     return [self newCGPathWithCString:c length:strlen(c) trafo:trafo error:errPtr];
 }
+
+#pragma clang diagnostic pop
 
 @end

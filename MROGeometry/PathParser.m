@@ -38,12 +38,15 @@ static inline double strltod(const char *restrict nptr, char **restrict endptr, 
  */
 @implementation PathParser
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-const-variable"
 
-#line 264 "MROGeometry/PathParser.rl"
+
+#line 267 "MROGeometry/PathParser.rl"
 
 
 
-#line 47 "MROGeometry/PathParser.m"
+#line 50 "MROGeometry/PathParser.m"
 static const int path_start = 232;
 static const int path_first_final = 232;
 static const int path_error = 0;
@@ -51,7 +54,7 @@ static const int path_error = 0;
 static const int path_en_main = 232;
 
 
-#line 267 "MROGeometry/PathParser.rl"
+#line 270 "MROGeometry/PathParser.rl"
   
 -(CGPathRef)newCGPathWithCString:(const char*)data length:(const size_t)length trafo:(const CGAffineTransform*)trafo error:(NSError**)errPtr
 {
@@ -75,16 +78,16 @@ static const int path_en_main = 232;
 ///////////////////////////////////////////////////////////
 //  init ragel
   
-#line 79 "MROGeometry/PathParser.m"
+#line 82 "MROGeometry/PathParser.m"
 	{
 	cs = path_start;
 	}
 
-#line 290 "MROGeometry/PathParser.rl"
+#line 293 "MROGeometry/PathParser.rl"
 ///////////////////////////////////////////////////////////
 //  exec ragel
   
-#line 88 "MROGeometry/PathParser.m"
+#line 91 "MROGeometry/PathParser.m"
 	{
 	if ( p == pe )
 		goto _test_eof;
@@ -107,39 +110,39 @@ st0:
 cs = 0;
 	goto _out;
 tr443:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st1;
 tr485:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st1;
 tr508:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -147,85 +150,85 @@ tr508:
   }
 	goto st1;
 tr533:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st1;
 tr558:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st1;
 tr583:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st1;
 tr608:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st1;
 tr633:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st1;
 tr658:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st1;
 tr679:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -234,7 +237,7 @@ st1:
 	if ( ++p == pe )
 		goto _test_eof1;
 case 1:
-#line 238 "MROGeometry/PathParser.m"
+#line 241 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr0;
 		case 32: goto tr0;
@@ -249,13 +252,13 @@ case 1:
 		goto tr0;
 	goto st0;
 tr0:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
 	goto st2;
 tr366:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
@@ -264,7 +267,7 @@ st2:
 	if ( ++p == pe )
 		goto _test_eof2;
 case 2:
-#line 268 "MROGeometry/PathParser.m"
+#line 271 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st2;
 		case 32: goto st2;
@@ -279,27 +282,27 @@ case 2:
 		goto st2;
 	goto st0;
 tr2:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st3;
 tr6:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st3;
 tr367:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -308,34 +311,34 @@ st3:
 	if ( ++p == pe )
 		goto _test_eof3;
 case 3:
-#line 312 "MROGeometry/PathParser.m"
+#line 315 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st4;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st161;
 	goto st0;
 tr3:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st4;
 tr7:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st4;
 tr368:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -344,7 +347,7 @@ st4:
 	if ( ++p == pe )
 		goto _test_eof4;
 case 4:
-#line 348 "MROGeometry/PathParser.m"
+#line 351 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st5;
 	goto st0;
@@ -370,7 +373,7 @@ case 5:
 		goto tr13;
 	goto st0;
 tr12:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -381,7 +384,7 @@ st6:
 	if ( ++p == pe )
 		goto _test_eof6;
 case 6:
-#line 385 "MROGeometry/PathParser.m"
+#line 388 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st6;
 		case 32: goto st6;
@@ -398,19 +401,19 @@ case 6:
 		goto tr18;
 	goto st0;
 tr18:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st7;
 tr13:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -419,26 +422,26 @@ st7:
 	if ( ++p == pe )
 		goto _test_eof7;
 case 7:
-#line 423 "MROGeometry/PathParser.m"
+#line 426 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st8;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st265;
 	goto st0;
 tr20:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st8;
 tr15:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -447,7 +450,7 @@ st8:
 	if ( ++p == pe )
 		goto _test_eof8;
 case 8:
-#line 451 "MROGeometry/PathParser.m"
+#line 454 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st233;
 	goto st0;
@@ -493,26 +496,26 @@ case 233:
 		goto tr435;
 	goto st0;
 tr434:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st234;
 tr476:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
@@ -522,7 +525,7 @@ st234:
 	if ( ++p == pe )
 		goto _test_eof234;
 case 234:
-#line 526 "MROGeometry/PathParser.m"
+#line 529 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st234;
 		case 32: goto st234;
@@ -559,61 +562,61 @@ case 234:
 		goto tr42;
 	goto st0;
 tr205:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st9;
 tr42:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st9;
 tr363:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st9;
 tr435:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st9;
 tr477:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -622,68 +625,68 @@ st9:
 	if ( ++p == pe )
 		goto _test_eof9;
 case 9:
-#line 626 "MROGeometry/PathParser.m"
+#line 629 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st10;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st16;
 	goto st0;
 tr206:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st10;
 tr43:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st10;
 tr364:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st10;
 tr437:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st10;
 tr479:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -692,7 +695,7 @@ st10:
 	if ( ++p == pe )
 		goto _test_eof10;
 case 10:
-#line 696 "MROGeometry/PathParser.m"
+#line 699 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st11;
 	goto st0;
@@ -718,7 +721,7 @@ case 11:
 		goto tr29;
 	goto st0;
 tr28:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -729,7 +732,7 @@ st12:
 	if ( ++p == pe )
 		goto _test_eof12;
 case 12:
-#line 733 "MROGeometry/PathParser.m"
+#line 736 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st12;
 		case 32: goto st12;
@@ -746,19 +749,19 @@ case 12:
 		goto tr34;
 	goto st0;
 tr34:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st13;
 tr29:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -767,26 +770,26 @@ st13:
 	if ( ++p == pe )
 		goto _test_eof13;
 case 13:
-#line 771 "MROGeometry/PathParser.m"
+#line 774 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st14;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st236;
 	goto st0;
 tr36:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st14;
 tr31:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -795,7 +798,7 @@ st14:
 	if ( ++p == pe )
 		goto _test_eof14;
 case 14:
-#line 799 "MROGeometry/PathParser.m"
+#line 802 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st235;
 	goto st0;
@@ -841,38 +844,38 @@ case 235:
 		goto tr477;
 	goto st0;
 tr204:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
 	goto st15;
 tr362:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
 	goto st15;
 tr436:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st15;
 tr478:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
@@ -882,7 +885,7 @@ st15:
 	if ( ++p == pe )
 		goto _test_eof15;
 case 15:
-#line 886 "MROGeometry/PathParser.m"
+#line 889 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st15;
 		case 32: goto st15;
@@ -897,27 +900,27 @@ case 15:
 		goto st15;
 	goto st0;
 tr207:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st16;
 tr44:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st16;
 tr365:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -926,7 +929,7 @@ st16:
 	if ( ++p == pe )
 		goto _test_eof16;
 case 16:
-#line 930 "MROGeometry/PathParser.m"
+#line 933 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr28;
 		case 32: goto tr28;
@@ -945,7 +948,7 @@ case 16:
 		goto tr29;
 	goto st0;
 tr30:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -956,7 +959,7 @@ st17:
 	if ( ++p == pe )
 		goto _test_eof17;
 case 17:
-#line 960 "MROGeometry/PathParser.m"
+#line 963 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st17;
 		case 32: goto st17;
@@ -971,7 +974,7 @@ case 17:
 		goto st17;
 	goto st0;
 tr37:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -980,7 +983,7 @@ st236:
 	if ( ++p == pe )
 		goto _test_eof236;
 case 236:
-#line 984 "MROGeometry/PathParser.m"
+#line 987 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr476;
 		case 32: goto tr476;
@@ -1019,39 +1022,39 @@ case 236:
 		goto tr477;
 	goto st0;
 tr438:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st18;
 tr480:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st18;
 tr503:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -1059,85 +1062,85 @@ tr503:
   }
 	goto st18;
 tr528:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st18;
 tr553:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st18;
 tr578:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st18;
 tr603:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st18;
 tr628:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st18;
 tr653:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st18;
 tr675:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -1146,7 +1149,7 @@ st18:
 	if ( ++p == pe )
 		goto _test_eof18;
 case 18:
-#line 1150 "MROGeometry/PathParser.m"
+#line 1153 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr45;
 		case 32: goto tr45;
@@ -1159,25 +1162,25 @@ case 18:
 		goto tr45;
 	goto st0;
 tr45:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
 	goto st19;
 tr351:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
 	goto st19;
 tr501:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -1188,7 +1191,7 @@ st19:
 	if ( ++p == pe )
 		goto _test_eof19;
 case 19:
-#line 1192 "MROGeometry/PathParser.m"
+#line 1195 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st19;
 		case 32: goto st19;
@@ -1201,45 +1204,45 @@ case 19:
 		goto st19;
 	goto st0;
 tr46:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st20;
 tr49:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st20;
 tr352:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st20;
 tr502:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -1248,7 +1251,7 @@ st20:
 	if ( ++p == pe )
 		goto _test_eof20;
 case 20:
-#line 1252 "MROGeometry/PathParser.m"
+#line 1255 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st21;
 	goto st0;
@@ -1271,7 +1274,7 @@ case 21:
 		goto tr52;
 	goto st0;
 tr52:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -1282,7 +1285,7 @@ st22:
 	if ( ++p == pe )
 		goto _test_eof22;
 case 22:
-#line 1286 "MROGeometry/PathParser.m"
+#line 1289 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st22;
 		case 32: goto st22;
@@ -1296,7 +1299,7 @@ case 22:
 		goto st22;
 	goto st0;
 tr53:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -1307,7 +1310,7 @@ st23:
 	if ( ++p == pe )
 		goto _test_eof23;
 case 23:
-#line 1311 "MROGeometry/PathParser.m"
+#line 1314 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st23;
 		case 32: goto st23;
@@ -1320,19 +1323,19 @@ case 23:
 		goto st23;
 	goto st0;
 tr58:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st24;
 tr54:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -1341,7 +1344,7 @@ st24:
 	if ( ++p == pe )
 		goto _test_eof24;
 case 24:
-#line 1345 "MROGeometry/PathParser.m"
+#line 1348 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st25;
 	goto st0;
@@ -1367,7 +1370,7 @@ case 25:
 		goto tr62;
 	goto st0;
 tr61:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -1378,7 +1381,7 @@ st26:
 	if ( ++p == pe )
 		goto _test_eof26;
 case 26:
-#line 1382 "MROGeometry/PathParser.m"
+#line 1385 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st26;
 		case 32: goto st26;
@@ -1395,19 +1398,19 @@ case 26:
 		goto tr67;
 	goto st0;
 tr67:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st27;
 tr62:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -1416,26 +1419,26 @@ st27:
 	if ( ++p == pe )
 		goto _test_eof27;
 case 27:
-#line 1420 "MROGeometry/PathParser.m"
+#line 1423 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st28;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st221;
 	goto st0;
 tr69:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st28;
 tr64:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -1444,7 +1447,7 @@ st28:
 	if ( ++p == pe )
 		goto _test_eof28;
 case 28:
-#line 1448 "MROGeometry/PathParser.m"
+#line 1451 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st29;
 	goto st0;
@@ -1466,7 +1469,7 @@ case 29:
 		goto tr74;
 	goto st0;
 tr74:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -1477,7 +1480,7 @@ st30:
 	if ( ++p == pe )
 		goto _test_eof30;
 case 30:
-#line 1481 "MROGeometry/PathParser.m"
+#line 1484 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st30;
 		case 32: goto st30;
@@ -1489,7 +1492,7 @@ case 30:
 		goto st30;
 	goto st0;
 tr75:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -1500,7 +1503,7 @@ st31:
 	if ( ++p == pe )
 		goto _test_eof31;
 case 31:
-#line 1504 "MROGeometry/PathParser.m"
+#line 1507 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st31;
 		case 32: goto st31;
@@ -1523,14 +1526,14 @@ case 32:
 		goto tr81;
 	goto st0;
 tr81:
-#line 62 "MROGeometry/PathParser.rl"
+#line 65 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action push_false isn't implemented yet." format:@""];
   }
 	goto st33;
 tr420:
-#line 57 "MROGeometry/PathParser.rl"
+#line 60 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action push_true isn't implemented yet." format:@""];
@@ -1540,7 +1543,7 @@ st33:
 	if ( ++p == pe )
 		goto _test_eof33;
 case 33:
-#line 1544 "MROGeometry/PathParser.m"
+#line 1547 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st33;
 		case 32: goto st33;
@@ -1552,14 +1555,14 @@ case 33:
 		goto st33;
 	goto st0;
 tr82:
-#line 62 "MROGeometry/PathParser.rl"
+#line 65 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action push_false isn't implemented yet." format:@""];
   }
 	goto st34;
 tr421:
-#line 57 "MROGeometry/PathParser.rl"
+#line 60 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action push_true isn't implemented yet." format:@""];
@@ -1569,7 +1572,7 @@ st34:
 	if ( ++p == pe )
 		goto _test_eof34;
 case 34:
-#line 1573 "MROGeometry/PathParser.m"
+#line 1576 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st34;
 		case 32: goto st34;
@@ -1592,14 +1595,14 @@ case 35:
 		goto tr87;
 	goto st0;
 tr87:
-#line 62 "MROGeometry/PathParser.rl"
+#line 65 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action push_false isn't implemented yet." format:@""];
   }
 	goto st36;
 tr418:
-#line 57 "MROGeometry/PathParser.rl"
+#line 60 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action push_true isn't implemented yet." format:@""];
@@ -1609,7 +1612,7 @@ st36:
 	if ( ++p == pe )
 		goto _test_eof36;
 case 36:
-#line 1613 "MROGeometry/PathParser.m"
+#line 1616 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st36;
 		case 32: goto st36;
@@ -1626,7 +1629,7 @@ case 36:
 		goto tr90;
 	goto st0;
 tr90:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -1635,14 +1638,14 @@ st37:
 	if ( ++p == pe )
 		goto _test_eof37;
 case 37:
-#line 1639 "MROGeometry/PathParser.m"
+#line 1642 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st38;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st214;
 	goto st0;
 tr92:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -1651,7 +1654,7 @@ st38:
 	if ( ++p == pe )
 		goto _test_eof38;
 case 38:
-#line 1655 "MROGeometry/PathParser.m"
+#line 1658 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st39;
 	goto st0;
@@ -1677,7 +1680,7 @@ case 39:
 		goto tr98;
 	goto st0;
 tr97:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -1688,7 +1691,7 @@ st40:
 	if ( ++p == pe )
 		goto _test_eof40;
 case 40:
-#line 1692 "MROGeometry/PathParser.m"
+#line 1695 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st40;
 		case 32: goto st40;
@@ -1705,19 +1708,19 @@ case 40:
 		goto tr103;
 	goto st0;
 tr103:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st41;
 tr98:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -1726,26 +1729,26 @@ st41:
 	if ( ++p == pe )
 		goto _test_eof41;
 case 41:
-#line 1730 "MROGeometry/PathParser.m"
+#line 1733 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st42;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st268;
 	goto st0;
 tr105:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st42;
 tr100:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -1754,7 +1757,7 @@ st42:
 	if ( ++p == pe )
 		goto _test_eof42;
 case 42:
-#line 1758 "MROGeometry/PathParser.m"
+#line 1761 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st237;
 	goto st0;
@@ -1797,13 +1800,13 @@ case 237:
 		goto tr500;
 	goto st0;
 tr500:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -1814,7 +1817,7 @@ st238:
 	if ( ++p == pe )
 		goto _test_eof238;
 case 238:
-#line 1818 "MROGeometry/PathParser.m"
+#line 1821 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st238;
 		case 32: goto st238;
@@ -1848,27 +1851,27 @@ case 238:
 		goto st238;
 	goto st0;
 tr47:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st43;
 tr50:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st43;
 tr353:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -1877,7 +1880,7 @@ st43:
 	if ( ++p == pe )
 		goto _test_eof43;
 case 43:
-#line 1881 "MROGeometry/PathParser.m"
+#line 1884 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr52;
 		case 32: goto tr52;
@@ -1927,39 +1930,39 @@ case 46:
 		goto tr52;
 	goto st0;
 tr439:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st47;
 tr481:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st47;
 tr504:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -1967,85 +1970,85 @@ tr504:
   }
 	goto st47;
 tr529:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st47;
 tr554:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st47;
 tr579:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st47;
 tr604:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st47;
 tr629:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st47;
 tr654:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st47;
 tr676:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -2054,7 +2057,7 @@ st47:
 	if ( ++p == pe )
 		goto _test_eof47;
 case 47:
-#line 2058 "MROGeometry/PathParser.m"
+#line 2061 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr113;
 		case 32: goto tr113;
@@ -2069,25 +2072,25 @@ case 47:
 		goto tr113;
 	goto st0;
 tr113:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
 	goto st48;
 tr354:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
 	goto st48;
 tr526:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
@@ -2097,7 +2100,7 @@ st48:
 	if ( ++p == pe )
 		goto _test_eof48;
 case 48:
-#line 2101 "MROGeometry/PathParser.m"
+#line 2104 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st48;
 		case 32: goto st48;
@@ -2112,44 +2115,44 @@ case 48:
 		goto st48;
 	goto st0;
 tr114:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st49;
 tr118:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st49;
 tr355:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st49;
 tr525:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2158,51 +2161,51 @@ st49:
 	if ( ++p == pe )
 		goto _test_eof49;
 case 49:
-#line 2162 "MROGeometry/PathParser.m"
+#line 2165 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st50;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st71;
 	goto st0;
 tr115:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st50;
 tr119:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st50;
 tr356:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st50;
 tr527:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2211,7 +2214,7 @@ st50:
 	if ( ++p == pe )
 		goto _test_eof50;
 case 50:
-#line 2215 "MROGeometry/PathParser.m"
+#line 2218 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st51;
 	goto st0;
@@ -2237,7 +2240,7 @@ case 51:
 		goto tr125;
 	goto st0;
 tr124:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -2248,7 +2251,7 @@ st52:
 	if ( ++p == pe )
 		goto _test_eof52;
 case 52:
-#line 2252 "MROGeometry/PathParser.m"
+#line 2255 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st52;
 		case 32: goto st52;
@@ -2265,19 +2268,19 @@ case 52:
 		goto tr130;
 	goto st0;
 tr130:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st53;
 tr125:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2286,26 +2289,26 @@ st53:
 	if ( ++p == pe )
 		goto _test_eof53;
 case 53:
-#line 2290 "MROGeometry/PathParser.m"
+#line 2293 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st54;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st73;
 	goto st0;
 tr132:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st54;
 tr127:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2314,7 +2317,7 @@ st54:
 	if ( ++p == pe )
 		goto _test_eof54;
 case 54:
-#line 2318 "MROGeometry/PathParser.m"
+#line 2321 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st55;
 	goto st0;
@@ -2340,7 +2343,7 @@ case 55:
 		goto tr138;
 	goto st0;
 tr137:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -2351,7 +2354,7 @@ st56:
 	if ( ++p == pe )
 		goto _test_eof56;
 case 56:
-#line 2355 "MROGeometry/PathParser.m"
+#line 2358 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st56;
 		case 32: goto st56;
@@ -2368,19 +2371,19 @@ case 56:
 		goto tr143;
 	goto st0;
 tr143:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st57;
 tr138:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2389,26 +2392,26 @@ st57:
 	if ( ++p == pe )
 		goto _test_eof57;
 case 57:
-#line 2393 "MROGeometry/PathParser.m"
+#line 2396 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st58;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st75;
 	goto st0;
 tr145:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st58;
 tr140:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2417,7 +2420,7 @@ st58:
 	if ( ++p == pe )
 		goto _test_eof58;
 case 58:
-#line 2421 "MROGeometry/PathParser.m"
+#line 2424 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st59;
 	goto st0;
@@ -2443,7 +2446,7 @@ case 59:
 		goto tr151;
 	goto st0;
 tr150:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -2454,7 +2457,7 @@ st60:
 	if ( ++p == pe )
 		goto _test_eof60;
 case 60:
-#line 2458 "MROGeometry/PathParser.m"
+#line 2461 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st60;
 		case 32: goto st60;
@@ -2471,19 +2474,19 @@ case 60:
 		goto tr156;
 	goto st0;
 tr156:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st61;
 tr151:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2492,26 +2495,26 @@ st61:
 	if ( ++p == pe )
 		goto _test_eof61;
 case 61:
-#line 2496 "MROGeometry/PathParser.m"
+#line 2499 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st62;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st77;
 	goto st0;
 tr158:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st62;
 tr153:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2520,7 +2523,7 @@ st62:
 	if ( ++p == pe )
 		goto _test_eof62;
 case 62:
-#line 2524 "MROGeometry/PathParser.m"
+#line 2527 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st63;
 	goto st0;
@@ -2546,7 +2549,7 @@ case 63:
 		goto tr164;
 	goto st0;
 tr163:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -2557,7 +2560,7 @@ st64:
 	if ( ++p == pe )
 		goto _test_eof64;
 case 64:
-#line 2561 "MROGeometry/PathParser.m"
+#line 2564 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st64;
 		case 32: goto st64;
@@ -2574,19 +2577,19 @@ case 64:
 		goto tr169;
 	goto st0;
 tr169:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st65;
 tr164:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2595,26 +2598,26 @@ st65:
 	if ( ++p == pe )
 		goto _test_eof65;
 case 65:
-#line 2599 "MROGeometry/PathParser.m"
+#line 2602 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st66;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st79;
 	goto st0;
 tr171:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st66;
 tr166:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2623,7 +2626,7 @@ st66:
 	if ( ++p == pe )
 		goto _test_eof66;
 case 66:
-#line 2627 "MROGeometry/PathParser.m"
+#line 2630 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st67;
 	goto st0;
@@ -2649,7 +2652,7 @@ case 67:
 		goto tr177;
 	goto st0;
 tr176:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -2660,7 +2663,7 @@ st68:
 	if ( ++p == pe )
 		goto _test_eof68;
 case 68:
-#line 2664 "MROGeometry/PathParser.m"
+#line 2667 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st68;
 		case 32: goto st68;
@@ -2677,19 +2680,19 @@ case 68:
 		goto tr182;
 	goto st0;
 tr182:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st69;
 tr177:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2698,26 +2701,26 @@ st69:
 	if ( ++p == pe )
 		goto _test_eof69;
 case 69:
-#line 2702 "MROGeometry/PathParser.m"
+#line 2705 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st70;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st241;
 	goto st0;
 tr184:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st70;
 tr179:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2726,7 +2729,7 @@ st70:
 	if ( ++p == pe )
 		goto _test_eof70;
 case 70:
-#line 2730 "MROGeometry/PathParser.m"
+#line 2733 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st239;
 	goto st0;
@@ -2772,13 +2775,13 @@ case 239:
 		goto tr525;
 	goto st0;
 tr524:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
@@ -2788,7 +2791,7 @@ st240:
 	if ( ++p == pe )
 		goto _test_eof240;
 case 240:
-#line 2792 "MROGeometry/PathParser.m"
+#line 2795 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st240;
 		case 32: goto st240;
@@ -2825,27 +2828,27 @@ case 240:
 		goto tr118;
 	goto st0;
 tr116:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st71;
 tr120:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st71;
 tr357:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2854,7 +2857,7 @@ st71:
 	if ( ++p == pe )
 		goto _test_eof71;
 case 71:
-#line 2858 "MROGeometry/PathParser.m"
+#line 2861 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr124;
 		case 32: goto tr124;
@@ -2873,7 +2876,7 @@ case 71:
 		goto tr125;
 	goto st0;
 tr126:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -2884,7 +2887,7 @@ st72:
 	if ( ++p == pe )
 		goto _test_eof72;
 case 72:
-#line 2888 "MROGeometry/PathParser.m"
+#line 2891 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st72;
 		case 32: goto st72;
@@ -2899,7 +2902,7 @@ case 72:
 		goto st72;
 	goto st0;
 tr133:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2908,7 +2911,7 @@ st73:
 	if ( ++p == pe )
 		goto _test_eof73;
 case 73:
-#line 2912 "MROGeometry/PathParser.m"
+#line 2915 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr137;
 		case 32: goto tr137;
@@ -2927,7 +2930,7 @@ case 73:
 		goto tr138;
 	goto st0;
 tr139:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -2938,7 +2941,7 @@ st74:
 	if ( ++p == pe )
 		goto _test_eof74;
 case 74:
-#line 2942 "MROGeometry/PathParser.m"
+#line 2945 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st74;
 		case 32: goto st74;
@@ -2953,7 +2956,7 @@ case 74:
 		goto st74;
 	goto st0;
 tr146:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -2962,7 +2965,7 @@ st75:
 	if ( ++p == pe )
 		goto _test_eof75;
 case 75:
-#line 2966 "MROGeometry/PathParser.m"
+#line 2969 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr150;
 		case 32: goto tr150;
@@ -2981,7 +2984,7 @@ case 75:
 		goto tr151;
 	goto st0;
 tr152:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -2992,7 +2995,7 @@ st76:
 	if ( ++p == pe )
 		goto _test_eof76;
 case 76:
-#line 2996 "MROGeometry/PathParser.m"
+#line 2999 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st76;
 		case 32: goto st76;
@@ -3007,7 +3010,7 @@ case 76:
 		goto st76;
 	goto st0;
 tr159:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -3016,7 +3019,7 @@ st77:
 	if ( ++p == pe )
 		goto _test_eof77;
 case 77:
-#line 3020 "MROGeometry/PathParser.m"
+#line 3023 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr163;
 		case 32: goto tr163;
@@ -3035,7 +3038,7 @@ case 77:
 		goto tr164;
 	goto st0;
 tr165:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -3046,7 +3049,7 @@ st78:
 	if ( ++p == pe )
 		goto _test_eof78;
 case 78:
-#line 3050 "MROGeometry/PathParser.m"
+#line 3053 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st78;
 		case 32: goto st78;
@@ -3061,7 +3064,7 @@ case 78:
 		goto st78;
 	goto st0;
 tr172:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -3070,7 +3073,7 @@ st79:
 	if ( ++p == pe )
 		goto _test_eof79;
 case 79:
-#line 3074 "MROGeometry/PathParser.m"
+#line 3077 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr176;
 		case 32: goto tr176;
@@ -3089,7 +3092,7 @@ case 79:
 		goto tr177;
 	goto st0;
 tr178:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -3100,7 +3103,7 @@ st80:
 	if ( ++p == pe )
 		goto _test_eof80;
 case 80:
-#line 3104 "MROGeometry/PathParser.m"
+#line 3107 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st80;
 		case 32: goto st80;
@@ -3115,7 +3118,7 @@ case 80:
 		goto st80;
 	goto st0;
 tr185:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -3124,7 +3127,7 @@ st241:
 	if ( ++p == pe )
 		goto _test_eof241;
 case 241:
-#line 3128 "MROGeometry/PathParser.m"
+#line 3131 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr524;
 		case 32: goto tr524;
@@ -3220,39 +3223,39 @@ case 242:
 		goto tr525;
 	goto st0;
 tr441:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st83;
 tr483:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st83;
 tr506:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -3260,85 +3263,85 @@ tr506:
   }
 	goto st83;
 tr531:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st83;
 tr556:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st83;
 tr581:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st83;
 tr606:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st83;
 tr631:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st83;
 tr656:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st83;
 tr677:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -3347,7 +3350,7 @@ st83:
 	if ( ++p == pe )
 		goto _test_eof83;
 case 83:
-#line 3351 "MROGeometry/PathParser.m"
+#line 3354 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr191;
 		case 32: goto tr191;
@@ -3362,25 +3365,25 @@ case 83:
 		goto tr191;
 	goto st0;
 tr191:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
 	goto st84;
 tr358:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
 	goto st84;
 tr551:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
@@ -3390,7 +3393,7 @@ st84:
 	if ( ++p == pe )
 		goto _test_eof84;
 case 84:
-#line 3394 "MROGeometry/PathParser.m"
+#line 3397 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st84;
 		case 32: goto st84;
@@ -3405,44 +3408,44 @@ case 84:
 		goto st84;
 	goto st0;
 tr192:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st85;
 tr196:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st85;
 tr359:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st85;
 tr550:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -3451,51 +3454,51 @@ st85:
 	if ( ++p == pe )
 		goto _test_eof85;
 case 85:
-#line 3455 "MROGeometry/PathParser.m"
+#line 3458 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st86;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st245;
 	goto st0;
 tr193:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st86;
 tr197:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st86;
 tr360:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st86;
 tr552:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -3504,7 +3507,7 @@ st86:
 	if ( ++p == pe )
 		goto _test_eof86;
 case 86:
-#line 3508 "MROGeometry/PathParser.m"
+#line 3511 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st243;
 	goto st0;
@@ -3550,13 +3553,13 @@ case 243:
 		goto tr550;
 	goto st0;
 tr549:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
@@ -3566,7 +3569,7 @@ st244:
 	if ( ++p == pe )
 		goto _test_eof244;
 case 244:
-#line 3570 "MROGeometry/PathParser.m"
+#line 3573 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st244;
 		case 32: goto st244;
@@ -3603,27 +3606,27 @@ case 244:
 		goto tr196;
 	goto st0;
 tr194:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st245;
 tr198:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st245;
 tr361:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -3632,7 +3635,7 @@ st245:
 	if ( ++p == pe )
 		goto _test_eof245;
 case 245:
-#line 3636 "MROGeometry/PathParser.m"
+#line 3639 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr549;
 		case 32: goto tr549;
@@ -3728,39 +3731,39 @@ case 246:
 		goto tr550;
 	goto st0;
 tr442:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st89;
 tr484:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st89;
 tr507:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -3768,85 +3771,85 @@ tr507:
   }
 	goto st89;
 tr532:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st89;
 tr557:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st89;
 tr582:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st89;
 tr607:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st89;
 tr632:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st89;
 tr657:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st89;
 tr678:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -3855,7 +3858,7 @@ st89:
 	if ( ++p == pe )
 		goto _test_eof89;
 case 89:
-#line 3859 "MROGeometry/PathParser.m"
+#line 3862 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr204;
 		case 32: goto tr204;
@@ -3870,39 +3873,39 @@ case 89:
 		goto tr204;
 	goto st0;
 tr444:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st90;
 tr486:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st90;
 tr509:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -3910,85 +3913,85 @@ tr509:
   }
 	goto st90;
 tr534:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st90;
 tr559:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st90;
 tr584:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st90;
 tr609:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st90;
 tr634:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st90;
 tr659:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st90;
 tr680:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -3997,7 +4000,7 @@ st90:
 	if ( ++p == pe )
 		goto _test_eof90;
 case 90:
-#line 4001 "MROGeometry/PathParser.m"
+#line 4004 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr208;
 		case 32: goto tr208;
@@ -4012,25 +4015,25 @@ case 90:
 		goto tr208;
 	goto st0;
 tr208:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
 	goto st91;
 tr372:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
 	goto st91;
 tr576:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
@@ -4040,7 +4043,7 @@ st91:
 	if ( ++p == pe )
 		goto _test_eof91;
 case 91:
-#line 4044 "MROGeometry/PathParser.m"
+#line 4047 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st91;
 		case 32: goto st91;
@@ -4055,44 +4058,44 @@ case 91:
 		goto st91;
 	goto st0;
 tr209:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st92;
 tr213:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st92;
 tr373:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st92;
 tr575:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4101,51 +4104,51 @@ st92:
 	if ( ++p == pe )
 		goto _test_eof92;
 case 92:
-#line 4105 "MROGeometry/PathParser.m"
+#line 4108 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st93;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st106;
 	goto st0;
 tr210:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st93;
 tr214:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st93;
 tr374:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st93;
 tr577:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4154,7 +4157,7 @@ st93:
 	if ( ++p == pe )
 		goto _test_eof93;
 case 93:
-#line 4158 "MROGeometry/PathParser.m"
+#line 4161 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st94;
 	goto st0;
@@ -4180,7 +4183,7 @@ case 94:
 		goto tr220;
 	goto st0;
 tr219:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -4191,7 +4194,7 @@ st95:
 	if ( ++p == pe )
 		goto _test_eof95;
 case 95:
-#line 4195 "MROGeometry/PathParser.m"
+#line 4198 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st95;
 		case 32: goto st95;
@@ -4208,19 +4211,19 @@ case 95:
 		goto tr225;
 	goto st0;
 tr225:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st96;
 tr220:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4229,26 +4232,26 @@ st96:
 	if ( ++p == pe )
 		goto _test_eof96;
 case 96:
-#line 4233 "MROGeometry/PathParser.m"
+#line 4236 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st97;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st108;
 	goto st0;
 tr227:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st97;
 tr222:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4257,7 +4260,7 @@ st97:
 	if ( ++p == pe )
 		goto _test_eof97;
 case 97:
-#line 4261 "MROGeometry/PathParser.m"
+#line 4264 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st98;
 	goto st0;
@@ -4283,7 +4286,7 @@ case 98:
 		goto tr233;
 	goto st0;
 tr232:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -4294,7 +4297,7 @@ st99:
 	if ( ++p == pe )
 		goto _test_eof99;
 case 99:
-#line 4298 "MROGeometry/PathParser.m"
+#line 4301 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st99;
 		case 32: goto st99;
@@ -4311,19 +4314,19 @@ case 99:
 		goto tr238;
 	goto st0;
 tr238:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st100;
 tr233:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4332,26 +4335,26 @@ st100:
 	if ( ++p == pe )
 		goto _test_eof100;
 case 100:
-#line 4336 "MROGeometry/PathParser.m"
+#line 4339 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st101;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st110;
 	goto st0;
 tr240:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st101;
 tr235:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4360,7 +4363,7 @@ st101:
 	if ( ++p == pe )
 		goto _test_eof101;
 case 101:
-#line 4364 "MROGeometry/PathParser.m"
+#line 4367 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st102;
 	goto st0;
@@ -4386,7 +4389,7 @@ case 102:
 		goto tr246;
 	goto st0;
 tr245:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -4397,7 +4400,7 @@ st103:
 	if ( ++p == pe )
 		goto _test_eof103;
 case 103:
-#line 4401 "MROGeometry/PathParser.m"
+#line 4404 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st103;
 		case 32: goto st103;
@@ -4414,19 +4417,19 @@ case 103:
 		goto tr251;
 	goto st0;
 tr251:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st104;
 tr246:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4435,26 +4438,26 @@ st104:
 	if ( ++p == pe )
 		goto _test_eof104;
 case 104:
-#line 4439 "MROGeometry/PathParser.m"
+#line 4442 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st105;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st249;
 	goto st0;
 tr253:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st105;
 tr248:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4463,7 +4466,7 @@ st105:
 	if ( ++p == pe )
 		goto _test_eof105;
 case 105:
-#line 4467 "MROGeometry/PathParser.m"
+#line 4470 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st247;
 	goto st0;
@@ -4509,13 +4512,13 @@ case 247:
 		goto tr575;
 	goto st0;
 tr574:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
@@ -4525,7 +4528,7 @@ st248:
 	if ( ++p == pe )
 		goto _test_eof248;
 case 248:
-#line 4529 "MROGeometry/PathParser.m"
+#line 4532 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st248;
 		case 32: goto st248;
@@ -4562,27 +4565,27 @@ case 248:
 		goto tr213;
 	goto st0;
 tr211:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st106;
 tr215:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st106;
 tr375:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4591,7 +4594,7 @@ st106:
 	if ( ++p == pe )
 		goto _test_eof106;
 case 106:
-#line 4595 "MROGeometry/PathParser.m"
+#line 4598 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr219;
 		case 32: goto tr219;
@@ -4610,7 +4613,7 @@ case 106:
 		goto tr220;
 	goto st0;
 tr221:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -4621,7 +4624,7 @@ st107:
 	if ( ++p == pe )
 		goto _test_eof107;
 case 107:
-#line 4625 "MROGeometry/PathParser.m"
+#line 4628 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st107;
 		case 32: goto st107;
@@ -4636,7 +4639,7 @@ case 107:
 		goto st107;
 	goto st0;
 tr228:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4645,7 +4648,7 @@ st108:
 	if ( ++p == pe )
 		goto _test_eof108;
 case 108:
-#line 4649 "MROGeometry/PathParser.m"
+#line 4652 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr232;
 		case 32: goto tr232;
@@ -4664,7 +4667,7 @@ case 108:
 		goto tr233;
 	goto st0;
 tr234:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -4675,7 +4678,7 @@ st109:
 	if ( ++p == pe )
 		goto _test_eof109;
 case 109:
-#line 4679 "MROGeometry/PathParser.m"
+#line 4682 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st109;
 		case 32: goto st109;
@@ -4690,7 +4693,7 @@ case 109:
 		goto st109;
 	goto st0;
 tr241:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4699,7 +4702,7 @@ st110:
 	if ( ++p == pe )
 		goto _test_eof110;
 case 110:
-#line 4703 "MROGeometry/PathParser.m"
+#line 4706 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr245;
 		case 32: goto tr245;
@@ -4718,7 +4721,7 @@ case 110:
 		goto tr246;
 	goto st0;
 tr247:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -4729,7 +4732,7 @@ st111:
 	if ( ++p == pe )
 		goto _test_eof111;
 case 111:
-#line 4733 "MROGeometry/PathParser.m"
+#line 4736 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st111;
 		case 32: goto st111;
@@ -4744,7 +4747,7 @@ case 111:
 		goto st111;
 	goto st0;
 tr254:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -4753,7 +4756,7 @@ st249:
 	if ( ++p == pe )
 		goto _test_eof249;
 case 249:
-#line 4757 "MROGeometry/PathParser.m"
+#line 4760 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr574;
 		case 32: goto tr574;
@@ -4849,39 +4852,39 @@ case 250:
 		goto tr575;
 	goto st0;
 tr445:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st114;
 tr487:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st114;
 tr510:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -4889,85 +4892,85 @@ tr510:
   }
 	goto st114;
 tr535:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st114;
 tr560:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st114;
 tr585:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st114;
 tr610:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st114;
 tr635:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st114;
 tr660:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st114;
 tr681:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -4976,7 +4979,7 @@ st114:
 	if ( ++p == pe )
 		goto _test_eof114;
 case 114:
-#line 4980 "MROGeometry/PathParser.m"
+#line 4983 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr260;
 		case 32: goto tr260;
@@ -4991,25 +4994,25 @@ case 114:
 		goto tr260;
 	goto st0;
 tr260:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
 	goto st115;
 tr376:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
 	goto st115;
 tr601:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
@@ -5019,7 +5022,7 @@ st115:
 	if ( ++p == pe )
 		goto _test_eof115;
 case 115:
-#line 5023 "MROGeometry/PathParser.m"
+#line 5026 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st115;
 		case 32: goto st115;
@@ -5034,44 +5037,44 @@ case 115:
 		goto st115;
 	goto st0;
 tr261:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st116;
 tr265:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st116;
 tr377:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st116;
 tr600:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5080,51 +5083,51 @@ st116:
 	if ( ++p == pe )
 		goto _test_eof116;
 case 116:
-#line 5084 "MROGeometry/PathParser.m"
+#line 5087 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st117;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st130;
 	goto st0;
 tr262:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st117;
 tr266:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st117;
 tr378:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st117;
 tr602:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5133,7 +5136,7 @@ st117:
 	if ( ++p == pe )
 		goto _test_eof117;
 case 117:
-#line 5137 "MROGeometry/PathParser.m"
+#line 5140 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st118;
 	goto st0;
@@ -5159,7 +5162,7 @@ case 118:
 		goto tr272;
 	goto st0;
 tr271:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -5170,7 +5173,7 @@ st119:
 	if ( ++p == pe )
 		goto _test_eof119;
 case 119:
-#line 5174 "MROGeometry/PathParser.m"
+#line 5177 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st119;
 		case 32: goto st119;
@@ -5187,19 +5190,19 @@ case 119:
 		goto tr277;
 	goto st0;
 tr277:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st120;
 tr272:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5208,26 +5211,26 @@ st120:
 	if ( ++p == pe )
 		goto _test_eof120;
 case 120:
-#line 5212 "MROGeometry/PathParser.m"
+#line 5215 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st121;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st132;
 	goto st0;
 tr279:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st121;
 tr274:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5236,7 +5239,7 @@ st121:
 	if ( ++p == pe )
 		goto _test_eof121;
 case 121:
-#line 5240 "MROGeometry/PathParser.m"
+#line 5243 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st122;
 	goto st0;
@@ -5262,7 +5265,7 @@ case 122:
 		goto tr285;
 	goto st0;
 tr284:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -5273,7 +5276,7 @@ st123:
 	if ( ++p == pe )
 		goto _test_eof123;
 case 123:
-#line 5277 "MROGeometry/PathParser.m"
+#line 5280 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st123;
 		case 32: goto st123;
@@ -5290,19 +5293,19 @@ case 123:
 		goto tr290;
 	goto st0;
 tr290:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st124;
 tr285:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5311,26 +5314,26 @@ st124:
 	if ( ++p == pe )
 		goto _test_eof124;
 case 124:
-#line 5315 "MROGeometry/PathParser.m"
+#line 5318 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st125;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st134;
 	goto st0;
 tr292:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st125;
 tr287:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5339,7 +5342,7 @@ st125:
 	if ( ++p == pe )
 		goto _test_eof125;
 case 125:
-#line 5343 "MROGeometry/PathParser.m"
+#line 5346 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st126;
 	goto st0;
@@ -5365,7 +5368,7 @@ case 126:
 		goto tr298;
 	goto st0;
 tr297:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -5376,7 +5379,7 @@ st127:
 	if ( ++p == pe )
 		goto _test_eof127;
 case 127:
-#line 5380 "MROGeometry/PathParser.m"
+#line 5383 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st127;
 		case 32: goto st127;
@@ -5393,19 +5396,19 @@ case 127:
 		goto tr303;
 	goto st0;
 tr303:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st128;
 tr298:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5414,26 +5417,26 @@ st128:
 	if ( ++p == pe )
 		goto _test_eof128;
 case 128:
-#line 5418 "MROGeometry/PathParser.m"
+#line 5421 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st129;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st253;
 	goto st0;
 tr305:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st129;
 tr300:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5442,7 +5445,7 @@ st129:
 	if ( ++p == pe )
 		goto _test_eof129;
 case 129:
-#line 5446 "MROGeometry/PathParser.m"
+#line 5449 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st251;
 	goto st0;
@@ -5488,13 +5491,13 @@ case 251:
 		goto tr600;
 	goto st0;
 tr599:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
@@ -5504,7 +5507,7 @@ st252:
 	if ( ++p == pe )
 		goto _test_eof252;
 case 252:
-#line 5508 "MROGeometry/PathParser.m"
+#line 5511 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st252;
 		case 32: goto st252;
@@ -5541,27 +5544,27 @@ case 252:
 		goto tr265;
 	goto st0;
 tr263:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st130;
 tr267:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st130;
 tr379:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5570,7 +5573,7 @@ st130:
 	if ( ++p == pe )
 		goto _test_eof130;
 case 130:
-#line 5574 "MROGeometry/PathParser.m"
+#line 5577 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr271;
 		case 32: goto tr271;
@@ -5589,7 +5592,7 @@ case 130:
 		goto tr272;
 	goto st0;
 tr273:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -5600,7 +5603,7 @@ st131:
 	if ( ++p == pe )
 		goto _test_eof131;
 case 131:
-#line 5604 "MROGeometry/PathParser.m"
+#line 5607 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st131;
 		case 32: goto st131;
@@ -5615,7 +5618,7 @@ case 131:
 		goto st131;
 	goto st0;
 tr280:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5624,7 +5627,7 @@ st132:
 	if ( ++p == pe )
 		goto _test_eof132;
 case 132:
-#line 5628 "MROGeometry/PathParser.m"
+#line 5631 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr284;
 		case 32: goto tr284;
@@ -5643,7 +5646,7 @@ case 132:
 		goto tr285;
 	goto st0;
 tr286:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -5654,7 +5657,7 @@ st133:
 	if ( ++p == pe )
 		goto _test_eof133;
 case 133:
-#line 5658 "MROGeometry/PathParser.m"
+#line 5661 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st133;
 		case 32: goto st133;
@@ -5669,7 +5672,7 @@ case 133:
 		goto st133;
 	goto st0;
 tr293:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5678,7 +5681,7 @@ st134:
 	if ( ++p == pe )
 		goto _test_eof134;
 case 134:
-#line 5682 "MROGeometry/PathParser.m"
+#line 5685 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr297;
 		case 32: goto tr297;
@@ -5697,7 +5700,7 @@ case 134:
 		goto tr298;
 	goto st0;
 tr299:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -5708,7 +5711,7 @@ st135:
 	if ( ++p == pe )
 		goto _test_eof135;
 case 135:
-#line 5712 "MROGeometry/PathParser.m"
+#line 5715 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st135;
 		case 32: goto st135;
@@ -5723,7 +5726,7 @@ case 135:
 		goto st135;
 	goto st0;
 tr306:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -5732,7 +5735,7 @@ st253:
 	if ( ++p == pe )
 		goto _test_eof253;
 case 253:
-#line 5736 "MROGeometry/PathParser.m"
+#line 5739 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr599;
 		case 32: goto tr599;
@@ -5828,39 +5831,39 @@ case 254:
 		goto tr600;
 	goto st0;
 tr446:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st138;
 tr488:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st138;
 tr511:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -5868,85 +5871,85 @@ tr511:
   }
 	goto st138;
 tr536:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st138;
 tr561:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st138;
 tr586:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st138;
 tr611:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st138;
 tr636:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st138;
 tr661:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st138;
 tr682:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -5955,7 +5958,7 @@ st138:
 	if ( ++p == pe )
 		goto _test_eof138;
 case 138:
-#line 5959 "MROGeometry/PathParser.m"
+#line 5962 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr312;
 		case 32: goto tr312;
@@ -5970,25 +5973,25 @@ case 138:
 		goto tr312;
 	goto st0;
 tr312:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
 	goto st139;
 tr380:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
 	goto st139;
 tr626:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
@@ -5998,7 +6001,7 @@ st139:
 	if ( ++p == pe )
 		goto _test_eof139;
 case 139:
-#line 6002 "MROGeometry/PathParser.m"
+#line 6005 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st139;
 		case 32: goto st139;
@@ -6013,44 +6016,44 @@ case 139:
 		goto st139;
 	goto st0;
 tr313:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st140;
 tr317:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st140;
 tr381:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st140;
 tr625:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -6059,51 +6062,51 @@ st140:
 	if ( ++p == pe )
 		goto _test_eof140;
 case 140:
-#line 6063 "MROGeometry/PathParser.m"
+#line 6066 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st141;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st146;
 	goto st0;
 tr314:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st141;
 tr318:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st141;
 tr382:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st141;
 tr627:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -6112,7 +6115,7 @@ st141:
 	if ( ++p == pe )
 		goto _test_eof141;
 case 141:
-#line 6116 "MROGeometry/PathParser.m"
+#line 6119 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st142;
 	goto st0;
@@ -6138,7 +6141,7 @@ case 142:
 		goto tr324;
 	goto st0;
 tr323:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -6149,7 +6152,7 @@ st143:
 	if ( ++p == pe )
 		goto _test_eof143;
 case 143:
-#line 6153 "MROGeometry/PathParser.m"
+#line 6156 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st143;
 		case 32: goto st143;
@@ -6166,19 +6169,19 @@ case 143:
 		goto tr329;
 	goto st0;
 tr329:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st144;
 tr324:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -6187,26 +6190,26 @@ st144:
 	if ( ++p == pe )
 		goto _test_eof144;
 case 144:
-#line 6191 "MROGeometry/PathParser.m"
+#line 6194 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st145;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st257;
 	goto st0;
 tr331:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st145;
 tr326:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -6215,7 +6218,7 @@ st145:
 	if ( ++p == pe )
 		goto _test_eof145;
 case 145:
-#line 6219 "MROGeometry/PathParser.m"
+#line 6222 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st255;
 	goto st0;
@@ -6261,13 +6264,13 @@ case 255:
 		goto tr625;
 	goto st0;
 tr624:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
@@ -6277,7 +6280,7 @@ st256:
 	if ( ++p == pe )
 		goto _test_eof256;
 case 256:
-#line 6281 "MROGeometry/PathParser.m"
+#line 6284 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st256;
 		case 32: goto st256;
@@ -6314,27 +6317,27 @@ case 256:
 		goto tr317;
 	goto st0;
 tr315:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st146;
 tr319:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st146;
 tr383:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -6343,7 +6346,7 @@ st146:
 	if ( ++p == pe )
 		goto _test_eof146;
 case 146:
-#line 6347 "MROGeometry/PathParser.m"
+#line 6350 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr323;
 		case 32: goto tr323;
@@ -6362,7 +6365,7 @@ case 146:
 		goto tr324;
 	goto st0;
 tr325:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -6373,7 +6376,7 @@ st147:
 	if ( ++p == pe )
 		goto _test_eof147;
 case 147:
-#line 6377 "MROGeometry/PathParser.m"
+#line 6380 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st147;
 		case 32: goto st147;
@@ -6388,7 +6391,7 @@ case 147:
 		goto st147;
 	goto st0;
 tr332:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -6397,7 +6400,7 @@ st257:
 	if ( ++p == pe )
 		goto _test_eof257;
 case 257:
-#line 6401 "MROGeometry/PathParser.m"
+#line 6404 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr624;
 		case 32: goto tr624;
@@ -6493,39 +6496,39 @@ case 258:
 		goto tr625;
 	goto st0;
 tr447:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st150;
 tr489:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st150;
 tr512:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -6533,85 +6536,85 @@ tr512:
   }
 	goto st150;
 tr537:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st150;
 tr562:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st150;
 tr587:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st150;
 tr612:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st150;
 tr637:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st150;
 tr662:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st150;
 tr683:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -6620,7 +6623,7 @@ st150:
 	if ( ++p == pe )
 		goto _test_eof150;
 case 150:
-#line 6624 "MROGeometry/PathParser.m"
+#line 6627 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr338;
 		case 32: goto tr338;
@@ -6635,25 +6638,25 @@ case 150:
 		goto tr338;
 	goto st0;
 tr338:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
 	goto st151;
 tr384:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
 	goto st151;
 tr651:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
@@ -6663,7 +6666,7 @@ st151:
 	if ( ++p == pe )
 		goto _test_eof151;
 case 151:
-#line 6667 "MROGeometry/PathParser.m"
+#line 6670 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st151;
 		case 32: goto st151;
@@ -6678,44 +6681,44 @@ case 151:
 		goto st151;
 	goto st0;
 tr339:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st152;
 tr343:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st152;
 tr385:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st152;
 tr650:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -6724,51 +6727,51 @@ st152:
 	if ( ++p == pe )
 		goto _test_eof152;
 case 152:
-#line 6728 "MROGeometry/PathParser.m"
+#line 6731 "MROGeometry/PathParser.m"
 	if ( (*p) == 46 )
 		goto st153;
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st261;
 	goto st0;
 tr340:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st153;
 tr344:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st153;
 tr386:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st153;
 tr652:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -6777,7 +6780,7 @@ st153:
 	if ( ++p == pe )
 		goto _test_eof153;
 case 153:
-#line 6781 "MROGeometry/PathParser.m"
+#line 6784 "MROGeometry/PathParser.m"
 	if ( 48 <= (*p) && (*p) <= 57 )
 		goto st259;
 	goto st0;
@@ -6823,13 +6826,13 @@ case 259:
 		goto tr650;
 	goto st0;
 tr649:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
@@ -6839,7 +6842,7 @@ st260:
 	if ( ++p == pe )
 		goto _test_eof260;
 case 260:
-#line 6843 "MROGeometry/PathParser.m"
+#line 6846 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st260;
 		case 32: goto st260;
@@ -6876,27 +6879,27 @@ case 260:
 		goto tr343;
 	goto st0;
 tr341:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st261;
 tr345:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st261;
 tr387:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -6905,7 +6908,7 @@ st261:
 	if ( ++p == pe )
 		goto _test_eof261;
 case 261:
-#line 6909 "MROGeometry/PathParser.m"
+#line 6912 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr649;
 		case 32: goto tr649;
@@ -7001,39 +7004,39 @@ case 262:
 		goto tr650;
 	goto st0;
 tr448:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st263;
 tr490:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st263;
 tr513:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -7041,85 +7044,85 @@ tr513:
   }
 	goto st263;
 tr538:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st263;
 tr563:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st263;
 tr588:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st263;
 tr613:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st263;
 tr638:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st263;
 tr663:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st263;
 tr684:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -7128,7 +7131,7 @@ st263:
 	if ( ++p == pe )
 		goto _test_eof263;
 case 263:
-#line 7132 "MROGeometry/PathParser.m"
+#line 7135 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr674;
 		case 32: goto tr674;
@@ -7157,7 +7160,7 @@ case 263:
 		goto tr674;
 	goto st0;
 tr674:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -7166,7 +7169,7 @@ st264:
 	if ( ++p == pe )
 		goto _test_eof264;
 case 264:
-#line 7170 "MROGeometry/PathParser.m"
+#line 7173 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st264;
 		case 32: goto st264;
@@ -7195,39 +7198,39 @@ case 264:
 		goto st264;
 	goto st0;
 tr449:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st156;
 tr491:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st156;
 tr514:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -7235,85 +7238,85 @@ tr514:
   }
 	goto st156;
 tr539:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st156;
 tr564:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st156;
 tr589:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st156;
 tr614:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st156;
 tr639:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st156;
 tr664:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st156;
 tr685:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -7322,7 +7325,7 @@ st156:
 	if ( ++p == pe )
 		goto _test_eof156;
 case 156:
-#line 7326 "MROGeometry/PathParser.m"
+#line 7329 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr351;
 		case 32: goto tr351;
@@ -7335,39 +7338,39 @@ case 156:
 		goto tr351;
 	goto st0;
 tr450:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st157;
 tr492:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st157;
 tr515:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -7375,85 +7378,85 @@ tr515:
   }
 	goto st157;
 tr540:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st157;
 tr565:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st157;
 tr590:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st157;
 tr615:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st157;
 tr640:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st157;
 tr665:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st157;
 tr686:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -7462,7 +7465,7 @@ st157:
 	if ( ++p == pe )
 		goto _test_eof157;
 case 157:
-#line 7466 "MROGeometry/PathParser.m"
+#line 7469 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr354;
 		case 32: goto tr354;
@@ -7477,39 +7480,39 @@ case 157:
 		goto tr354;
 	goto st0;
 tr451:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st158;
 tr493:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st158;
 tr516:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -7517,85 +7520,85 @@ tr516:
   }
 	goto st158;
 tr541:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st158;
 tr566:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st158;
 tr591:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st158;
 tr616:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st158;
 tr641:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st158;
 tr666:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st158;
 tr687:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -7604,7 +7607,7 @@ st158:
 	if ( ++p == pe )
 		goto _test_eof158;
 case 158:
-#line 7608 "MROGeometry/PathParser.m"
+#line 7611 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr358;
 		case 32: goto tr358;
@@ -7619,39 +7622,39 @@ case 158:
 		goto tr358;
 	goto st0;
 tr452:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st159;
 tr494:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st159;
 tr517:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -7659,85 +7662,85 @@ tr517:
   }
 	goto st159;
 tr542:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st159;
 tr567:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st159;
 tr592:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st159;
 tr617:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st159;
 tr642:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st159;
 tr667:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st159;
 tr688:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -7746,7 +7749,7 @@ st159:
 	if ( ++p == pe )
 		goto _test_eof159;
 case 159:
-#line 7750 "MROGeometry/PathParser.m"
+#line 7753 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr362;
 		case 32: goto tr362;
@@ -7761,39 +7764,39 @@ case 159:
 		goto tr362;
 	goto st0;
 tr453:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st160;
 tr495:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st160;
 tr518:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -7801,85 +7804,85 @@ tr518:
   }
 	goto st160;
 tr543:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st160;
 tr568:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st160;
 tr593:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st160;
 tr618:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st160;
 tr643:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st160;
 tr668:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st160;
 tr689:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -7888,7 +7891,7 @@ st160:
 	if ( ++p == pe )
 		goto _test_eof160;
 case 160:
-#line 7892 "MROGeometry/PathParser.m"
+#line 7895 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr366;
 		case 32: goto tr366;
@@ -7903,27 +7906,27 @@ case 160:
 		goto tr366;
 	goto st0;
 tr4:
-#line 67 "MROGeometry/PathParser.rl"
+#line 70 "MROGeometry/PathParser.rl"
 	{
     absolute = YES;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st161;
 tr8:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
 	goto st161;
 tr369:
-#line 71 "MROGeometry/PathParser.rl"
+#line 74 "MROGeometry/PathParser.rl"
 	{
     absolute = NO;
   }
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -7932,7 +7935,7 @@ st161:
 	if ( ++p == pe )
 		goto _test_eof161;
 case 161:
-#line 7936 "MROGeometry/PathParser.m"
+#line 7939 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr12;
 		case 32: goto tr12;
@@ -7951,7 +7954,7 @@ case 161:
 		goto tr13;
 	goto st0;
 tr14:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -7962,7 +7965,7 @@ st162:
 	if ( ++p == pe )
 		goto _test_eof162;
 case 162:
-#line 7966 "MROGeometry/PathParser.m"
+#line 7969 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st162;
 		case 32: goto st162;
@@ -7977,7 +7980,7 @@ case 162:
 		goto st162;
 	goto st0;
 tr21:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -7986,7 +7989,7 @@ st265:
 	if ( ++p == pe )
 		goto _test_eof265;
 case 265:
-#line 7990 "MROGeometry/PathParser.m"
+#line 7993 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr434;
 		case 32: goto tr434;
@@ -8082,39 +8085,39 @@ case 266:
 		goto tr435;
 	goto st0;
 tr454:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st165;
 tr496:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st165;
 tr519:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -8122,85 +8125,85 @@ tr519:
   }
 	goto st165;
 tr544:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st165;
 tr569:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st165;
 tr594:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st165;
 tr619:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st165;
 tr644:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st165;
 tr669:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st165;
 tr690:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -8209,7 +8212,7 @@ st165:
 	if ( ++p == pe )
 		goto _test_eof165;
 case 165:
-#line 8213 "MROGeometry/PathParser.m"
+#line 8216 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr372;
 		case 32: goto tr372;
@@ -8224,39 +8227,39 @@ case 165:
 		goto tr372;
 	goto st0;
 tr455:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st166;
 tr497:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st166;
 tr520:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -8264,85 +8267,85 @@ tr520:
   }
 	goto st166;
 tr545:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st166;
 tr570:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st166;
 tr595:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st166;
 tr620:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st166;
 tr645:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st166;
 tr670:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st166;
 tr691:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -8351,7 +8354,7 @@ st166:
 	if ( ++p == pe )
 		goto _test_eof166;
 case 166:
-#line 8355 "MROGeometry/PathParser.m"
+#line 8358 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr376;
 		case 32: goto tr376;
@@ -8366,39 +8369,39 @@ case 166:
 		goto tr376;
 	goto st0;
 tr456:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st167;
 tr498:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st167;
 tr521:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -8406,85 +8409,85 @@ tr521:
   }
 	goto st167;
 tr546:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st167;
 tr571:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st167;
 tr596:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st167;
 tr621:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st167;
 tr646:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st167;
 tr671:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st167;
 tr692:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -8493,7 +8496,7 @@ st167:
 	if ( ++p == pe )
 		goto _test_eof167;
 case 167:
-#line 8497 "MROGeometry/PathParser.m"
+#line 8500 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr380;
 		case 32: goto tr380;
@@ -8508,39 +8511,39 @@ case 167:
 		goto tr380;
 	goto st0;
 tr457:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st168;
 tr499:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
   }
 	goto st168;
 tr522:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
@@ -8548,85 +8551,85 @@ tr522:
   }
 	goto st168;
 tr547:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
   }
 	goto st168;
 tr572:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
   }
 	goto st168;
 tr597:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
   }
 	goto st168;
 tr622:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
   }
 	goto st168;
 tr647:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
   }
 	goto st168;
 tr672:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
   }
 	goto st168;
 tr693:
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -8635,7 +8638,7 @@ st168:
 	if ( ++p == pe )
 		goto _test_eof168;
 case 168:
-#line 8639 "MROGeometry/PathParser.m"
+#line 8642 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr384;
 		case 32: goto tr384;
@@ -9185,7 +9188,7 @@ case 267:
 		goto tr500;
 	goto st0;
 tr106:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -9194,7 +9197,7 @@ st268:
 	if ( ++p == pe )
 		goto _test_eof268;
 case 268:
-#line 9198 "MROGeometry/PathParser.m"
+#line 9201 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr500;
 		case 32: goto tr500;
@@ -9230,7 +9233,7 @@ case 268:
 		goto tr500;
 	goto st0;
 tr99:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -9241,7 +9244,7 @@ st210:
 	if ( ++p == pe )
 		goto _test_eof210;
 case 210:
-#line 9245 "MROGeometry/PathParser.m"
+#line 9248 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st210;
 		case 32: goto st210;
@@ -9293,7 +9296,7 @@ case 213:
 		goto tr98;
 	goto st0;
 tr93:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -9302,7 +9305,7 @@ st214:
 	if ( ++p == pe )
 		goto _test_eof214;
 case 214:
-#line 9306 "MROGeometry/PathParser.m"
+#line 9309 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr97;
 		case 32: goto tr97;
@@ -9321,14 +9324,14 @@ case 214:
 		goto tr98;
 	goto st0;
 tr88:
-#line 62 "MROGeometry/PathParser.rl"
+#line 65 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action push_false isn't implemented yet." format:@""];
   }
 	goto st215;
 tr419:
-#line 57 "MROGeometry/PathParser.rl"
+#line 60 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action push_true isn't implemented yet." format:@""];
@@ -9338,7 +9341,7 @@ st215:
 	if ( ++p == pe )
 		goto _test_eof215;
 case 215:
-#line 9342 "MROGeometry/PathParser.m"
+#line 9345 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st215;
 		case 32: goto st215;
@@ -9410,7 +9413,7 @@ case 220:
 		goto tr74;
 	goto st0;
 tr70:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -9419,7 +9422,7 @@ st221:
 	if ( ++p == pe )
 		goto _test_eof221;
 case 221:
-#line 9423 "MROGeometry/PathParser.m"
+#line 9426 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr74;
 		case 32: goto tr74;
@@ -9435,7 +9438,7 @@ case 221:
 		goto tr74;
 	goto st0;
 tr63:
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
@@ -9446,7 +9449,7 @@ st222:
 	if ( ++p == pe )
 		goto _test_eof222;
 case 222:
-#line 9450 "MROGeometry/PathParser.m"
+#line 9453 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto st222;
 		case 32: goto st222;
@@ -9498,7 +9501,7 @@ case 225:
 		goto tr62;
 	goto st0;
 tr59:
-#line 47 "MROGeometry/PathParser.rl"
+#line 50 "MROGeometry/PathParser.rl"
 	{
     start = p;
   }
@@ -9507,7 +9510,7 @@ st226:
 	if ( ++p == pe )
 		goto _test_eof226;
 case 226:
-#line 9511 "MROGeometry/PathParser.m"
+#line 9514 "MROGeometry/PathParser.m"
 	switch( (*p) ) {
 		case 13: goto tr61;
 		case 32: goto tr61;
@@ -9895,7 +9898,7 @@ case 231:
 	{
 	switch ( cs ) {
 	case 263: 
-#line 121 "MROGeometry/PathParser.rl"
+#line 124 "MROGeometry/PathParser.rl"
 	{
     [pb closePath];   
   }
@@ -9903,13 +9906,13 @@ case 231:
 	case 233: 
 	case 265: 
 	case 266: 
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 75 "MROGeometry/PathParser.rl"
+#line 78 "MROGeometry/PathParser.rl"
 	{
     [pb moveToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
@@ -9918,13 +9921,13 @@ case 231:
 	case 235: 
 	case 236: 
 	case 269: 
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 80 "MROGeometry/PathParser.rl"
+#line 83 "MROGeometry/PathParser.rl"
 	{
     [pb lineToAbsolute:absolute x:argv[0] y:argv[1]];
     argc = 0;
@@ -9933,13 +9936,13 @@ case 231:
 	case 243: 
 	case 245: 
 	case 246: 
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 85 "MROGeometry/PathParser.rl"
+#line 88 "MROGeometry/PathParser.rl"
 	{
     [pb hlineToAbsolute:absolute x:argv[0]];
     argc = 0;
@@ -9948,13 +9951,13 @@ case 231:
 	case 259: 
 	case 261: 
 	case 262: 
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 90 "MROGeometry/PathParser.rl"
+#line 93 "MROGeometry/PathParser.rl"
 	{
     [pb vlineToAbsolute:absolute y:argv[0]];
     argc = 0;
@@ -9963,13 +9966,13 @@ case 231:
 	case 239: 
 	case 241: 
 	case 242: 
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 95 "MROGeometry/PathParser.rl"
+#line 98 "MROGeometry/PathParser.rl"
 	{
     [pb cubicToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] x3:argv[4] y3:argv[5] ];
     argc = 0;
@@ -9978,13 +9981,13 @@ case 231:
 	case 251: 
 	case 253: 
 	case 254: 
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 100 "MROGeometry/PathParser.rl"
+#line 103 "MROGeometry/PathParser.rl"
 	{
     [pb smoothCubicToAbsolute:absolute x2:argv[0] y2:argv[1] x3:argv[2] y3:argv[3] ];
     argc = 0;
@@ -9993,13 +9996,13 @@ case 231:
 	case 247: 
 	case 249: 
 	case 250: 
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 105 "MROGeometry/PathParser.rl"
+#line 108 "MROGeometry/PathParser.rl"
 	{
     [pb quadToAbsolute:absolute x1:argv[0] y1:argv[1] x2:argv[2] y2:argv[3] ];
     argc = 0;
@@ -10008,13 +10011,13 @@ case 231:
 	case 255: 
 	case 257: 
 	case 258: 
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 110 "MROGeometry/PathParser.rl"
+#line 113 "MROGeometry/PathParser.rl"
 	{
     [pb smoothQuadToAbsolute:absolute x2:argv[0] y2:argv[1] ];
     argc = 0;
@@ -10023,27 +10026,27 @@ case 231:
 	case 237: 
 	case 267: 
 	case 268: 
-#line 51 "MROGeometry/PathParser.rl"
+#line 54 "MROGeometry/PathParser.rl"
 	{
     assert(p >= start && "must be positive size");
     argv[argc++] = strltod(start, NULL, p-start);
     start = NULL;
   }
-#line 115 "MROGeometry/PathParser.rl"
+#line 118 "MROGeometry/PathParser.rl"
 	{
     if(YES)
       [NSException raise:@"ragel action elliptical_arc isn't implemented yet." format:@""];
     argc = 0;
   }
 	break;
-#line 10040 "MROGeometry/PathParser.m"
+#line 10043 "MROGeometry/PathParser.m"
 	}
 	}
 
 	_out: {}
 	}
 
-#line 293 "MROGeometry/PathParser.rl"
+#line 296 "MROGeometry/PathParser.rl"
 
   if ( errPtr != nil && cs < path_first_final )
     *errPtr = [self parseError:data position:p];
@@ -10056,5 +10059,7 @@ case 231:
     const char *c = [data UTF8String];
     return [self newCGPathWithCString:c length:strlen(c) trafo:trafo error:errPtr];
 }
+
+#pragma clang diagnostic pop
 
 @end

@@ -22,6 +22,9 @@
  */
 @implementation TrafoParser
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-const-variable"
+
 %%{
 
   machine trafo;
@@ -170,5 +173,7 @@
   const char *c = [data UTF8String];
   return [self newCGAffineTransformWithCString:c length:strlen(c) error:errPtr];
 }
+
+#pragma clang diagnostic pop
 
 @end
