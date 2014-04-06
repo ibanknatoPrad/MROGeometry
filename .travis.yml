@@ -1,6 +1,6 @@
 # sign in at https://travis-ci.org/#
 language: objective-c
 xcode_project: MROGeometry.xcodeproj
-xcode_scheme: MROGeometryTests
+xcode_scheme: MROGeometry
 # before_install:
 #    - mkdir -p "MROGeometry.xcodeproj/xcshareddata/xcschemes" && cp Tests/Schemes/*.xcscheme "MROGeometry.xcodeproj/xcshareddata/xcschemes/"
