@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/mro/MROGeometry.svg?branch=master)](http://travis-ci.org/mro/MROGeometry)
+
 # MROGeometry
 
 Some C / Objective-C helpers related to
