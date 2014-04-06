@@ -1,5 +1,7 @@
 # sign in at https://travis-ci.org/#
 language: objective-c
+# http://docs.travis-ci.com/user/languages/objective-c/
+xcode_sdk: iphonesimulator5.0
 xcode_project: MROGeometry.xcodeproj
 xcode_scheme: MROGeometry
 # before_install:
