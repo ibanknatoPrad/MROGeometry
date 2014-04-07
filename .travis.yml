@@ -3,10 +3,10 @@ language: objective-c
 # http://docs.travis-ci.com/user/languages/objective-c/
 xcode_sdk:
   - iphonesimulator7.0
-  - iphonesimulator6.1
-  - iphonesimulator6.0
-  - iphonesimulator5.1
-  - iphonesimulator5.0
+#  - iphonesimulator6.1
+#  - iphonesimulator6.0
+#  - iphonesimulator5.1
+#  - iphonesimulator5.0
 xcode_project: MROGeometry.xcodeproj
 xcode_scheme: MROGeometry
 # before_install:
