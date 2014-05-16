@@ -5,6 +5,6 @@ language: objective-c
 xcode_sdk:
   - iphonesimulator7.1
   - iphonesimulator7.0
-  - iphonesimulator6.1
+#  - iphonesimulator6.1
 xcode_project: MROGeometry.xcodeproj
 xcode_scheme: MROGeometry
