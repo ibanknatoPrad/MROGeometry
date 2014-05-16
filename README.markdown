@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/mro/MROGeometry.svg?branch=master)](http://travis-ci.org/mro/MROGeometry)
+[![Build Status](https://travis-ci.org/mro/MROGeometry.svg?branch=master)](https://travis-ci.org/mro/MROGeometry)
 
 # MROGeometry
 
