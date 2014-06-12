@@ -84,10 +84,11 @@
 		1627C7B918BFE26700D0465F /* TrafoParser.rl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrafoParser.rl; sourceTree = "<group>"; };
 		1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPathWriterTest.m; sourceTree = "<group>"; };
 		1627C7D218BFE70F00D0465F /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		1627C7D318BFE70F00D0465F /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		1627C7D418BFEFA600D0465F /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		1627C7D518BFEFA600D0465F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		1627C7D618BFEFA600D0465F /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		1675FF721949C21E00175808 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		1675FF731949C41400175808 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		16992E8418C0947000701606 /* CGPathWriterTest.PathDataCubicBezierCommands.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CGPathWriterTest.PathDataCubicBezierCommands.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,10 +118,11 @@
 		1627C77518BFE14000D0465F = {
 			isa = PBXGroup;
 			children = (
+				1675FF721949C21E00175808 /* README.md */,
+				1675FF731949C41400175808 /* VERSION */,
 				1627C7D418BFEFA600D0465F /* Common.xcconfig */,
 				1627C7D518BFEFA600D0465F /* Debug.xcconfig */,
 				1627C7D618BFEFA600D0465F /* Release.xcconfig */,
-				1627C7D318BFE70F00D0465F /* README.markdown */,
 				1627C7D218BFE70F00D0465F /* Makefile */,
 				1627C78318BFE14000D0465F /* MROGeometry */,
 				1627C79718BFE14000D0465F /* MROGeometryTests */,
