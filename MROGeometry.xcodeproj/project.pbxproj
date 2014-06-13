@@ -30,6 +30,7 @@
 		1627C7CB18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; };
 		1627C7CC18BFE26700D0465F /* TrafoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7B818BFE26700D0465F /* TrafoParser.m */; };
 		1627C7CF18BFE2AB00D0465F /* CGPathWriterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627C7CE18BFE2AB00D0465F /* CGPathWriterTest.m */; };
+		16283ACB194B3C4800F8A7A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16283ACA194B3C4800F8A7A2 /* CoreGraphics.framework */; };
 		16992E8518C0947000701606 /* CGPathWriterTest.PathDataCubicBezierCommands.svg in Resources */ = {isa = PBXBuildFile; fileRef = 16992E8418C0947000701606 /* CGPathWriterTest.PathDataCubicBezierCommands.svg */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		1627C7D418BFEFA600D0465F /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		1627C7D518BFEFA600D0465F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		1627C7D618BFEFA600D0465F /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		16283ACA194B3C4800F8A7A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1675FF721949C21E00175808 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1675FF731949C41400175808 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		16992E8418C0947000701606 /* CGPathWriterTest.PathDataCubicBezierCommands.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CGPathWriterTest.PathDataCubicBezierCommands.svg; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16283ACB194B3C4800F8A7A2 /* CoreGraphics.framework in Frameworks */,
 				1627C78218BFE14000D0465F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +146,7 @@
 		1627C78018BFE14000D0465F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16283ACA194B3C4800F8A7A2 /* CoreGraphics.framework */,
 				1627C78118BFE14000D0465F /* Foundation.framework */,
 				1627C78F18BFE14000D0465F /* XCTest.framework */,
 				1627C79218BFE14000D0465F /* UIKit.framework */,
