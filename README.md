@@ -1,6 +1,10 @@
 
 [![Build Status](https://travis-ci.org/mro/MROGeometry.svg?branch=master)](https://travis-ci.org/mro/MROGeometry)
 
+[![Version](https://img.shields.io/cocoapods/v/MROGeometry.svg)](http://cocoadocs.org/docsets/MROGeometry)
+[![License](https://img.shields.io/cocoapods/l/MROGeometry.svg)](http://cocoadocs.org/docsets/MROGeometry)
+[![Platform](https://img.shields.io/cocoapods/p/MROGeometry.svg)](http://cocoadocs.org/docsets/MROGeometry)
+
 # MROGeometry
 
 Some C / Objective-C helpers related to
