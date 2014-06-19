@@ -66,4 +66,16 @@ file I put them into [MROGeometry-Prefix.pch](MROGeometry/MROGeometry-Prefix.pch
 
 Generate C state machines and pdf docs from [Ragel](http://www.complang.org/ragel/) sources.
 
+
+## Design Goals
+
+| Quality         | very good | good | normal | irrelevant |
+|-----------------|:---------:|:----:|:------:|:----------:|
+| Functionality   |           |      |    ×   |            |
+| Reliability     |     ×     |      |        |            |
+| Usability       |           |  ×   |        |            |
+| Efficiency      |     ×     |      |        |            |
+| Changeability   |           |  ×   |        |            |
+| Portability     |           |      |    ×   |            |
+
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=mro&url=https://github.com/mro/MROGeometry&title=MROGeometry&language=&tags=github&category=software) 
