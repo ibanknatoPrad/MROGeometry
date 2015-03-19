@@ -2,7 +2,7 @@
 // NSCoder_MROCGPath.m
 //
 // Created by Marcus Rohrmoser on 26.10.10.
-// Copyright (c) 2010-2014, Marcus Rohrmoser mobile Software
+// Copyright (c) 2010-2015, Marcus Rohrmoser mobile Software
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted
