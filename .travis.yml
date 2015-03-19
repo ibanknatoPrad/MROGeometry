@@ -10,8 +10,6 @@ language: objective-c
 xcode_sdk:
 #  - iphoneos         CodeSign error: code signing is required for product type 'Unit Test Bundle' in SDK 'iOS 8.1'
 #  - iphoneos8.1      CodeSign error: code signing is required for product type 'Unit Test Bundle' in SDK 'iOS 8.1'
-  - iphonesimulator8.1
-  - iphonesimulator7.1
-  - iphonesimulator7.0
+  - iphonesimulator
 xcode_project: MROGeometry.xcodeproj
 xcode_scheme: MROGeometry
