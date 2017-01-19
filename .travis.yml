@@ -7,6 +7,8 @@
 #
 # http://docs.travis-ci.com/user/languages/objective-c/
 language: objective-c
+branches:
+  only: [master, develop]
 xcode_sdk:
 #  - iphoneos         CodeSign error: code signing is required for product type 'Unit Test Bundle' in SDK 'iOS 8.1'
 #  - iphoneos8.1      CodeSign error: code signing is required for product type 'Unit Test Bundle' in SDK 'iOS 8.1'
